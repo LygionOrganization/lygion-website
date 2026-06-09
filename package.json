@@ -1,0 +1,16 @@
+{
+  "name": "lygion-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1 --port 5173",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1 --port 4173"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "astro": "^5.13.5",
+    "typescript": "^5.5.4"
+  }
+}

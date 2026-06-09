@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { copy, isLanguage, languages, wikiLinks, type Language } from "../../data/i18n";
+import { getProductDetailPath, getProductsByModule, modules, products, type ModuleId } from "../../data/products";
+
+export function getStaticPaths() {
+  return languages.map((lang) => ({ params: { lang } }));
+}
+
+const langParam = Astro.params.lang;
+const lang: Language = isLanguage(langParam) ? langParam : "zh";
+const t = copy[lang];
+
+const moduleIcons: Record<ModuleId, string> = {
+  "bus-devices": "M5 7h14v10H5z M8 7V4m8 3V4M8 20v-3m8 3v-3M2 10h3m-3 4h3m14-4h3m-3 4h3",
+  "robot-modules": "M12 4l7 4v8l-7 4-7-4V8z M12 12l7-4M12 12v8M12 12 5 8",
+  "robot-systems": "M7 14h10l2 5H5z M9 14V8a3 3 0 0 1 6 0v6M8 19h.01M16 19h.01",
+  "lygion-open": "M7 4h10a2 2 0 0 1 2 2v14l-7-3-7 3V6a2 2 0 0 1 2-2z M9 8h6M9 12h6"
+};
+---
+
+<BaseLayout lang={lang} title={t.heroTitle}>
+  <main>
+    <section class="hero">
+      <img class="hero-media" src="/assets/lygion-hero.png" alt="" loading="eager" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>{t.heroTitle}</h1>
+        <p>{t.heroLead}</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#modules">{t.heroPrimary}</a>
+          <a class="button ghost" href={wikiLinks[lang]} target="_blank" rel="noreferrer">{t.heroSecondary}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro" id="modules">
+      <div class="section-heading modules-heading">
+        <p class="eyebrow">Portfolio System</p>
+        <h2>{t.modulesTitle}</h2>
+      </div>
+      <div class="module-grid">
+        {
+          modules.map((module) => (
+            <a class={`module-card accent-${module.accent}`} href={`/${lang}/modules/${module.id}/`}>
+              <span class="module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d={moduleIcons[module.id]} />
+                </svg>
+              </span>
+              <div>
+                <h3>{module.name[lang]}</h3>
+                <p>{module.summary[lang]}</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-heading products-heading">
+        <p class="eyebrow">Product Matrix</p>
+        <h2>{t.featuredTitle}</h2>
+      </div>
+      <div class="product-grid">
+        {
+          products.map((product) => {
+            const module = modules.find((item) => item.id === product.module);
+            return (
+              <a class="product-card" href={getProductDetailPath(product, lang)}>
+                <img src={product.image} alt="" loading="lazy" />
+                <div>
+                  <span class={`tag accent-${module?.accent ?? "cyan"}`}>{module?.name[lang]}</span>
+                  <h3>{product.name[lang]}</h3>
+                  <p>{product.summary[lang]}</p>
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <section class="section open-band" id="open">
+      <div>
+        <p class="eyebrow">{t.githubEyebrow}</p>
+        <h2>{t.ctaTitle}</h2>
+        <p>{t.ctaLead}</p>
+      </div>
+      <a class="button primary" href="https://github.com/orgs/LygionOrganization/repositories" target="_blank" rel="noreferrer">
+        {t.githubButton}
+      </a>
+    </section>
+  </main>
+</BaseLayout>

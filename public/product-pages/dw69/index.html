@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DW69 机器人底盘 69mm 驱动轮模组详情页</title>
+    <meta
+      name="description"
+      content="DW69 机器人底盘 69mm 驱动轮模组，步进电机减速驱动轮、TTL 总线控制、开源底盘案例、Python/C++ SDK，适合 AGV/UGV/ROS 小车快速搭建。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="DW69 首页">
+          <span class="brand-mark">DW</span>
+          <span>
+            <strong>DW69</strong>
+            <em>机器人底盘驱动轮模组</em>
+          </span>
+        </a>
+        <nav class="nav" aria-label="页面导航">
+          <a href="#selling-points">卖点</a>
+          <a href="#control">控制接入</a>
+          <a href="#kits">套餐</a>
+          <a href="#cases">开源案例</a>
+          <a href="#specs">参数</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-pad">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">69mm modular drive wheel for robot chassis</div>
+            <h1>把“轮子、电机、安装座、控制接口”做成一个标准底盘驱动单元</h1>
+            <p class="lead">
+              DW69 面向小型 AGV / UGV / ROS 小车与教学实验平台。它把 69mm 耐磨橡胶轮、6061 铝合金轮毂与底座、步进电机减速一体机整合在一起，
+              让你少画结构、少配零件，把时间留给底盘算法和上层应用。
+            </p>
+
+            <div class="hero-actions" aria-label="核心参数">
+              <div>
+                <strong>69mm</strong>
+                <span>轮径</span>
+              </div>
+              <div>
+                <strong>12kg</strong>
+                <span>单模组推荐载重</span>
+              </div>
+              <div>
+                <strong>24V</strong>
+                <span>推荐工作电压</span>
+              </div>
+              <div>
+                <strong>TTL</strong>
+                <span>总线步进驱动</span>
+              </div>
+            </div>
+
+            <div class="hero-note">
+              <span>适合：</span> 小型移动机器人底盘、四驱小车、两轮平衡车、教学平台、AI 巡检小车、原型验证。
+            </div>
+          </div>
+          <div class="hero-visual card-glow">
+            <img src="assets/hero-product.jpg" alt="DW69 69mm 驱动轮模组实拍图" />
+            <div class="floating-card torque-card">
+              <strong>14kg·cm</strong>
+              <span>输出静力矩 @ 24V 1.5A</span>
+            </div>
+            <div class="floating-card speed-card">
+              <strong>19.5m/min</strong>
+              <span>默认空载车速，接近人走路速度</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div class="container trust-grid">
+          <div><b>步进电机 + 减速器</b><span>低速更好控，定位更稳定</span></div>
+          <div><b>轮内法兰轴承</b><span>车体重量由轮内结构承担</span></div>
+          <div><b>6061 铝合金</b><span>CNC / 车床加工，强度与精度兼顾</span></div>
+          <div><b>开源资料</b><span>CAD、装配、代码与案例可参考</span></div>
+        </div>
+      </section>
+
+      <section id="selling-points" class="section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Why DW69</span>
+            <h2>新手容易上手，高手也能继续扩展</h2>
+            <p>
+              普通轮子要自己解决轮毂、轴承、安装座、减速电机、控制板和线束；DW69 把底盘驱动里的重复工作标准化，
+              更适合快速搭建可运行的机器人底盘。
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="icon">01</span>
+              <h3>低速高精，适合室内移动底盘</h3>
+              <p>步进电机配合减速器，默认固件偏向平稳低速，柔性启停更顺滑，适合定位、巡航和教学实验。</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">02</span>
+              <h3>承重结构在轮内完成</h3>
+              <p>轮内安装法兰轴承来承重，配合 6061 铝合金底座，减少外部支撑结构的设计压力。</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">03</span>
+              <h3>橡胶胎面可更换</h3>
+              <p>15mm 接地宽度，耐磨橡胶胎皮；磨损后可更换胎面，不必整体报废轮组。</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">04</span>
+              <h3>TTL 总线，接线更少</h3>
+              <p>支持 TTL 总线步进驱动，可与飞特 TTL 总线舵机复用同一总线，适合多轮、多执行器系统。</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">05</span>
+              <h3>心跳保护与柔性启停</h3>
+              <p>驱动板支持心跳保护，通信异常时更安全；柔性启停让底盘动作更自然，降低机械冲击。</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">06</span>
+              <h3>开源底盘案例可参考</h3>
+              <p>两轮平衡、板金四驱、铝型材四驱等案例可复用，模型资料可下载，降低从 0 到 1 的成本。</p>
+            </article>
+          </div>
+
+          <div class="split-panel anatomy">
+            <div>
+              <span class="eyebrow">Product anatomy</span>
+              <h2>一个模组，解决底盘驱动的四件事</h2>
+              <ul class="check-list">
+                <li><b>驱动：</b>步进电机减速一体机，适合对低速稳定性要求高的移动底盘。</li>
+                <li><b>承重：</b>轮内法兰轴承承担车体重量，结构更紧凑。</li>
+                <li><b>安装：</b>侧面 M6、正面 M4 安装位，左右通用，便于固定到钣金或铝型材。</li>
+                <li><b>维护：</b>橡胶胎皮可替换，轮毂与底座均为 6061 铝合金。</li>
+              </ul>
+            </div>
+            <div class="image-stack">
+              <img src="assets/rear-product.jpg" alt="DW69 驱动轮模组背面与电机接口" />
+              <img src="assets/bearing-detail.jpg" alt="DW69 轮内法兰轴承细节" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="control" class="section section-pad bg-deep">
+        <div class="container control-grid">
+          <div class="control-copy">
+            <span class="eyebrow">TTL bus control</span>
+            <h2>接上控制器，就能把底盘跑起来</h2>
+            <p>
+              你可以用 PC / 树莓派 / Jetson / RK 通过 USB 转 TTL 接入，也可以用 ESP32、STM32、Arduino 等 MCU 通过 UART RX/TX 直接控制。
+              页面示例采用 TTL Stepper Driver（A）方案，方便快速验证速度、加速度与电流参数。
+            </p>
+            <div class="control-steps">
+              <div><b>上位机</b><span>Python SDK，适合算法与 ROS 原型。</span></div>
+              <div><b>嵌入式</b><span>C / C++ 示例，适合底盘控制器。</span></div>
+              <div><b>多设备</b><span>总线式扩展，接线更清爽。</span></div>
+            </div>
+            <div class="code-card" aria-label="示例代码">
+              <pre><code># Python 控制 ID:1，目标速度 500，加速度 5，相电流 200
+packetHandler.WritePosEx(1, 0, 500, 5, 200)
+
+// C++ 控制 ID:2，目标速度 -300，加速度 5，相电流 200
+ttlsd.stepsCtrl(2, 0, -300, 5, 200);</code></pre>
+            </div>
+          </div>
+          <div class="control-visual">
+            <img src="assets/ttl-control-demo.jpg" alt="DW69 驱动轮模组连接 TTL 控制板的实拍演示" />
+          </div>
+        </div>
+      </section>
+
+      <section id="kits" class="section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Choose your kit</span>
+            <h2>三种套餐，按项目阶段灵活选择</h2>
+            <p>从“只需要结构轮组”到“直接接 TTL 总线控制”，都可以逐步升级。</p>
+          </div>
+
+          <div class="kit-grid">
+            <article class="kit-card">
+              <img src="assets/kit-sp01.jpg" alt="DW69 套餐一：驱动轮与底座" />
+              <div class="kit-body">
+                <span class="kit-badge">套餐一</span>
+                <h3>基础结构套装</h3>
+                <p>适合希望自行选择电机、减速器或仅需轮组结构的用户。</p>
+                <ul>
+                  <li>69mm 驱动轮 ×1</li>
+                  <li>6061 铝合金底座 ×1</li>
+                  <li>安装螺丝 M3×8 ×4</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="kit-card featured">
+              <img src="assets/kit-sp02.jpg" alt="DW69 套餐二：驱动轮、电机减速器与线束" />
+              <div class="kit-body">
+                <span class="kit-badge">套餐二</span>
+                <h3>电机减速驱动套装</h3>
+                <p>适合已有步进驱动器，希望快速完成机械与电机装配的用户。</p>
+                <ul>
+                  <li>69mm 驱动轮 ×1</li>
+                  <li>6061 铝合金底座 ×1</li>
+                  <li>步进电机减速器一体机 ×1</li>
+                  <li>2.0-6P 电机连接线 ×1</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="kit-card">
+              <img src="assets/kit-sp03.jpg" alt="DW69 套餐三：带 TTL 步进驱动板" />
+              <div class="kit-body">
+                <span class="kit-badge">套餐三</span>
+                <h3>TTL 总线控制套装</h3>
+                <p>适合希望直接接入 TTL 总线控制，减少驱动板选型与调试时间的用户。</p>
+                <ul>
+                  <li>69mm 驱动轮 ×1</li>
+                  <li>6061 铝合金底座 ×1</li>
+                  <li>步进电机减速器一体机 ×1</li>
+                  <li>TTL 步进电机驱动板 ×1</li>
+                  <li>驱动板连接线 ×1</li>
+                  <li>5264-3P TTL 总线连接线 ×1</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="cases" class="section section-pad bg-soft">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">OpenLygion reference</span>
+            <h2>不是只有零件，还有可参考的开源底盘路径</h2>
+            <p>如果你不想从空白 CAD 开始，可以参考开源案例，再按自己的传感器、电池、控制器尺寸调整。</p>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card">
+              <img src="assets/openlygion-balance.png" alt="OpenLygion Balance 两轮平衡车 CAD 案例" />
+              <div>
+                <span>OpenLygion Balance</span>
+                <h3>两轮平衡车</h3>
+                <p>一根 2040 欧标铝型材即可安装驱动轮模组，适合算法教学和控制实验。</p>
+                <b>安装方式：M4 螺丝</b>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="assets/openlygion-4wd-sheetmetal.png" alt="OpenLygion 4WD SheetMetal 四驱钣金底盘 CAD 案例" />
+              <div>
+                <span>OpenLygion 4WD SheetMetal</span>
+                <h3>四驱底盘（钣金件）</h3>
+                <p>钣金件按孔位加工后即可组装成底盘，适合封闭式小车原型。</p>
+                <b>安装方式：M6 螺丝 + 弹性垫片</b>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="assets/openlygion-4wd-al.png" alt="OpenLygion 4WD AL 四驱铝型材底盘 CAD 案例" />
+              <div>
+                <span>OpenLygion 4WD AL</span>
+                <h3>四驱底盘（铝型材）</h3>
+                <p>可直接安装在 20 系列铝型材上，便于持续扩展传感器、电池和计算平台。</p>
+                <b>安装方式：M4 螺丝</b>
+              </div>
+            </article>
+          </div>
+
+          <div class="resource-row">
+            <div>
+              <h3>STEP 模型与 CAD 资料可参考</h3>
+              <p>提供结构模型、装配参考与示例工程，便于二次开发和快速验证。</p>
+            </div>
+            <img src="assets/step-model.png" alt="DW69 STEP 三维模型文件示意" />
+          </div>
+        </div>
+      </section>
+
+      <section id="specs" class="section section-pad">
+        <div class="container specs-grid">
+          <div>
+            <span class="eyebrow">Technical parameters</span>
+            <h2>关键技术参数</h2>
+            <p class="spec-intro">
+              以下参数用于评估底盘结构、供电、驱动与线束设计。默认固件速度较小，优点是柔性启停平滑；如需更高速度，可参考产品文档修改控制相位。
+            </p>
+            <div class="spec-table-wrap" role="region" aria-label="DW69 参数表">
+              <table class="spec-table">
+                <tbody>
+                  <tr><th>产品名称</th><td>DW69 - 机器人底盘驱动轮模组</td></tr>
+                  <tr><th>产品类型</th><td>步进电机减速驱动轮模块</td></tr>
+                  <tr><th>轮子外径</th><td>69mm</td></tr>
+                  <tr><th>橡胶接地宽度</th><td>15mm</td></tr>
+                  <tr><th>胎皮材质 / 是否可更换</th><td>耐磨橡胶 / 可以</td></tr>
+                  <tr><th>轮毂 / 底座材质</th><td>6061 铝合金</td></tr>
+                  <tr><th>轮毂 / 底座工艺</th><td>车床加工 / CNC 加工</td></tr>
+                  <tr><th>推荐最大载重</th><td>单驱动轮模组 12kg</td></tr>
+                  <tr><th>单个模组重量</th><td>约 600g</td></tr>
+                  <tr><th>电机类型</th><td>步进电机 + 减速器一体机</td></tr>
+                  <tr><th>电机减速比</th><td>5.1818182</td></tr>
+                  <tr><th>输出静力矩</th><td>14kg·cm @ 24V 1.5A</td></tr>
+                  <tr><th>推荐工作电压</th><td>24V</td></tr>
+                  <tr><th>支持输入电压</th><td>9~25.2V</td></tr>
+                  <tr><th>空载转速 / 车速</th><td>90rpm / 19.5m/min</td></tr>
+                  <tr><th>TTL 驱动板输入电压</th><td>9~25.2V</td></tr>
+                  <tr><th>TTL 驱动板最大相电流</th><td>1.5A</td></tr>
+                  <tr><th>电机线接口</th><td>2.0-6P，赠接线</td></tr>
+                  <tr><th>TTL 接口</th><td>5264-3P，赠接线</td></tr>
+                  <tr><th>安装螺丝</th><td>侧面 M6，正面 M4</td></tr>
+                  <tr><th>左右是否通用</th><td>是</td></tr>
+                  <tr><th>3D 模型 / 开源底盘案例</th><td>提供，免费下载</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <aside class="dimension-card">
+            <img src="assets/dimension-drawing.png" alt="DW69 驱动轮模组尺寸参考图" />
+            <p>尺寸图用于装配参考；实际机械设计请以最新 CAD / STEP 文件为准。</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-pad final-cta">
+        <div class="container cta-card">
+          <div>
+            <span class="eyebrow">Ready to build</span>
+            <h2>从一个驱动单元开始，快速搭建你的移动机器人底盘</h2>
+            <p>选结构、选驱动、选 TTL 套装；配合开源资料，可以更快完成从设计到跑车的第一步。</p>
+          </div>
+          <a href="#kits" class="cta-link">查看套餐配置</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>DW69 机器人底盘 69mm 驱动轮模组</span>
+        <span>参数与图片来源：产品资料包</span>
+      </div>
+    </footer>
+  </body>
+</html>

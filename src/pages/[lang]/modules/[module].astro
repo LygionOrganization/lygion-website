@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { copy, isLanguage, languages, type Language } from "../../../data/i18n";
+import { getProductDetailPath, getProductsByModule, modules, type ModuleId } from "../../../data/products";
+
+export function getStaticPaths() {
+  return languages.flatMap((lang) =>
+    modules.map((module) => ({
+      params: { lang, module: module.id },
+      props: { module }
+    }))
+  );
+}
+
+const { module } = Astro.props;
+const langParam = Astro.params.lang;
+const lang: Language = isLanguage(langParam) ? langParam : "zh";
+const t = copy[lang];
+const moduleProducts = getProductsByModule(module.id as ModuleId);
+---
+
+<BaseLayout lang={lang} title={module.name[lang]} description={module.summary[lang]}>
+  <main class="module-page">
+    <section class={`module-hero accent-${module.accent}`}>
+      <a class="back-link" href={`/${lang}/`}>{t.backHome}</a>
+      <p class="eyebrow">Lygion Portfolio</p>
+      <h1>{module.name[lang]}</h1>
+      <p>{module.description[lang]}</p>
+      <div class="module-stat-row">
+        <span>{moduleProducts.length}</span>
+        <strong>{t.products}</strong>
+      </div>
+    </section>
+
+    <section class="section module-products">
+      <div class="section-heading compact">
+        <p class="eyebrow">{module.name[lang]}</p>
+        <h2>{t.products}</h2>
+      </div>
+      <div class="product-grid">
+        {
+          moduleProducts.map((product) => (
+            <a class="product-card" href={getProductDetailPath(product, lang)}>
+              <img src={product.image} alt="" loading="lazy" />
+              <div>
+                <span class={`tag accent-${module.accent}`}>{module.name[lang]}</span>
+                <h3>{product.name[lang]}</h3>
+                <p>{product.summary[lang]}</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

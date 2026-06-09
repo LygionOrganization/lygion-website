@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { copy, isLanguage, languages, type Language } from "../../../data/i18n";
+import { getModule, products } from "../../../data/products";
+
+export function getStaticPaths() {
+  return languages.flatMap((lang) =>
+    products.map((product) => ({
+      params: { lang, slug: product.slug },
+      props: { product }
+    }))
+  );
+}
+
+const { product } = Astro.props;
+const langParam = Astro.params.lang;
+const lang: Language = isLanguage(langParam) ? langParam : "zh";
+const t = copy[lang];
+const module = getModule(product.module);
+---
+
+<BaseLayout lang={lang} title={product.name[lang]} description={product.summary[lang]}>
+  <main class="detail-page">
+    <section class="detail-hero">
+      <div class="detail-copy">
+        <a class="back-link" href={`/${lang}/modules/${product.module}/`}>{t.backModule}</a>
+        <span class={`tag accent-${module?.accent ?? "cyan"}`}>{module?.name[lang]}</span>
+        <h1>{product.name[lang]}</h1>
+        <p>{product.description[lang]}</p>
+      </div>
+      <img class="detail-image" src={product.image} alt="" loading="eager" />
+    </section>
+
+    <section class="detail-grid">
+      <article class="detail-panel">
+        <h2>{t.highlights}</h2>
+        <ul class="check-list">
+          {product.highlights[lang].map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+      <article class="detail-panel">
+        <h2>{t.specs}</h2>
+        <dl class="spec-list">
+          {
+            product.specs[lang].map((spec) => (
+              <>
+                <dt>{spec.label}</dt>
+                <dd>{spec.value}</dd>
+              </>
+            ))
+          }
+        </dl>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

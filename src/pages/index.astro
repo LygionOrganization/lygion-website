@@ -1,0 +1,23 @@
+---
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lygion Robotics</title>
+    <script is:inline>
+      const language = navigator.language || navigator.userLanguage || "zh";
+      const target = language.toLowerCase().startsWith("zh") ? "/zh/" : "/en/";
+      window.location.replace(target);
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/zh/" />
+    </noscript>
+  </head>
+  <body>
+    <a href="/zh/">进入中文站</a>
+    <a href="/en/">English</a>
+  </body>
+</html>
