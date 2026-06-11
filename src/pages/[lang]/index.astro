@@ -14,15 +14,15 @@ const t = copy[lang];
 const moduleIcons: Record<ModuleId, string> = {
   "bus-devices": "M5 7h14v10H5z M8 7V4m8 3V4M8 20v-3m8 3v-3M2 10h3m-3 4h3m14-4h3m-3 4h3",
   "robot-modules": "M12 4l7 4v8l-7 4-7-4V8z M12 12l7-4M12 12v8M12 12 5 8",
-  "robot-systems": "M7 14h10l2 5H5z M9 14V8a3 3 0 0 1 6 0v6M8 19h.01M16 19h.01",
-  "lygion-open": "M7 4h10a2 2 0 0 1 2 2v14l-7-3-7 3V6a2 2 0 0 1 2-2z M9 8h6M9 12h6"
+  "robot-systems": "M12 2v4M9 3h6M7 7h10l2 4v6H5v-6zM8 17v2m8-2v2M7 19h10M9 11h6M12 11v3",
+  "lygion-open": "M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"
 };
 ---
 
-<BaseLayout lang={lang} title={t.heroTitle}>
+<BaseLayout lang={lang}>
   <main>
     <section class="hero">
-      <img class="hero-media" src="/images/lygion-product-banner-annotated.png?v=20260610-small" alt="" loading="eager" />
+      <img class="hero-media" src="/images/lygion-product-banner-dark-no-ttl-node.png" alt="" loading="eager" />
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1>{t.heroTitle}</h1>
@@ -45,7 +45,13 @@ const moduleIcons: Record<ModuleId, string> = {
             <a class={`module-card accent-${module.accent}`} href={`/${lang}/modules/${module.id}/`}>
               <span class="module-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
-                  <path d={moduleIcons[module.id]} />
+                  <defs>
+                    <linearGradient id={`module-gradient-${module.id}`} x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#8b5cf6" />
+                      <stop offset="1" stop-color="#3f5cff" />
+                    </linearGradient>
+                  </defs>
+                  <path d={moduleIcons[module.id]} style={`stroke: url(#module-gradient-${module.id})`} />
                 </svg>
               </span>
               <div>

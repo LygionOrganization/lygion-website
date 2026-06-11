@@ -12,7 +12,7 @@ type Props = {
 const { lang, title, description } = Astro.props;
 const t = copy[lang];
 const alternateLang = lang === "zh" ? "en" : "zh";
-const pageTitle = title ? `${title} | Lygion` : "Lygion Robotics";
+const pageTitle = title ? `${title} | Lygion` : "Lygion";
 const pageDescription = description ?? t.heroLead;
 const currentPath = Astro.url.pathname;
 const alternatePath = currentPath.replace(`/${lang}`, `/${alternateLang}`);
@@ -24,7 +24,7 @@ const alternatePath = currentPath.replace(`/${lang}`, `/${alternateLang}`);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={pageDescription} />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -50,7 +50,10 @@ const alternatePath = currentPath.replace(`/${lang}`, `/${alternateLang}`);
     <slot />
     <footer class="site-footer">
       <span>{t.footer}</span>
-      <span>lygion.ai</span>
+      <a href="mailto:effectsmachine@outlook.com">effectsmachine@outlook.com</a>
+      <a href="https://shop349435383.taobao.com/?spm=pc_detail.30350276.shop_block.dshopinfo.2ccb5e35emF1gh" target="_blank" rel="noreferrer">
+        {lang === "zh" ? "灵影智能企业店" : "Lygion Taobao Store"}
+      </a>
     </footer>
   </body>
 </html>
