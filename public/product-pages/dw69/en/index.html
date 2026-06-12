@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DW69 69mm Robot Chassis Drive Wheel Module</title>
+    <meta
+      name="description"
+      content="DW69 is a 69mm robot chassis drive wheel module with a geared stepper motor, TTL bus control, open chassis references, and Python/C++ SDK support for AGV, UGV, ROS, and education platforms."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="DW69 home">
+          <span class="brand-mark">DW</span>
+          <span>
+            <strong>DW69</strong>
+            <em>Robot chassis drive wheel module</em>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Page navigation">
+          <a href="#selling-points">Highlights</a>
+          <a href="#control">Control</a>
+          <a href="#kits">Kits</a>
+          <a href="#cases">Open Cases</a>
+          <a href="#specs">Specs</a>
+          <a class="language-switch" href="../index.html" lang="zh-CN">中文</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-pad">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">69mm modular drive wheel for robot chassis</div>
+            <h1>A standard drive unit that combines wheel, motor, mount, and control interface</h1>
+            <p class="lead">
+              DW69 is designed for compact AGV, UGV, ROS rover, and education platforms. It integrates a 69mm wear-resistant rubber tire,
+              6061 aluminum wheel hub and base, and a geared stepper motor so teams can spend less time on mechanical sourcing and more time
+              on chassis algorithms and upper-layer applications.
+            </p>
+
+            <div class="hero-actions" aria-label="Key parameters">
+              <div>
+                <strong>69mm</strong>
+                <span>Wheel diameter</span>
+              </div>
+              <div>
+                <strong>12kg</strong>
+                <span>Recommended load per module</span>
+              </div>
+              <div>
+                <strong>24V</strong>
+                <span>Recommended voltage</span>
+              </div>
+              <div>
+                <strong>TTL</strong>
+                <span>Bus stepper drive</span>
+              </div>
+            </div>
+
+            <div class="hero-note">
+              <span>Built for:</span> compact mobile robot chassis, four-wheel rovers, two-wheel balancing robots, education platforms,
+              AI inspection rovers, and prototype validation.
+            </div>
+          </div>
+          <div class="hero-visual card-glow">
+            <img src="../assets/hero-product.jpg" alt="DW69 69mm drive wheel module product photo" />
+            <div class="floating-card torque-card">
+              <strong>14kg.cm</strong>
+              <span>Output holding torque @ 24V 1.5A</span>
+            </div>
+            <div class="floating-card speed-card">
+              <strong>19.5m/min</strong>
+              <span>Default no-load chassis speed, close to walking pace</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div class="container trust-grid">
+          <div><b>Stepper + gearbox</b><span>Stable low-speed motion and easier positioning</span></div>
+          <div><b>In-wheel flange bearing</b><span>Vehicle load is carried inside the wheel structure</span></div>
+          <div><b>6061 aluminum</b><span>CNC and lathe machined for strength and precision</span></div>
+          <div><b>Open resources</b><span>CAD, assembly references, code, and chassis examples</span></div>
+        </div>
+      </section>
+
+      <section id="selling-points" class="section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Why DW69</span>
+            <h2>Easy to start with, flexible enough to extend</h2>
+            <p>
+              A conventional wheel setup still requires hub design, bearings, mounts, geared motors, drivers, and wiring. DW69 standardizes
+              the repeated work inside chassis drive design so a working mobile platform can be assembled faster.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="icon">01</span>
+              <h3>Stable low-speed drive for indoor mobile bases</h3>
+              <p>The geared stepper setup and default firmware emphasize smooth, stable low-speed control for positioning, cruising, and lab experiments.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">02</span>
+              <h3>Load-bearing structure built into the wheel</h3>
+              <p>An in-wheel flange bearing carries chassis load, reducing the pressure of designing extra external support structures.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">03</span>
+              <h3>Replaceable rubber tire surface</h3>
+              <p>The 15mm contact width uses wear-resistant rubber. The tire surface can be replaced after wear without discarding the whole wheel assembly.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">04</span>
+              <h3>TTL bus control with cleaner wiring</h3>
+              <p>The TTL bus stepper driver can share the same bus style as Feetech TTL servos, which is useful for multi-wheel and multi-actuator systems.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">05</span>
+              <h3>Heartbeat protection and soft start-stop</h3>
+              <p>The driver supports heartbeat protection for safer behavior during communication loss. Soft start-stop reduces mechanical shock.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">06</span>
+              <h3>Open chassis references available</h3>
+              <p>Two-wheel balance, sheet-metal 4WD, and aluminum-profile 4WD references can be reused to lower the cost from idea to first motion.</p>
+            </article>
+          </div>
+
+          <div class="split-panel anatomy">
+            <div>
+              <span class="eyebrow">Product anatomy</span>
+              <h2>One module handles four chassis drive jobs</h2>
+              <ul class="check-list">
+                <li><b>Drive:</b> geared stepper motor for mobile bases that need stable low-speed behavior.</li>
+                <li><b>Load:</b> in-wheel flange bearing carries vehicle weight in a compact structure.</li>
+                <li><b>Mount:</b> side M6 and front M4 mounting points; left and right sides are interchangeable.</li>
+                <li><b>Maintenance:</b> replaceable rubber tire surface, with 6061 aluminum hub and base.</li>
+              </ul>
+            </div>
+            <div class="image-stack">
+              <img src="../assets/rear-product.jpg" alt="Rear view and motor interface of the DW69 drive wheel module" />
+              <img src="../assets/bearing-detail.jpg" alt="In-wheel flange bearing detail of the DW69 module" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="control" class="section section-pad bg-deep">
+        <div class="container control-grid">
+          <div class="control-copy">
+            <span class="eyebrow">TTL bus control</span>
+            <h2>Connect a controller and start driving the chassis</h2>
+            <p>
+              Use a PC, Raspberry Pi, Jetson, or RK board through USB-to-TTL, or connect an ESP32, STM32, Arduino, or other MCU directly over UART RX/TX.
+              The examples here use the TTL Stepper Driver (A) setup to quickly verify speed, acceleration, and current parameters.
+            </p>
+            <div class="control-steps">
+              <div><b>Host computer</b><span>Python SDK for algorithms and ROS prototypes.</span></div>
+              <div><b>Embedded control</b><span>C/C++ examples for chassis controllers.</span></div>
+              <div><b>Multi-device bus</b><span>Bus expansion keeps wiring clean.</span></div>
+            </div>
+            <div class="code-card" aria-label="Example code">
+              <pre><code># Python: control ID 1, target speed 500, acceleration 5, phase current 200
+packetHandler.WritePosEx(1, 0, 500, 5, 200)
+
+// C++: control ID 2, target speed -300, acceleration 5, phase current 200
+ttlsd.stepsCtrl(2, 0, -300, 5, 200);</code></pre>
+            </div>
+          </div>
+          <div class="control-visual">
+            <img src="../assets/ttl-control-demo.jpg" alt="DW69 drive wheel module connected to a TTL control board" />
+          </div>
+        </div>
+      </section>
+
+      <section id="kits" class="section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Choose your kit</span>
+            <h2>Three kits for different project stages</h2>
+            <p>Start with the mechanical wheel unit, add the motor drive assembly, or choose the TTL bus kit for faster control integration.</p>
+          </div>
+
+          <div class="kit-grid">
+            <article class="kit-card">
+              <img src="../assets/kit-sp01.jpg" alt="DW69 kit 1 with drive wheel and base" />
+              <div class="kit-body">
+                <span class="kit-badge">Kit 1</span>
+                <h3>Basic mechanical kit</h3>
+                <p>For teams that want to select their own motor, gearbox, or only need the wheel and mounting structure.</p>
+                <ul>
+                  <li>69mm drive wheel x1</li>
+                  <li>6061 aluminum base x1</li>
+                  <li>M3x8 mounting screws x4</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="kit-card featured">
+              <img src="../assets/kit-sp02.jpg" alt="DW69 kit 2 with drive wheel, geared motor, and cable" />
+              <div class="kit-body">
+                <span class="kit-badge">Kit 2</span>
+                <h3>Motor drive kit</h3>
+                <p>For users who already have a stepper driver and want to finish mechanical and motor assembly quickly.</p>
+                <ul>
+                  <li>69mm drive wheel x1</li>
+                  <li>6061 aluminum base x1</li>
+                  <li>Geared stepper motor x1</li>
+                  <li>2.0-6P motor cable x1</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="kit-card">
+              <img src="../assets/kit-sp03.jpg" alt="DW69 kit 3 with TTL stepper driver board" />
+              <div class="kit-body">
+                <span class="kit-badge">Kit 3</span>
+                <h3>TTL bus control kit</h3>
+                <p>For teams that want direct TTL bus control and less driver selection and bring-up work.</p>
+                <ul>
+                  <li>69mm drive wheel x1</li>
+                  <li>6061 aluminum base x1</li>
+                  <li>Geared stepper motor x1</li>
+                  <li>TTL stepper driver board x1</li>
+                  <li>Driver board cable x1</li>
+                  <li>5264-3P TTL bus cable x1</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="cases" class="section section-pad bg-soft">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">OpenLygion reference</span>
+            <h2>More than a component: reusable open chassis paths</h2>
+            <p>When starting from a blank CAD file is too slow, use the open references and adjust sensors, battery, and controllers around your project.</p>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card">
+              <img src="../assets/openlygion-balance.png" alt="OpenLygion Balance two-wheel balancing chassis CAD reference" />
+              <div>
+                <span>OpenLygion Balance</span>
+                <h3>Two-wheel balancing robot</h3>
+                <p>A single 2040 European standard aluminum profile can mount the drive wheel modules for control education and experiments.</p>
+                <b>Mounting: M4 screws</b>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="../assets/openlygion-4wd-sheetmetal.png" alt="OpenLygion 4WD SheetMetal chassis CAD reference" />
+              <div>
+                <span>OpenLygion 4WD SheetMetal</span>
+                <h3>4WD sheet-metal chassis</h3>
+                <p>Sheet-metal parts can be fabricated from the hole layout and assembled into a compact closed chassis prototype.</p>
+                <b>Mounting: M6 screws + elastic washers</b>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="../assets/openlygion-4wd-al.png" alt="OpenLygion 4WD AL aluminum profile chassis CAD reference" />
+              <div>
+                <span>OpenLygion 4WD AL</span>
+                <h3>4WD aluminum-profile chassis</h3>
+                <p>Mounts directly to 20-series aluminum profiles, making it easy to expand sensors, battery, and compute platform.</p>
+                <b>Mounting: M4 screws</b>
+              </div>
+            </article>
+          </div>
+
+          <div class="resource-row">
+            <div>
+              <h3>STEP models and CAD references are available</h3>
+              <p>Structure models, assembly references, and example projects help speed up secondary development and validation.</p>
+            </div>
+            <img src="../assets/step-model.png" alt="DW69 STEP 3D model file preview" />
+          </div>
+        </div>
+      </section>
+
+      <section id="specs" class="section section-pad">
+        <div class="container specs-grid">
+          <div>
+            <span class="eyebrow">Technical parameters</span>
+            <h2>Key technical specifications</h2>
+            <p class="spec-intro">
+              Use these values to evaluate chassis structure, power, drive, and wiring design. The default firmware uses conservative speed for smoother
+              soft start-stop. For higher speed, refer to the product documentation and adjust the control phase.
+            </p>
+            <div class="spec-table-wrap" role="region" aria-label="DW69 specification table">
+              <table class="spec-table">
+                <tbody>
+                  <tr><th>Product name</th><td>DW69 - Robot chassis drive wheel module</td></tr>
+                  <tr><th>Product type</th><td>Geared stepper drive wheel module</td></tr>
+                  <tr><th>Wheel outer diameter</th><td>69mm</td></tr>
+                  <tr><th>Rubber contact width</th><td>15mm</td></tr>
+                  <tr><th>Tire material / replacement</th><td>Wear-resistant rubber / replaceable</td></tr>
+                  <tr><th>Wheel hub / base material</th><td>6061 aluminum alloy</td></tr>
+                  <tr><th>Wheel hub / base process</th><td>Lathe machining / CNC machining</td></tr>
+                  <tr><th>Recommended max load</th><td>12kg per drive wheel module</td></tr>
+                  <tr><th>Single module weight</th><td>About 600g</td></tr>
+                  <tr><th>Motor type</th><td>Stepper motor + gearbox integrated unit</td></tr>
+                  <tr><th>Gear ratio</th><td>5.1818182</td></tr>
+                  <tr><th>Output holding torque</th><td>14kg.cm @ 24V 1.5A</td></tr>
+                  <tr><th>Recommended voltage</th><td>24V</td></tr>
+                  <tr><th>Supported input voltage</th><td>9~25.2V</td></tr>
+                  <tr><th>No-load rpm / chassis speed</th><td>90rpm / 19.5m/min</td></tr>
+                  <tr><th>TTL driver input voltage</th><td>9~25.2V</td></tr>
+                  <tr><th>TTL driver max phase current</th><td>1.5A</td></tr>
+                  <tr><th>Motor cable interface</th><td>2.0-6P, cable included</td></tr>
+                  <tr><th>TTL interface</th><td>5264-3P, cable included</td></tr>
+                  <tr><th>Mounting screws</th><td>Side M6, front M4</td></tr>
+                  <tr><th>Left/right compatibility</th><td>Interchangeable</td></tr>
+                  <tr><th>3D model / open chassis cases</th><td>Available for free download</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <aside class="dimension-card">
+            <img src="../assets/dimension-drawing.png" alt="DW69 drive wheel module dimension drawing" />
+            <p>The drawing is for assembly reference. Use the latest CAD or STEP file as the source of truth for mechanical design.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-pad final-cta">
+        <div class="container cta-card">
+          <div>
+            <span class="eyebrow">Ready to build</span>
+            <h2>Start with one drive unit and build your mobile robot chassis faster</h2>
+            <p>Choose the structure kit, motor kit, or TTL control kit. With open resources, you can move from design to first motion sooner.</p>
+          </div>
+          <a href="#kits" class="cta-link">View kit options</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>DW69 69mm robot chassis drive wheel module</span>
+        <span>Parameters and images: product detail package</span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -120,6 +120,18 @@ a {
   color: var(--blue);
 }
 
+.nav .language-switch {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.nav .language-switch:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
 .hero {
   position: relative;
   overflow: hidden;

@@ -9,7 +9,7 @@ export type Product = {
   module: ModuleId;
   status: "concept" | "prototype" | "available" | "open";
   image: string;
-  detailPath?: string;
+  detailPath?: string | LocalizedText;
   name: LocalizedText;
   summary: LocalizedText;
   description: LocalizedText;
@@ -187,7 +187,10 @@ export const products: Product[] = [
     module: "robot-modules",
     status: "available",
     image: "/product-pages/dw69/assets/hero-product.jpg",
-    detailPath: "/product-pages/dw69/index.html",
+    detailPath: {
+      zh: "/product-pages/dw69/index.html",
+      en: "/product-pages/dw69/en/index.html"
+    },
     name: { zh: "DW69 机器人底盘驱动轮模组", en: "DW69 Chassis Drive Wheel Module" },
     summary: {
       zh: "69mm 驱动轮、减速步进电机、安装结构与 TTL 控制接口整合为一个底盘驱动单元。",
@@ -513,5 +516,9 @@ export function getProductsByModule(id: ModuleId) {
 }
 
 export function getProductDetailPath(product: Product, lang: Language) {
-  return product.detailPath ?? `/${lang}/products/${product.slug}/`;
+  if (!product.detailPath) {
+    return `/${lang}/products/${product.slug}/`;
+  }
+
+  return typeof product.detailPath === "string" ? product.detailPath : product.detailPath[lang];
 }
