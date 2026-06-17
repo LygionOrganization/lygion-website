@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkArm-LT 轻量机械臂 | 浏览器直控、动作脚本与多接口上位机集成 | 灵影 LYGION</title>
+  <meta name="description" content="LinkArm-LT 是灵影 LYGION 的轻量机械臂，基于 ESP32-S3，内置 Web 控制台，支持浏览器直控、FPV 与三维直角坐标控制、动作脚本、ESP-NOW 同步示教，以及 USB CDC / HTTP / WebSocket 上位机通信。">
+  <meta name="keywords" content="LinkArm-LT,轻量机械臂,浏览器机械臂,Web 控制机械臂,ESP32-S3,动作脚本,ESP-NOW,USB CDC,WebSocket,HTTP,灵影,LYGION">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="home-link" href="https://lygion.ai/" aria-label="返回灵影官网">
+        <span class="logo-mark">LY</span>
+        <span><strong>LYGION 灵影</strong><small>返回官方网站</small></span>
+      </a>
+      <nav aria-label="页面导航">
+        <a href="#features">核心能力</a>
+        <a href="#web">浏览器控制</a>
+        <a href="#automation">动作脚本</a>
+        <a href="#integration">集成尺寸</a>
+        <a href="#specs">技术参数</a>
+        <a class="wiki-link" href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-backdrop"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Browser-controlled robotic arm</p>
+          <h1>LinkArm-LT<br><span>轻量机械臂与 Web 控制平台</span></h1>
+          <p class="lead">内置 ESP32-S3 控制器和 Web 应用，开机后可直接通过浏览器完成基础控制、Wi-Fi 配置、动作脚本编排和 JSON 指令调试。页面只整理当前资料包、现有详情素材和本地 Wiki 中能直接确认的信息，不补写未明确给出的参数。</p>
+          <div class="hero-actions">
+            <a class="primary" href="#specs">查看技术参数</a>
+            <a class="secondary" href="#" aria-label="Wiki 资料页面链接待更新">进入 Wiki 资料页</a>
+          </div>
+          <div class="hero-note">
+            <strong>使用前必须固定：</strong>现有文档明确要求使用两只 G 字夹固定到桌面，或通过安装板牢固固定到底盘与实验平台。USB 只适合通信与开发调试，不能替代机械臂的 9~12.6V 动力电源。
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <img src="assets/hero.jpg" alt="LinkArm-LT 轻量机械臂实拍图">
+          </div>
+        </div>
+      </div>
+      <div class="container stat-grid">
+        <article><strong>9~12.6V</strong><span>机械臂工作电压范围</span></article>
+        <article><strong>12V 3A</strong><span>文档推荐标准适配器</span></article>
+        <article><strong>500000 bps</strong><span>控制器与总线设备通信波特率</span></article>
+        <article><strong>3 种接口</strong><span>USB CDC / HTTP / WebSocket</span></article>
+        <article><strong>2 种控制逻辑</strong><span>FPV 与三维直角坐标</span></article>
+        <article><strong>AP + STA</strong><span>默认可同时保留热点与局域网接入</span></article>
+      </div>
+      <div class="container visual-strip" aria-label="LinkArm-LT 关键场景图">
+        <figure>
+          <img src="assets/closeup.jpg" alt="LinkArm-LT 机械臂近景细节">
+          <figcaption>实拍机械臂结构细节与末端夹爪</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/desk-clamps.png" alt="LinkArm-LT 使用 G 字夹固定到桌面">
+          <figcaption>标准套装支持用 G 字夹固定桌边</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/rover-render.png" alt="LinkArm-LT 安装在移动机器人上的渲染图">
+          <figcaption>可集成到移动底盘与实验平台</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Core capabilities</p>
+          <h2>把网页控制、动作编排和对外通信都收进同一台机械臂</h2>
+          <p>LinkArm-LT 的亮点不只是机械结构，而是把浏览器控制台、脚本系统、无线接入和 JSON 通信能力整合在控制器中。对需要快速演示、教学使用或继续接到上位机项目的人来说，现有资料已经给出了完整的入门和集成路径。</p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <b>01</b>
+            <h3>浏览器直连，不依赖专用 App</h3>
+            <p>默认热点名为 <code>Robot</code>，密码 <code>12345678</code>，浏览器访问 <code>http://192.168.4.1</code> 即可进入控制台，适合手机、平板和电脑直接使用。</p>
+          </article>
+          <article>
+            <b>02</b>
+            <h3>两套末端控制方式</h3>
+            <p>Web 控制台同时提供 FPV 控制和三维直角坐标控制。笛卡尔坐标与移动距离统一使用毫米，便于人工操作与程序联动。</p>
+          </article>
+          <article>
+            <b>03</b>
+            <h3>动作脚本可保存到板载 Flash</h3>
+            <p><code>AUTOMATION SCRIPTS</code> 可把多条 JSON 指令保存为 <code>.mission</code> 文件，掉电后仍会保留，并支持手动运行、删除和开机自动执行。</p>
+          </article>
+          <article>
+            <b>04</b>
+            <h3>支持 ESP-NOW 同步示教</h3>
+            <p>一台 LinkArm-LT 可作为示教主机，把姿态实时广播给一台或多台从机，不依赖路由器，适合多机械臂同步演示与教学。</p>
+          </article>
+          <article>
+            <b>05</b>
+            <h3>开放上位机接入</h3>
+            <p>同一套 JSON 指令可通过 USB CDC、HTTP 和 WebSocket 下发。资料中已给出 Python 示例、串口测试方法和接口地址。</p>
+          </article>
+          <article>
+            <b>06</b>
+            <h3>集成资料已带图纸与固件说明</h3>
+            <p>本地资料包含原始 PDF、DXF、固件恢复说明和中位校准流程，适合先做空间评估，再进入安装设计和项目集成。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="web" class="section panel">
+      <div class="container split">
+        <div class="media-card screen-card">
+          <img src="assets/web-console-overview.png" alt="LinkArm-LT Web 控制台界面">
+        </div>
+        <div>
+          <p class="eyebrow">Web console</p>
+          <h2>开机即有控制台，热点直连和局域网接入都已预留</h2>
+          <p>出厂固件默认支持 AP 热点模式，也支持在控制台里填入路由器账号密码后切换到 STA 局域网模式。资料还明确说明 AP 与 STA 可以同时工作，便于首次调试和现场维护。</p>
+          <ul class="check-list">
+            <li><strong>默认热点：</strong><code>Robot</code> / <code>12345678</code>。</li>
+            <li><strong>默认入口：</strong>AP 模式浏览器访问 <code>http://192.168.4.1</code>。</li>
+            <li><strong>设备信息：</strong>页面会显示运行时间、当前总线波特率和设备 MAC。</li>
+            <li><strong>FPV 控制：</strong><code>R</code> / <code>B</code> / <code>Z</code> 与夹爪按键适合快速示教与现场操作。</li>
+            <li><strong>直角坐标控制：</strong><code>X</code> / <code>Y</code> / <code>Z</code> 均为逆运动学控制，适合程序化路径测试。</li>
+          </ul>
+          <div class="notice">
+            <strong>切换提醒：</strong>资料明确提示 FPV 和直角坐标控制内部维护的目标状态不同。连续操作时尽量使用同一组控件，切换前先点 <code>INIT</code> 更稳妥。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="automation" class="section section-dark">
+      <div class="container split reverse">
+        <div>
+          <p class="eyebrow">Automation scripts</p>
+          <h2>任务文件直接保存在控制器里，可循环、可开机自动运行</h2>
+          <p>资料中的动作脚本系统不是简单的录制回放，而是可以按行保存 JSON 指令，形成可编辑、可复用的任务文件。适合把搬运、演示或教学动作写成固定流程。</p>
+          <div class="mini-grid">
+            <article>
+              <strong>Set:a ~ Set:d</strong>
+              <span>保存为四个常规任务文件，适合先验证流程再固化。</span>
+            </article>
+            <article>
+              <strong>Run / Del</strong>
+              <span>直接运行或删除对应任务，不需要重新连接其它软件。</span>
+            </article>
+            <article>
+              <strong>Set:On Boot</strong>
+              <span>保存为开机自动循环执行的 <code>boot_user.mission</code>。</span>
+            </article>
+            <article>
+              <strong>STOP MISSION</strong>
+              <span>文档特别要求在启用自动任务前先确认停止入口位置。</span>
+            </article>
+          </div>
+          <p class="section-note">现有说明建议先在 <code>JSON INTERFACE</code> 逐条验证动作，再保存为任务文件，不要第一次就直接写成开机运行。</p>
+        </div>
+        <div class="media-stack">
+          <div class="media-card">
+            <img src="assets/automation-panel.png" alt="LinkArm-LT 动作脚本面板">
+          </div>
+          <div class="glass-card">
+            <h3>常见用法</h3>
+            <ul>
+              <li>把多步末端路径写成固定演示流程。</li>
+              <li>通过延时指令安排停顿、等待与节拍。</li>
+              <li>保存开机任务前先做低速全路径测试。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container compare-grid">
+        <div class="compare-copy">
+          <p class="eyebrow">Host communication</p>
+          <h2>从演示到开发，可以按布线和实时性选择不同通信方式</h2>
+          <p>LinkArm-LT 的上位机接入没有被锁死在单一协议里。当前文档把常用方式拆成 USB CDC、HTTP 和 WebSocket 三条链路，并给出各自典型频率和适用场景。</p>
+          <ul class="check-list">
+            <li><strong>USB CDC：</strong>约 60~65 条/秒，适合固定工位、单板电脑和低延迟调试。</li>
+            <li><strong>HTTP：</strong>约 40 条/秒，接口简单，适合任务下发与普通控制。</li>
+            <li><strong>WebSocket：</strong>60 条/秒以上，适合需要长连接和状态反馈的实时控制。</li>
+            <li><strong>统一 JSON：</strong>三种方式使用同一套 JSON 指令，脚本和上位机逻辑更容易复用。</li>
+          </ul>
+        </div>
+        <div class="compare-panel">
+          <div class="media-card">
+            <img src="assets/arm-control-panel.png" alt="LinkArm-LT 控制面板界面">
+          </div>
+          <div class="feature-quote">
+            <p>当前资料还明确给出 Python、串口终端与 WebSocket 示例，适合把机械臂继续接入 PC、树莓派、Jetson 或自定义控制程序。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="integration" class="section panel">
+      <div class="container integration-layout">
+        <div>
+          <p class="eyebrow">Integration and dimensions</p>
+          <h2>桌面固定、底盘集成和安装评估资料已经成套给出</h2>
+          <p>现有资料把集成重点放在三件事上：固定方式、电源边界和安装孔位。页面保留了这些已确认内容，并避免把示意图误当成加工图。</p>
+          <div class="integration-grid">
+            <article>
+              <h3>固定方式</h3>
+              <p>标准套装提供两只 G 字夹，适用于厚度约 7~50mm 的桌边；集成到底盘时应通过安装板和螺栓固定。</p>
+            </article>
+            <article>
+              <h3>电源边界</h3>
+              <p>动力输入为 DC 9~12.6V，推荐 12V 3A 适配器或满足电流需求的 3S 锂电池。USB 不作为机械臂动力电源。</p>
+            </article>
+            <article>
+              <h3>原始图纸</h3>
+              <p>资料包中已包含展开姿态 PDF、折叠姿态 PDF 和二维 DXF，可用于安装设计、空间评估和正式加工前复核。</p>
+            </article>
+          </div>
+        </div>
+        <div class="dimension-stack">
+          <div class="media-card">
+            <img src="assets/product-outline.png" alt="LinkArm-LT 外形轮廓图">
+          </div>
+          <div class="media-card">
+            <img src="assets/mounting-pattern.png" alt="LinkArm-LT 安装孔位参考图">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container split">
+        <div class="media-card">
+          <img src="assets/mobile-base-example.png" alt="LinkArm-LT 安装在移动底盘上的应用场景">
+        </div>
+        <div>
+          <p class="eyebrow">Application scenarios</p>
+          <h2>更适合演示、教学、轻量搬运和移动机器人上层集成</h2>
+          <p>结合现有图文资料，LinkArm-LT 的典型场景主要是桌面示教、移动底盘搭载、脚本化动作演示以及通过网络或 USB 进行二次开发。页面不把它包装成高负载工业机械臂，而是保持与资料一致的轻量平台定位。</p>
+          <ul class="check-list">
+            <li><strong>桌面教学演示：</strong>浏览器控制和脚本系统降低了现场展示门槛。</li>
+            <li><strong>移动机器人搭载：</strong>资料已展示机械臂与底盘结合的应用画面。</li>
+            <li><strong>轻量自动化流程：</strong>通过任务文件可重复执行固定动作。</li>
+            <li><strong>上位机实验平台：</strong>统一 JSON 指令适合做视觉、AI Agent 或流程控制联调。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="section">
+      <div class="container specs-layout">
+        <div>
+          <p class="eyebrow">Specifications</p>
+          <h2>当前资料可直接确认的参数与接入信息</h2>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><th>产品型号</th><td>LinkArm-LT</td></tr>
+                <tr><th>产品类型</th><td>轻量机械臂，内置 ESP32-S3 控制器与 Web 控制台</td></tr>
+                <tr><th>工作电压</th><td>DC 9~12.6V</td></tr>
+                <tr><th>推荐电源</th><td>12V 3A，DC5521</td></tr>
+                <tr><th>移动供电</th><td>满足功率要求的 3S 锂电池</td></tr>
+                <tr><th>总线波特率</th><td>500000 bps</td></tr>
+                <tr><th>默认 Wi-Fi 热点</th><td><code>Robot</code></td></tr>
+                <tr><th>默认热点密码</th><td><code>12345678</code></td></tr>
+                <tr><th>AP 模式地址</th><td><code>http://192.168.4.1</code></td></tr>
+                <tr><th>HTTP 服务</th><td>端口 <code>80</code>，接口 <code>/api/cmd</code></td></tr>
+                <tr><th>WebSocket 服务</th><td><code>ws://&lt;设备IP&gt;:80/ws</code></td></tr>
+                <tr><th>上位机通信</th><td>USB CDC / HTTP / WebSocket</td></tr>
+                <tr><th>末端控制方式</th><td>FPV 控制与三维直角坐标控制</td></tr>
+                <tr><th>动作脚本</th><td><code>.mission</code> 任务文件，支持保存、运行、删除与开机自动执行</td></tr>
+                <tr><th>同步示教</th><td>ESP-NOW 一对一或一对多</td></tr>
+                <tr><th>总线设备构成</th><td>4 个舵机 + 1 个 TTL Node (A)</td></tr>
+                <tr><th>图纸资料</th><td>展开姿态 PDF、折叠姿态 PDF、二维 DXF</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="spec-aside">
+          <img src="assets/dimensions.png" alt="LinkArm-LT 中位姿态与尺寸参考图">
+          <p>尺寸与孔位图片适合做前期评估。正式开孔、加工或批量生产前，请使用资料包中的原始 PDF 与 DXF 核对实际硬件批次。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta">
+        <div>
+          <p class="eyebrow">Next step</p>
+          <h2>先完成固定与上电检查，再决定是浏览器直控还是接入上位机</h2>
+          <p>如果目标是快速演示，直接连接默认热点进入 Web 控制台即可。如果目标是集成到自己的程序或移动平台，建议先用图纸做安装评估，再按 USB、HTTP 或 WebSocket 其中一种路径开始联调。Wiki 链接先保留占位，等待后续补充正式地址。</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://lygion.ai/">访问灵影官网</a>
+          <a class="ghost" href="#">Wiki 资料待补充</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© LYGION 灵影 | LinkArm-LT 中文响应式产品详情页</p>
+      <a href="https://lygion.ai/">https://lygion.ai/</a>
+    </div>
+  </footer>
+</body>
+</html>

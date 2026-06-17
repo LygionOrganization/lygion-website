@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TTL Stepper Driver (A) TTL 总线步进电机驱动板 | 灵影</title>
+  <meta name="description" content="灵影 TTL Stepper Driver (A) 通过 1Mbps 单线 TTL 总线控制双极步进电机，支持位置、速度和从动模式，具有限位、同步、心跳及保护功能，输入 DC 9-26V，最大相电流 1.5A。">
+  <meta name="keywords" content="TTL步进电机驱动板,总线步进驱动,TTL Stepper Driver,机器人关节驱动,丝杆同步控制">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner">
+    <a class="home-link" href="https://lygion.ai/" aria-label="返回灵影官网"><span class="logo-mark">LY</span><span><strong>LYGION 灵影</strong><small>返回官方网站</small></span></a>
+    <nav aria-label="页面导航"><a href="#features">产品优势</a><a href="#modes">控制模式</a><a href="#interfaces">接口</a><a href="#specs">参数</a><a class="wiki-link" href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料</a></nav>
+  </div></header>
+
+  <main>
+    <section class="hero"><div class="container hero-grid">
+      <div><p class="eyebrow">TTL bus stepper motor driver</p><h1>TTL Stepper Driver (A)<br><span>总线步进电机驱动板</span></h1>
+        <p class="lead">让控制步进电机像控制总线舵机一样简单。上位机只需发送位置、速度和电流等指令，驱动板在底层完成脉冲输出与速度插值，适合机器人关节、丝杆机构、小型移动底盘和自动化设备。</p>
+        <div class="hero-actions"><a class="primary" href="#specs">查看技术参数</a><a class="secondary" href="#" aria-label="Wiki 资料页面链接待更新">进入 Wiki 资料页</a></div>
+        <p class="pending-note">Wiki 链接暂时保留，后续可替换为正式资料地址。</p>
+      </div>
+      <div class="hero-media"><img src="assets/hero.png" alt="TTL Stepper Driver A 总线步进电机驱动板实物图"></div>
+    </div>
+    <div class="container stat-grid"><div><strong>1 Mbps</strong><span>单线 TTL 总线</span></div><div><strong>DC 9-26V</strong><span>宽电压输入</span></div><div><strong>1.5A</strong><span>最大电机相电流</span></div><div><strong>1/32</strong><span>最高微步细分</span></div></div>
+    </section>
+
+    <section id="features" class="section"><div class="container">
+      <div class="section-heading"><p class="eyebrow">解决什么问题</p><h2>少写底层运动代码，一根总线控制更多执行器</h2><p>传统方案需要上位机持续输出脉冲并自行处理加减速。TTL Stepper Driver (A) 把常用运动控制、状态反馈与保护功能放到驱动板中，让控制器把算力留给路径规划和上层应用。</p></div>
+      <div class="feature-grid">
+        <article><b>01</b><h3>位置、速度、从动三种模式</h3><p>支持多圈角度控制、连续转动与多电机完全同步动作，覆盖关节、车轮和丝杆等常见场景。</p></article>
+        <article><b>02</b><h3>多设备总线控制</h3><p>默认 1Mbps，设备 ID 可独立设置，可与灵影 TTL Encoder 及飞特 STS、HLS 系列设备共用总线。</p></article>
+        <article><b>03</b><h3>柔性启停与心跳保护</h3><p>通过加速度参数实现平滑启停；通信中断时可自动停止连续转动，降低失控风险。</p></article>
+        <article><b>04</b><h3>板载限位接口</h3><p>最大、最小位置各有独立限位接口，在驱动底层阻止电机继续向触发方向运动。</p></article>
+        <article><b>05</b><h3>板载同步接口</h3><p>同步输入和输出接口可让多个驱动板控制的步进电机保持一致动作，适合双丝杆或多轴联动结构。</p></article>
+        <article><b>06</b><h3>状态反馈与保护</h3><p>可读取位置、速度、电压、温度和运行状态，并支持过压、欠压、过热、过流及自动限流保护。</p></article>
+      </div>
+    </div></section>
+
+    <section id="modes" class="section soft"><div class="container split">
+      <div><p class="eyebrow">三种控制模式</p><h2>同一块板覆盖关节、车轮和同步机构</h2>
+        <ul class="check-list">
+          <li><strong>位置模式：</strong>控制绝对位置并支持多圈运动，适合机器人关节、转台和丝杆定位。</li>
+          <li><strong>速度模式：</strong>连续正反转，可设置速度与加速度，适合驱动车轮、输送与旋转机构。</li>
+          <li><strong>从动模式：</strong>通过同步接口使多台电机完全同步，适合双丝杆升降和并联机构。</li>
+        </ul>
+      </div>
+      <img src="assets/overview.png" alt="TTL 总线步进电机驱动板功能和机器人应用概览">
+    </div></section>
+
+    <section class="section deep"><div class="container split">
+      <img src="assets/wiring.png" alt="TTL Stepper Driver 使用 Hub 扩展多个电机的典型接线">
+      <div><p class="eyebrow">接入现有控制系统</p><h2>PC、SBC 与 MCU 都能使用</h2><p>PC、树莓派、Jetson 或 RK 平台可通过 USB 连接 TTL Adapter (A)；ESP32、STM32 等控制器可使用 UART 转单线 TTL 电路，或通过灵影 Robot Driver 接入。扩展多台驱动板时，可使用 TTL-5264 8P Hub (A)。</p>
+        <div class="mini-grid"><div><strong>Python SDK</strong><span>适合 PC、Linux 和 SBC</span></div><div><strong>C/C++ SDK</strong><span>适合 ESP32、STM32 等</span></div><div><strong>混合总线</strong><span>编码器、步进驱动与舵机共线</span></div></div>
+      </div>
+    </div></section>
+
+    <section id="interfaces" class="section"><div class="container specs-layout">
+      <div><p class="eyebrow">接口配置</p><h2>常用功能直接接线</h2><div class="table-wrap"><table><tbody>
+        <tr><th>5264-3P ×1</th><td>电源输入与单线 TTL 总线通信</td></tr>
+        <tr><th>XH2.54-4P ×1</th><td>双极步进电机 A+、A-、B-、B+</td></tr>
+        <tr><th>XH2.54-3P ×2</th><td>最小位置和最大位置限位开关</td></tr>
+        <tr><th>GH1.25-3P ×2</th><td>同步控制信号输入与输出</td></tr>
+        <tr><th>HC1.25-3P ×1</th><td>将灵影 TTL Encoder 编码器并入同一总线；驱动板不处理编码器读数</td></tr>
+      </tbody></table></div></div>
+      <aside><img src="assets/limit.png" alt="TTL Stepper Driver 限位开关接口示例"><p>限位保护由驱动板底层处理，可减少应用层持续轮询的复杂度。实际接线与触发电平以最新 Wiki 文档为准。</p></aside>
+    </div></section>
+
+    <section id="specs" class="section soft"><div class="container specs-layout">
+      <div><p class="eyebrow">技术参数</p><h2>TTL Stepper Driver (A) 参数表</h2><div class="table-wrap"><table><tbody>
+        <tr><th>适用电机</th><td>双极步进电机</td></tr><tr><th>输入电压</th><td>DC 9-26V</td></tr><tr><th>最大相电流</th><td>1.5A</td></tr>
+        <tr><th>通信</th><td>单线 TTL，总线默认 1Mbps</td></tr><tr><th>控制模式</th><td>位置模式、速度模式、从动模式</td></tr>
+        <tr><th>微步</th><td>1、1/2、1/4、1/8、1/16、1/32</td></tr><tr><th>反馈</th><td>当前位置、当前速度、输出脉冲、电压、温度、移动标志、目标位置等</td></tr>
+        <tr><th>保护</th><td>过压/欠压、过热、过流、自动限流、限位、心跳保护</td></tr><tr><th>包装清单</th><td>驱动板 ×1、5264-3P 连接线 25cm ×1、步进电机连接线 25cm ×1</td></tr>
+      </tbody></table></div></div>
+      <aside><img src="assets/sync.png" alt="TTL Stepper Driver 多电机同步控制丝杆应用"><p><strong>选型边界：</strong>不建议驱动额定相电流超过 1.5A 的电机。长期大电流会增加发热并可能触发过热保护；更适合 42 系列、机身长度约 40mm 或以内的电机，不建议用于 60mm 长机身 42 步进电机。</p></aside>
+    </div></section>
+
+    <section class="section"><div class="container cta"><div><p class="eyebrow">资料与开发</p><h2>查看接线、SDK、内存表和示例工程</h2><p>Wiki 页面将提供最新教程与下载资料。</p></div><a href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料页（待更新）</a></div></section>
+  </main>
+  <footer><div class="container"><span>LYGION 灵影 · TTL Stepper Driver (A)</span><a href="https://lygion.ai/">返回 lygion.ai</a></div></footer>
+</body>
+</html>

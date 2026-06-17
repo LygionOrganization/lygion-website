@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TTL Node (A) 多功能总线节点板 | S.BUS 输入与双路 PWM 电源输出 | 灵影 LYGION</title>
+  <meta name="description" content="TTL Node (A) 是灵影 LYGION 的多功能 TTL 总线节点板，把 USB Type-C 调参、S.BUS 遥控输入、双路 PWM 可调电源输出、双 RGB 状态灯与总线扩展整合到紧凑板卡中，适合总线舵机、机械臂与移动机器人项目。">
+  <meta name="keywords" content="TTL Node (A),多功能总线节点板,TTL总线,S.BUS,USB Type-C,PWM电源输出,总线舵机,灵影,LYGION">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="home-link" href="https://lygion.ai/" aria-label="返回灵影官网">
+        <span class="logo-mark">LY</span>
+        <span><strong>LYGION 灵影</strong><small>返回官方网站</small></span>
+      </a>
+      <nav aria-label="页面导航">
+        <a href="#features">核心能力</a>
+        <a href="#interfaces">接口接入</a>
+        <a href="#scenarios">应用场景</a>
+        <a href="#specs">技术参数</a>
+        <a href="#package">包装清单</a>
+        <a class="wiki-link" href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">TTL bus node board</p>
+          <h1>TTL Node (A)<br><span>多功能总线节点板</span></h1>
+          <p class="lead">把 USB Type-C 调参、S.BUS 遥控输入、双路 PWM 可调电源输出、双 RGB 状态灯和 TTL 总线扩展整合到一块紧凑板卡里，适合给总线舵机、机械臂末端、移动机器人和自定义节点做统一接入。</p>
+          <div class="hero-actions">
+            <a class="primary" href="#specs">查看技术参数</a>
+            <a class="secondary" href="#" aria-label="Wiki 资料页面链接待更新">进入 Wiki 资料页</a>
+          </div>
+          <div class="hero-note">
+            <strong>说明：</strong>页面文案仅整理当前资料包和现有详情素材中能直接确认的信息。像电压范围、默认 ID、波特率、配件长度和接口用途都来自现有中文使用文档或成套物料；未在资料里明确写出的指标不做猜测。
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/hero.webp" alt="TTL Node (A) 多功能总线节点板产品渲染图">
+        </div>
+      </div>
+      <div class="container stat-grid">
+        <div><strong>30 × 35 mm</strong><span>详情物料标注的紧凑板卡尺寸</span></div>
+        <div><strong>ID 0</strong><span>出厂默认总线 ID</span></div>
+        <div><strong>1 Mbps</strong><span>默认总线波特率</span></div>
+        <div><strong>9~12.6V</strong><span>外部供电工作电压范围</span></div>
+        <div><strong>2 路 PWM</strong><span>板载可调电源输出通道</span></div>
+        <div><strong>2 路 RGB</strong><span>状态指示灯输出通道</span></div>
+      </div>
+      <div class="container gallery-row" aria-label="TTL Node (A) 关键能力示意图">
+        <img src="assets/sbus-input.webp" alt="TTL Node (A) 支持读取 S.BUS 航模接收器信号">
+        <img src="assets/rgb-led.webp" alt="TTL Node (A) 双路 RGB 状态指示灯">
+        <img src="assets/pwm-output.webp" alt="TTL Node (A) 双路 PWM 可调电源输出">
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">核心能力</p>
+          <h2>一块节点板，把总线调参与外设扩展都集中到同一处</h2>
+          <p>现有资料显示，TTL Node (A) 不是单纯的转接板，而是把总线通信、遥控器输入、状态灯、可调供电和上位机调参入口放到一起，方便在机械臂、底盘和实验设备中作为末端节点或扩展节点使用。</p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <b>01</b>
+            <h3>直接读取 S.BUS 遥控器信号</h3>
+            <p>资料明确写明可通过 2.54mm-3P 接口为 5V 航模接收器供电并通信，读取 S.BUS 通道数据，适合把遥控器输入接到总线系统里。</p>
+          </article>
+          <article>
+            <b>02</b>
+            <h3>USB Type-C 直连上位机</h3>
+            <p>可直接连接 PC、树莓派、Jetson 等带 USB 接口的设备，用于图形化调参、读取状态或通过程序控制节点板与总线设备。</p>
+          </article>
+          <article>
+            <b>03</b>
+            <h3>双路 PWM 电源输出</h3>
+            <p>板载两路 PWM 输出可调节 01 与 02 电源输出口电压，文档示例用 0 到 1000 的数值进行控制，便于辅助供电与联动控制。</p>
+          </article>
+          <article>
+            <b>04</b>
+            <h3>双路 RGB 状态指示</h3>
+            <p>板上提供两路 RGB 灯，资料给出了 FD 软件测试方法和 Arduino 例程，适合做状态反馈、调试提示和运行可视化。</p>
+          </article>
+          <article>
+            <b>05</b>
+            <h3>可编程 ID 与总线扩展</h3>
+            <p>出厂默认 ID 为 0，文档说明可设置范围为 0 到 253。多个 TTL Node (A) 与总线舵机可共线使用，但需要先避免 ID 冲突。</p>
+          </article>
+          <article>
+            <b>06</b>
+            <h3>兼容灵影现有开发链路</h3>
+            <p>现有资料提供 FD 调试软件、C++ / Python 控制方式和基于 Robot Driver with ESP32S3 Lite 的 Arduino 例程，适合继续接入现有总线项目。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interfaces" class="section soft">
+      <div class="container split">
+        <img src="assets/usb-type-c.webp" alt="TTL Node (A) USB Type-C 接口与上位机连接示意">
+        <div>
+          <p class="eyebrow">接口接入</p>
+          <h2>USB 直连、TTL Adapter 接入、ESP32S3 控制都已在资料里给出路径</h2>
+          <p>中文使用文档把 TTL Node (A) 的接入方式分成三类：直接通过 USB 连接上位机、通过 TTL Adapter (A) 加入总线、以及接入 Robot Driver with ESP32S3 Lite 由嵌入式程序控制。不同接法的用途和供电边界都已经写明。</p>
+          <ul class="check-list">
+            <li><strong>直接 USB 接入：</strong>适合上位机调参、RGB 控制、接收器信号读取和总线状态查看。</li>
+            <li><strong>通过 TTL Adapter (A) 接入：</strong>可一并完成供电与通信，并把节点板和其它总线舵机纳入同一条总线。</li>
+            <li><strong>通过 ESP32S3 Lite 接入：</strong>资料包已给出基于 Arduino IDE 的节点板例程，方便嵌入式集成。</li>
+            <li><strong>供电接口说明：</strong>文档说明 HX-5264-3P 与 PH2.0-3P 可用于供电；GH1.25-3P 仅用于信号传输，不作为供电口。</li>
+          </ul>
+          <div class="notice">
+            <strong>使用边界：</strong>在不接外部供电、仅通过 USB 供电时，可用于为总线舵机调参，但不能驱动舵机转动；同时可给 5V 航模接收器供电与通信，文档给出的电流上限为 500mA。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section deep">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">总线集成</p>
+          <h2>一块小节点板，同时连接总线舵机、上位机和接收器</h2>
+          <p>现有详情素材和使用文档都在强调 TTL Node (A) 的位置不是“额外配件”，而是一个总线系统里的功能节点。它能把接收器输入、状态灯、辅助供电和调参入口集中到机械臂或机器人上，减少额外走线。</p>
+          <div class="mini-grid">
+            <div><strong>默认 1Mbps</strong><span>出厂默认波特率为 1Mbps，可在 FD 软件中改写为与总线舵机一致的设置。</span></div>
+            <div><strong>ID 0~253</strong><span>设备 ID 可改写，适合同一总线下部署多个节点板或与多只舵机混合工作。</span></div>
+            <div><strong>总线电压检测</strong><span>文档列出了 ADC 输入通道 1 用于检测总线电压，便于上位机或程序读取电源状态。</span></div>
+            <div><strong>兼容总线设备</strong><span>物料中提到可与常见 TTL 串口总线协议设备以及飞特 STS / SCS / HLS 系列总线舵机共线使用。</span></div>
+          </div>
+        </div>
+        <img src="assets/bus-devs.webp" alt="TTL Node (A) 与上位机、总线舵机和控制板集成示意">
+      </div>
+    </section>
+
+    <section id="scenarios" class="section">
+      <div class="container contrast-grid">
+        <div class="contrast-copy">
+          <p class="eyebrow">应用场景</p>
+          <h2>更适合需要接收器输入、状态反馈和辅助供电的机械臂与机器人</h2>
+          <p>现有场景素材主要围绕机械臂和移动底盘：一类是把节点板放在机械臂末端读取接收器信号、控制指示灯和供电口；另一类是放在总线系统里，通过 PC、树莓派或 ESP32S3 统一管理。页面只保留资料里已经出现过的场景，不把它包装成无边界的通用控制器。</p>
+          <ul class="check-list">
+            <li><strong>S.BUS 遥控接入：</strong>把航模接收器信号送进 TTL 总线项目，减少单独接收模块和线束。</li>
+            <li><strong>机械臂末端节点：</strong>在夹爪附近放置状态灯和辅助供电口，方便末端模块调试与联动。</li>
+            <li><strong>上位机调参与测试：</strong>可直接连接 PC、树莓派、Jetson 等设备做图形化调参或程序控制。</li>
+            <li><strong>教学与开发示例：</strong>中文文档提供 Arduino / ESP32S3 示例，适合原型验证和课程实践。</li>
+          </ul>
+        </div>
+        <div class="compare-panel">
+          <img src="assets/sbus-input.webp" alt="TTL Node (A) S.BUS 航模接收器接入场景">
+          <img src="assets/example.webp" alt="TTL Node (A) 在机械臂与 Robot Driver with ESP32S3 Lite 系统中的应用示例">
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container split">
+        <img src="assets/cover-cn.webp" alt="TTL Node (A) 中文产品主图">
+        <div>
+          <p class="eyebrow">资料支持</p>
+          <h2>文档、例程、图形化调参入口都已经在资料包中备齐</h2>
+          <p>对需要快速上手的人来说，TTL Node (A) 的优势不只在板卡本身。现有资料已经给出中文使用文档、FD 软件接入说明、库与示例压缩包，以及围绕 ESP32S3 Lite 的 Arduino 演示代码。</p>
+          <ul class="check-list">
+            <li><strong>图形化软件：</strong>Windows 下可使用 FD 软件搜索设备、修改 ID 和波特率、测试 RGB 与 PWM。</li>
+            <li><strong>程序控制方式：</strong>资料说明其它系统可使用程序控制，并提供了 C++ / Python 方向的库与例程。</li>
+            <li><strong>Arduino 示例：</strong>现有中文文档中列出了修改 ID、读取电压、PWM 控制、RGB 控制和读取 S.BUS 的示例。</li>
+            <li><strong>结构与接线辅助：</strong>详情物料已包含产品图、应用场景图和包装清单图，便于二次整理到项目资料中。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="section">
+      <div class="container specs-layout">
+        <div>
+          <p class="eyebrow">技术参数</p>
+          <h2>TTL Node (A) 已确认参数与接口要点</h2>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><th>产品型号</th><td>TTL Node (A)</td></tr>
+                <tr><th>产品类型</th><td>多功能 TTL 总线节点板</td></tr>
+                <tr><th>板卡尺寸</th><td>30 × 35 mm（详情物料标注）</td></tr>
+                <tr><th>默认总线 ID</th><td>0</td></tr>
+                <tr><th>ID 设置范围</th><td>0~253</td></tr>
+                <tr><th>默认波特率</th><td>1 Mbps</td></tr>
+                <tr><th>可选波特率参数</th><td>1000000 / 500000 / 250000 / 128000 / 115200 / 76800 / 57600 / 38400</td></tr>
+                <tr><th>外部供电电压</th><td>9~12.6V</td></tr>
+                <tr><th>接收器供电</th><td>5V，文档标注电流不大于 500mA</td></tr>
+                <tr><th>通信与调参入口</th><td>USB Type-C，支持 PC、树莓派、Jetson 等上位机接入</td></tr>
+                <tr><th>总线接口说明</th><td>HX-5264-3P 与 PH2.0-3P 可用于供电和通信；GH1.25-3P 仅用于信号传输</td></tr>
+                <tr><th>S.BUS 接入</th><td>支持通过 2.54mm-3P 接口读取航模接收器信号</td></tr>
+                <tr><th>PWM 输出</th><td>2 路可调电源输出，文档示例控制值范围为 0~1000</td></tr>
+                <tr><th>RGB 指示</th><td>2 路 RGB 状态灯，单色通道示例值范围为 0~7</td></tr>
+                <tr><th>电压检测</th><td>ADC 输入通道 1 用于检测总线电压</td></tr>
+                <tr><th>开发支持</th><td>FD 软件、库与例程、Arduino / ESP32S3 Lite 示例</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <aside>
+          <img src="assets/why.webp" alt="TTL Node (A) 亮点概览">
+          <p>现有详情物料把 TTL Node (A) 定位为紧凑型 TTL 总线扩展节点，重点是节省空间、降低走线复杂度，并把遥控器输入、状态指示和辅助供电集中到同一块板上。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="package" class="section">
+      <div class="container package-grid">
+        <div>
+          <p class="eyebrow">包装清单</p>
+          <h2>当前成套物料中给出的标准随包配件</h2>
+          <p class="package-note">包装清单图片已明确列出板卡与三根线材，便于后续在商品页、发货清单或售后文档中保持一致。若后续用户调整线材规格，应以实际发货版本为准。</p>
+          <div class="package-list">
+            <div><span>01</span><p>TTL Node (A) 多功能 TTL 总线节点板</p></div>
+            <div><span>02</span><p>GH1.25-3P 公头线，黑色硅胶线，300mm</p></div>
+            <div><span>03</span><p>5264-3P 转 PH2.0-3P 总线线，黑色，250mm</p></div>
+            <div><span>04</span><p>USB-A 转 USB-C 数据线，1m</p></div>
+          </div>
+        </div>
+        <img src="assets/package.webp" alt="TTL Node (A) 包装清单">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta">
+        <div>
+          <p class="eyebrow">下一步</p>
+          <h2>可以先用 FD 软件完成 ID 与波特率配置，再把节点板接入总线系统</h2>
+          <p>如果你当前只是要把节点板加入已有舵机总线，建议先单独连接一个设备完成 ID 修改，再与舵机或其它 TTL Node (A) 共线接入，避免默认 ID 冲突。Wiki 地址仍保留占位，待用户补充正式链接。</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://lygion.ai/">访问灵影官网</a>
+          <a class="ghost" href="#">Wiki 资料待补充</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© LYGION 灵影 | TTL Node (A) 中文响应式产品详情页</p>
+      <a href="https://lygion.ai/">https://lygion.ai/</a>
+    </div>
+  </footer>
+</body>
+</html>

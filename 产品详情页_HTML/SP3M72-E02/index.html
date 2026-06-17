@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SP3M72-E02 HTD 3M 72T 内置绝对磁编码器同步轮 | 灵影</title>
+  <meta name="description" content="SP3M72-E02 是内置 E02 12bit 绝对磁编码器和 F6906 法兰轴承的 HTD 3M 72T 同步轮，适配 15mm 宽同步带，支持角度与速度反馈、DC 5-28V 和 1Mbps TTL 总线。">
+  <meta name="keywords" content="SP3M72-E02,HTD 3M 72T同步轮,内置编码器同步轮,绝对角度编码器,机械臂减速组">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner">
+    <a class="home-link" href="https://lygion.ai/" aria-label="返回灵影官网"><span class="logo-mark">LY</span><span><strong>LYGION 灵影</strong><small>返回官方网站</small></span></a>
+    <nav aria-label="页面导航"><a href="#features">产品优势</a><a href="#applications">应用场景</a><a href="#install">安装接线</a><a href="#specs">技术参数</a><a class="wiki-link" href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料</a></nav>
+  </div></header>
+  <main>
+    <section class="hero"><div class="container hero-grid">
+      <div><p class="eyebrow">HTD 3M 72T absolute encoder pulley</p><h1>SP3M72-E02<br><span>内置 12bit 绝对磁编码器同步轮</span></h1>
+        <p class="lead">同步轮、法兰轴承、固定座与编码器一体化。安装在机械臂关节、同步带减速组或舵轮转向输出端，可直接读取输出端的绝对角度和速度。</p>
+        <div class="hero-actions"><a class="primary" href="#specs">查看技术参数</a><a class="secondary" href="#" aria-label="Wiki 资料页面链接待更新">进入 Wiki 资料页</a></div>
+      </div>
+      <div class="hero-media"><img src="assets/hero.png" alt="SP3M72-E02 HTD 3M 72T 内置绝对磁编码器同步轮实物图"></div>
+    </div>
+    <div class="container stat-grid"><div><strong>12bit</strong><span>绝对角度反馈</span></div><div><strong>HTD 3M 72T</strong><span>同步轮规格</span></div><div><strong>DC 5-28V</strong><span>宽电压供电</span></div><div><strong>&lt;10mA</strong><span>编码器工作电流</span></div></div>
+    </section>
+
+    <section id="features" class="section"><div class="container">
+      <div class="section-heading"><p class="eyebrow">核心优势</p><h2>让减速组输出端角度检测更直接</h2><p>相较于在电机端估算输出角度，SP3M72-E02 将编码器直接集成到同步轮输出端，更适合检测真实关节角度，并减少独立轴承座与编码器结构的设计工作。</p></div>
+      <div class="feature-grid">
+        <article><b>01</b><h3>12bit 绝对角度</h3><p>单圈 0-4095 对应 360°，断电后不丢失单圈绝对位置，上电无需重新回零。</p></article>
+        <article><b>02</b><h3>角度与速度反馈</h3><p>实时读取同步轮输出端位置和速度，适合机器人关节闭环监测与状态判断。</p></article>
+        <article><b>03</b><h3>任意基准置位</h3><p>可通过软件将当前位置设置为指定值，校准参数掉电保存，方便装配后调试。</p></article>
+        <article><b>04</b><h3>轴承与固定座一体</h3><p>内置 F6906 法兰轴承；中间固定座保持静止，同步轮在外部平稳旋转。</p></article>
+        <article><b>05</b><h3>适配宽同步带</h3><p>HTD 3M 72T 规格，适配 15mm 宽 3M 同步带，适用于较高负载的同步带传动。</p></article>
+        <article><b>06</b><h3>TTL 总线接入</h3><p>1Mbps 单线 TTL 通信，可与灵影设备及飞特 STS、HLS 系列总线舵机混合使用。</p></article>
+      </div>
+    </div></section>
+
+    <section id="applications" class="section soft"><div class="container split">
+      <div><p class="eyebrow">应用场景</p><h2>机械臂关节、同步带减速组与舵轮转向</h2>
+        <ul class="check-list"><li><strong>机械臂关节：</strong>安装在减速组输出端，读取连杆真实绝对角度。</li><li><strong>同步带减速机构：</strong>兼顾传动和反馈，减少额外编码器安装空间。</li><li><strong>舵轮转向模组：</strong>用于检测轮组朝向，支持上电免机械回零初始化。</li><li><strong>自动化旋转机构：</strong>同步读取多个输出端的角度和速度。</li></ul>
+      </div>
+      <img src="assets/application.png" alt="SP3M72-E02 安装在同步带减速组输出端的应用">
+    </div></section>
+
+    <section id="install" class="section deep"><div class="container split">
+      <img src="assets/wiring.png" alt="SP3M72-E02 HC-1.25-3P 接线示例">
+      <div><p class="eyebrow">安装与接线</p><h2>机械安装与总线接入分别完成</h2>
+        <p>中心固定轴通过 6 个 M4 螺纹孔连接静止结构；同步轮平面的 8 个 M3 螺纹孔可连接连杆或其它旋转结构。编码器使用 HC-1.25-3P 接口，线序为 - / + / S。</p>
+        <div class="mini-grid"><div><strong>PC / SBC</strong><span>通过 TTL Adapter 与 Hub 接入</span></div><div><strong>MCU</strong><span>ESP32、STM32 可使用 C/C++ SDK</span></div><div><strong>多设备</strong><span>ID 1-252，支持同步读取</span></div></div>
+      </div>
+    </div></section>
+
+    <section id="specs" class="section"><div class="container specs-layout">
+      <div><p class="eyebrow">技术参数</p><h2>SP3M72-E02 参数表</h2><div class="table-wrap"><table><tbody>
+        <tr><th>同步轮规格</th><td>HTD 3M 72T</td></tr><tr><th>适配同步带</th><td>15mm 宽 HTD 3M 同步带</td></tr>
+        <tr><th>组件总厚度</th><td>22.05mm</td></tr><tr><th>同步轮厚度</th><td>20mm</td></tr>
+        <tr><th>旋转端安装孔</th><td>8 × M3，PCD Ø60mm</td></tr><tr><th>固定轴安装孔</th><td>6 × M4，PCD Ø23mm</td></tr>
+        <tr><th>轴承</th><td>F6906 法兰轴承</td></tr><tr><th>编码器</th><td>E02 12bit 绝对磁编码器</td></tr>
+        <tr><th>角度反馈</th><td>0-4095 对应 360°</td></tr><tr><th>速度反馈</th><td>步/秒，带正负方向</td></tr>
+        <tr><th>通信</th><td>单线 TTL，默认 1Mbps</td></tr><tr><th>接口</th><td>HC-1.25-3P，- / + / S</td></tr>
+        <tr><th>输入电压 / 电流</th><td>DC 5-28V / &lt;10mA</td></tr><tr><th>重量</th><td>约 190g</td></tr>
+        <tr><th>径向磁铁</th><td>默认配备 6 × 2.5mm 径向磁铁</td></tr>
+      </tbody></table></div></div>
+      <aside><img src="assets/drawing.png" alt="SP3M72-E02 安装尺寸图"><p>正式结构设计请以资料包中的最新 DXF、PDF 和 STEP 文件为准。</p></aside>
+    </div></section>
+
+    <section class="section soft"><div class="container split">
+      <div><p class="eyebrow">选型说明</p><h2>适合需要自行设计安装结构的项目</h2><p>该产品提供同步轮、轴承、固定座与编码器组件，但仍需要用户根据机械臂、减速组或底盘结构设计相应安装件。希望直接使用完整减速模组时，可选择已集成电机与传动结构的产品。</p>
+        <div class="notice"><strong>注意：</strong>同步轮传动能力还受同步带张力、包角、支撑刚度和安装精度影响，不能仅按同步轮规格判断整机载荷。</div>
+      </div>
+      <img src="assets/features.png" alt="SP3M72-E02 内置编码器同步轮核心特点">
+    </div></section>
+
+    <section class="section"><div class="container cta"><div><p class="eyebrow">资料与 SDK</p><h2>获取模型、图纸、接线和读取示例</h2><p>Wiki 页面将提供 Python、C++ SDK、结构资料及基准校准教程。</p></div><a href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料页（待更新）</a></div></section>
+  </main>
+  <footer><div class="container"><span>LYGION 灵影 · SP3M72-E02</span><a href="https://lygion.ai/">返回 lygion.ai</a></div></footer>
+</body>
+</html>
