@@ -3,331 +3,278 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TTL Adapter (A) TTL总线舵机驱动板 | USB/UART/单线TTL控制与3Mbps高速总线 | 灵影 LYGION</title>
-  <meta name="description" content="TTL Adapter (A) 是灵影 LYGION 面向机器人与嵌入式控制的超小型 TTL 总线舵机驱动板，支持 USB Type-C、UART RX/TX、单线 TTL 三种接入方式，3 Mbps 高速总线通信，5~25.2V 宽压输入，以及无外接电源参数设置与固件升级。">
-  <meta name="keywords" content="TTL Adapter (A),TTL总线舵机驱动板,TTL舵机控制板,USB Type-C舵机驱动,UART RX TX舵机,3Mbps总线舵机,LeRobot,Feetech,灵影,LYGION">
+  <title>TTL Adapter (A)｜USB / UART 接入 TTL 舵机、编码器与步进驱动器｜灵影 LYGION</title>
+  <meta name="description" content="TTL Adapter (A) 将 PC、树莓派、Jetson、ESP32、STM32 接入单线 TTL 总线，可连接 TTL 舵机、TTL Encoder、TTL Stepper Driver 等总线设备。支持 USB Type-C、UART、最高 3 Mbps 通信、5–25.2V 输入、分组供电与供电解耦。">
+  <meta name="keywords" content="TTL Adapter (A),TTL总线适配器,TTL舵机,TTL Encoder,TTL Stepper Driver,USB转TTL总线,单线TTL,分组供电,供电解耦,机器人总线">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "TTL Adapter (A)",
+    "brand": { "@type": "Brand", "name": "LYGION 灵影" },
+    "description": "通过 USB Type-C 或 UART 将上位机与控制器接入单线 TTL 总线，连接 TTL 舵机、TTL Encoder、TTL Stepper Driver 等设备。",
+    "category": "机器人 TTL 总线适配器",
+    "image": "https://lygion.ai/product-pages/TTL-Adapter-A/assets/photo-dev.jpg"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="home-link" href="https://lygion.ai/" aria-label="返回灵影官网">
-        <span class="logo-mark">LY</span>
-        <span><strong>LYGION 灵影</strong><small>返回官方网站</small></span>
+      <a class="brand" href="https://lygion.ai/" aria-label="返回灵影官网">
+        <span class="brand-mark">LY</span>
+        <span><strong>LYGION 灵影</strong><small>机器人硬件与开放生态</small></span>
       </a>
       <nav aria-label="页面导航">
-        <a href="#features">产品优势</a>
-        <a href="#interfaces">接口资源</a>
-        <a href="#integration">集成方式</a>
-        <a href="#specs">技术参数</a>
-        <a href="#package">套装配件</a>
-        <a class="wiki-link" href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料</a>
+        <a href="#devices">可接设备</a>
+        <a href="#connect">接入方式</a>
+        <a href="#interfaces">接口与供电</a>
+        <a href="#power-grouping">供电分组</a>
+        <a href="#specs">参数</a>
+        <a href="#package">套装</a>
+        <a class="nav-cta" href="https://wiki.lygion.ai/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer">产品 Wiki</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-glow hero-glow-a"></div>
-      <div class="hero-glow hero-glow-b"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">TTL bus servo adapter board</p>
-          <h1>TTL Adapter (A)<br><span>超小型 TTL 总线舵机驱动板与通信模块</span></h1>
-          <p class="lead">TTL Adapter (A) 面向机器人原型、嵌入式控制和多舵机系统集成。现有资料确认它支持 USB Type-C、UART RX/TX 和单线 TTL 三种控制信号同时接入，最高 3 Mbps 总线通信，并可在无需外接电源的情况下完成参数设置与固件升级。</p>
+          <p class="eyebrow">TTL BUS ADAPTER</p>
+          <h1>TTL 总线设备驱动板</h1>
+          <h3>TTL Adapter (A)</h3>
+          <p class="lead">用 USB 或 UART 连接上位机与控制器。舵机、编码器、步进驱动器等单线 TTL 设备，共用一套通信链路，简化机器人系统设计。</p>
           <div class="hero-actions">
-            <a class="primary" href="#specs">查看技术参数</a>
-            <a class="secondary" href="#integration">了解接入方式</a>
+            <a class="button primary" href="#connect">查看接入方式</a>
+            <a class="button secondary" href="#specs">查看参数</a>
           </div>
-          <div class="hero-note">
-            <strong>供电边界：</strong>USB 适合通信、调参和升级固件；驱动舵机或关节时，仍需按资料要求使用 5~25.2V 供电，并保证输入电压与所连接舵机/关节/轮毂电机的工作电压匹配。
-          </div>
+          <ul class="quick-specs" aria-label="核心参数">
+            <li><strong>3 Mbps</strong><span>高通信速率</span></li>
+            <li><strong>5–25.2V</strong><span>宽电压输入</span></li>
+            <li><strong>27 × 35 mm</strong><span>紧凑尺寸易集成</span></li>
+          </ul>
         </div>
-        <div class="hero-visual">
-          <div class="hero-frame">
-            <img src="assets/hero.jpg" alt="TTL Adapter (A) TTL 总线舵机驱动板主图">
-          </div>
-        </div>
-      </div>
-      <div class="container stat-grid">
-        <article><strong>3 Mbps</strong><span>总线通信速率上限</span></article>
-        <article><strong>5~25.2V</strong><span>宽电压输入范围</span></article>
-        <article><strong>27 x 35 mm</strong><span>紧凑板载尺寸</span></article>
-        <article><strong>253 个</strong><span>同总线可挂接 HLS / STS / SCS 系列舵机上限</span></article>
-        <article><strong>7A</strong><span>板载高质量 DC 插座额定电流</span></article>
-        <article><strong>3 路控制入口</strong><span>USB / UART / 单线 TTL 同时接入、自动识别</span></article>
-      </div>
-      <div class="container visual-strip" aria-label="TTL Adapter (A) 典型照片与应用素材">
-        <figure>
-          <img src="assets/photo-dev.jpg" alt="TTL Adapter (A) 连接开发板的实拍图">
-          <figcaption>适合原型开发与嵌入式控制调试</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/scene.jpg" alt="TTL Adapter (A) 多板分组串联与机器人应用场景图">
-          <figcaption>支持多板分组串联和多舵机系统集成</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/photo-module.jpg" alt="TTL Adapter (A) 配合舵机使用的实拍图">
-          <figcaption>可驱动 Feetech HLS、STS、SCS 系列总线舵机</figcaption>
+        <figure class="hero-media">
+          <img src="assets/photo-dev.jpg" alt="TTL Adapter (A) 连接开发设备的实拍图">
+          <figcaption><span>临时素材</span> 主视觉建议按拍摄清单重新拍摄</figcaption>
         </figure>
       </div>
     </section>
 
-    <section id="features" class="section">
+    <section class="proof-strip" aria-label="产品要点">
+      <div class="container proof-grid">
+        <div><strong>USB Type-C</strong><span>PC / SBC 直接接入<br>SBS: Raspberry Pi、Jetson、RK 等单板电脑</span></div>
+        <div><strong>UART RX / TX</strong><span>MCU 与嵌入式控制器<br>ESP32、Arduino、STM32 等嵌入式控制器</span></div>
+        <div><strong>单线 TTL</strong><span>可接入多种总线设备，支持<a class="inline-link" href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer">分组供电 / 供电解耦</a></span></div>
+        <div><strong>USB 调参</strong><span>仅 USB 连接即可为低压总线设备调参</span></div>
+      </div>
+    </section>
+
+    <section id="devices" class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Product highlights</p>
-          <h2>面向机器人原型与产品化集成的高兼容总线驱动板</h2>
-          <p>资料中的定位很明确：这不是单纯把 USB 转成舵机线的转接件，而是一块兼顾控制、通信、供电和系统扩展的超小型 TTL 总线驱动板。它既能服务调试阶段，也适合被直接塞进四足、六足、机械臂等体积敏感产品里。</p>
+          <p class="eyebrow">ONE BUS, MORE DEVICES</p>
+          <h2>适配多种总线设备</h2>
+          <p>凡是协议与电气规格兼容的单线 TTL 总线设备，都可通过 TTL Adapter (A) 接入主机。</p>
         </div>
-        <div class="feature-grid">
+        <div class="device-grid">
           <article>
-            <b>01</b>
-            <h3>无需外接电源即可调参与升级</h3>
-            <p>只需一根 USB 线即可与舵机通信、设置参数和升级固件，更适合开发阶段反复调试与出厂前批量配置。</p>
+            <span class="device-index">01</span>
+            <h3>TTL 总线舵机</h3>
+            <p>控制位置、速度并读取设备反馈。</p>
+            <strong>飞特 HLS / STS / SCS 系列</strong>
           </article>
           <article>
-            <b>02</b>
-            <h3>三种控制方式同时接入</h3>
-            <p>UART RX/TX 引脚、USB Type-C 和单线 TTL 接口可以同时接入，自动识别，无需手动切换信号源。</p>
+            <span class="device-index">02</span>
+            <h3>TTL Encoder</h3>
+            <p>读取关节角度、速度等编码器数据。</p>
+            <strong>位置 / 速度 / 状态反馈</strong>
           </article>
           <article>
-            <b>03</b>
-            <h3>3 Mbps 高速总线通信</h3>
-            <p>资料明确给出最高 3 Mbps 总线速度，适合高端总线设备，能更快获取位置、速度、温度、扭矩锁等反馈信息。</p>
+            <span class="device-index">03</span>
+            <h3>TTL Stepper Driver</h3>
+            <p>让步进电机加入同一条控制总线。</p>
+            <strong>多设备设置独立 ID</strong>
           </article>
           <article>
-            <b>04</b>
-            <h3>5~25.2V 宽压与 7A DC 插座</h3>
-            <p>板载高质量 DC 插座额定电流可达 7A，可配合不同电压等级的舵机做分组供电与混合系统集成。</p>
-          </article>
-          <article>
-            <b>05</b>
-            <h3>兼容开源机器人生态</h3>
-            <p>现有详情图明确标注兼容 LeRobot 及其分支项目，并兼容 Feetech HLS / STS / SCS 系列总线舵机和灵影 EoAT Node (A) 总线节点板。</p>
-          </article>
-          <article>
-            <b>06</b>
-            <h3>小尺寸利于嵌入式安装</h3>
-            <p>板载尺寸仅 27 x 35 mm，安装定位孔直径 2.1 mm，孔距 13 x 20 mm，适合对空间要求较高的机器人项目。</p>
+            <span class="device-index">04</span>
+            <h3>其他 TTL 节点</h3>
+            <p>扩展传感、执行与 I/O 节点。</p>
+            <strong>一条总线控制多种机器人模块</strong>
           </article>
         </div>
-        <div class="panel image-panel">
-          <img src="assets/feature-grid.jpg" alt="TTL Adapter (A) 产品特点与功能说明图">
-        </div>
-      </div>
-    </section>
-
-    <section id="interfaces" class="section soft">
-      <div class="container split">
-        <img src="assets/board.jpg" alt="TTL Adapter (A) 板载资源与接口标注图">
-        <div>
-          <p class="eyebrow">Board resources</p>
-          <h2>接口定义直接面向开发、集成与板间级联</h2>
-          <p>现有详情素材已经把板载资源标注得比较完整。这里将接口与边界整理成 HTML 文本，方便后续用于选型页检索、接线说明引用和 Wiki 补链。</p>
-          <ul class="check-list">
-            <li><strong>单线 TTL 总线舵机 / 关节控制接口：</strong>HX-5264-3P，共 2 路，分别位于上侧两组接口位置。</li>
-            <li><strong>单线 TTL 板间通信接口：</strong>GH1.25-3P，共 2 路，便于多板串联和分组扩展。</li>
-            <li><strong>UART 串口接口：</strong>RX / TX / GND，2.54 mm 间距排针，适合 ESP32、ESP32S3、STM32、Arduino 等嵌入式设备。</li>
-            <li><strong>USB 接口：</strong>Type-C，用于连接 PC、树莓派、Jetson、RK 等带 USB 的主机平台，也可用于调参与升级。</li>
-            <li><strong>供电接口：</strong>DC5521，资料标注为 DC-005H-D020，支持 5~25.2V 供电。</li>
-            <li><strong>状态指示：</strong>板上带通信状态指示灯，便于确认通信是否正常。</li>
-          </ul>
-          <div class="notice">
-            <strong>注意：</strong>资料明确写明“输入电压需要与连接的总线舵机 / 关节 / 轮毂电机的电压匹配”。因此页面不扩展未证实的线序和默认电源配置，只转录已确认接口与输入范围。
+        <div class="scene-brief" role="note">
+          <div>
+            <p class="eyebrow">待补拍核心画面</p>
+            <h3>一条总线，同时连接三类设备</h3>
+            <p>画面需同时出现 TTL Adapter、TTL Encoder、TTL Stepper Driver 与 TTL 舵机，线材连接完整，设备标签朝向镜头。</p>
           </div>
+          <span class="brief-status">完整拍摄清单已建立</span>
         </div>
       </div>
     </section>
 
-    <section id="integration" class="section deep">
+    <section id="connect" class="section dark-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Integration paths</p>
-          <h2>既能做单板驱动，也能做多板分组供电和上位机桥接</h2>
-          <p>TTL Adapter (A) 的价值不只是“把一块板接上一颗舵机”。从详情素材可以确认，它支持多板串联、异电压分组、USB 主机接入和 UART 主控接入，适合把多个关节拆成更清晰的供电与通信拓扑。</p>
+        <div class="section-heading light-heading">
+          <p class="eyebrow">CONNECT IN TWO STEPS</p>
+          <h2>降低机器人系统复杂度</h2>
+          <p>上位机不需要直接处理每一种设备的独立接线。<br>仅需一个接口，即可控制252个总线设备</p>
         </div>
-        <div class="mini-grid">
-          <div>
-            <strong>多板分组串联</strong>
-            <span>不同电压的舵机可分别接在不同板载上，再把多个板子串联使用，但需确保舵机 ID 不同。</span>
-          </div>
-          <div>
-            <strong>混合供电</strong>
-            <span>多组不同电源供电的舵机可串联在同一路总线中使用，提升复杂系统布线灵活性。</span>
-          </div>
-          <div>
-            <strong>USB 上位机控制</strong>
-            <span>可连接树莓派、Jetson、RK、N100 等带 USB 接口的单板电脑，快速完成原型搭建。</span>
-          </div>
-          <div>
-            <strong>UART 嵌入式控制</strong>
-            <span>可连接 ESP32、ESP32S3、STM32、Arduino 等设备，完成轻量化嵌入式系统集成。</span>
-          </div>
-          <div>
-            <strong>机器人应用</strong>
-            <span>适用于四足、六足、机械臂、人形等需要多个总线舵机的机器人项目。</span>
-          </div>
-          <div>
-            <strong>多信息反馈</strong>
-            <span>可读取位置、速度、扭矩锁等舵机支持的参数，也能反馈运行模式信息，支持更高级的闭环自动控制。</span>
-          </div>
+        <div class="path-grid">
+          <article>
+            <span class="path-number">1</span>
+            <p class="path-label">主机侧</p>
+            <h3>USB 或 UART 连接到控制器</h3>
+            <p>PC、树莓派、Jetson、RK 使用 USB；ESP32、STM32、Arduino 使用 UART。</p>
+          </article>
+          <article>
+            <span class="path-number">2</span>
+            <p class="path-label">总线侧</p>
+            <h3>控制总线设备</h3>
+            <p>为总线设备设定独立 ID，接入与总线设备电压匹配的电源。</p>
+          </article>
         </div>
-        <div class="diagram-grid">
-          <figure>
-            <img src="assets/multi-control.jpg" alt="TTL Adapter (A) 同时接入 USB、UART 和单线 TTL 的控制方式示意图">
-            <figcaption>USB、UART RX/TX、单线 TTL 三种控制入口并存</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/power.jpg" alt="TTL Adapter (A) 不同电压舵机分组供电的示意图">
-            <figcaption>不同电压舵机分组供电并联到同一路总线</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/host.jpg" alt="TTL Adapter (A) 接入树莓派与嵌入式设备的示意图">
-            <figcaption>树莓派 / Jetson / ESP32 / STM32 等主控均可接入</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/speed.jpg" alt="TTL Adapter (A) 3Mbps 高速总线通信示意图">
-            <figcaption>3 Mbps 总线通信有利于动作流畅和数据回传</figcaption>
-          </figure>
+        <div class="platform-row" aria-label="支持的主机平台">
+          <span>PC</span><span>Linux SBC</span><span>Raspberry Pi</span><span>Jetson</span><span>ESP32</span><span>STM32</span>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split">
+    <section id="interfaces" class="section soft-section">
+      <div class="container interface-layout">
         <div>
-          <p class="eyebrow">Software and docs</p>
-          <h2>现有资料包已覆盖软件、SDK、教程截图与开源入口</h2>
-          <p>外部资料目录中已经包含调试软件、驱动和多语言 SDK，适合把产品页和后续 Wiki 资料页打通。当前可以直接确认的资料包括：</p>
-          <ul class="check-list">
-            <li><strong>软件工具：</strong>`FD1.9.8.5(250729).7z`、`UartAssist.zip`、`CH340_URT.rar`。</li>
-            <li><strong>SDK：</strong>`FTServo_Arduino-main.zip`、`FTServo_Linux-main.zip`、`FTServo_Python-main.zip`、`FTServo_stm32HAL-main.zip`。</li>
-            <li><strong>开源入口：</strong>`Github.txt` 指向 `https://github.com/ftservo`。</li>
-            <li><strong>教程与案例：</strong>详情素材中给出上手教程截图、示例代码截图和开源资源截图，可作为正式 Wiki 补充内容。</li>
-          </ul>
-          <div class="notice">
-            <strong>资料页状态：</strong>本页面保留 Wiki 占位入口；等正式地址确定后，可直接把软件下载、SDK 文档和教程链接补到 Wiki 页面。
+          <p class="eyebrow">BOARD RESOURCES</p>
+          <h2>接口丰富，功能实用</h2>
+          <div class="interface-list">
+            <div><strong>USB Type-C</strong><span>主机与总线设备通信、调参、固件升级</span></div>
+            <div><strong>UART RX / TX / GND</strong><span>2.54 mm 排针，连接 MCU</span></div>
+            <div><strong>HX-5264-3P × 2</strong><span>总线设备通信与供电</span></div>
+            <div><strong>GH1.25-3P × 2</strong><span>板间单线 TTL 通信，可用于<a class="inline-link" href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer">通信级联与供电解耦</a></span></div>
+            <div><strong>DC5521</strong><span>5–25.2V 总线电源输入</span></div>
+            <div><strong>状态指示灯</strong><span>快速确认通信状态</span></div>
           </div>
         </div>
-        <img src="assets/docs.jpg" alt="TTL Adapter (A) 教程截图、示例代码和开源资源支持图">
+        <div class="interface-media">
+          <img src="assets/photo-dev.jpg" alt="TTL Adapter (A) 接入开发设备的实拍图，接口说明由页面 HTML 呈现">
+          <p><strong>需要补拍：</strong>正面垂直俯拍、背面垂直俯拍、四个 45° 角度。不要在图片中添加箭头和文字，接口名称全部由 HTML 展示。</p>
+        </div>
+      </div>
+      <div class="container power-note">
+        <strong>供电提醒</strong>
+        <p>对于低电压的总线设备，仅 USB 连接即可用于通信、调参和固件升级。但驱动设备时必须接入总线电源，并确保电压与所有连接设备匹配。多种电压或大电流系统供电方案可参考<a class="inline-link" href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer">分组供电和供电解耦教程</a>。</p>
       </div>
     </section>
 
-    <section id="specs" class="section soft">
+    <section id="power-grouping" class="section power-section">
+      <div class="container power-layout">
+        <div class="section-heading">
+          <p class="eyebrow">POWER GROUPING</p>
+          <h2>支持分组供电</h2>
+          <p>多设备系统不必仅用一路电源供电。TTL Adapter (A) 板载板间通信接口，可连接其它 TTL Adapter (A) 或 <a class="inline-link" href="https://wiki.lygion.ai/reference/bus-devices/hub-boards/ttl-5264-8p-hub-a/" target="_blank" rel="noopener noreferrer">Hub Boards</a> 实现分组供电/供电解耦。</p>
+          <a class="text-link" href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer">查看分组供电和供电解耦完整教程</a>
+        </div>
+        <div class="power-rules">
+          <article>
+            <span>通信</span>
+            <strong>S 信号与 GND 共地</strong>
+            <p>你可以通过 <a class="inline-link" href="https://wiki.lygion.ai/reference/bus-devices/hub-boards/ttl-5264-8p-hub-a/" target="_blank" rel="noopener noreferrer">Hub Boards</a> 来扩展更多总线设备。</p>
+          </article>
+          <article>
+            <span>供电</span>
+            <strong>各组独立接入</strong>
+            <p>12V、24V 或大电流设备分别成组，每组电压必须匹配该组设备。</p>
+          </article>
+          <article>
+            <span>解耦</span>
+            <strong>组间不连接电源正极</strong>
+            <p>通信级联只传递 S 与 GND，可同时使用不同电压的总线设备。</p>
+          </article>
+          <article class="rule-warning">
+            <span>必须</span>
+            <strong>总线上设备 ID 不可以重复</strong>
+            <p>分组供电后，也仍然是一根总线控制全部总线设备，所以总线设备 ID 必须唯一。</p>
+          </article>
+        </div>
+      </div>
+      <div class="container power-checklist">
+        <strong>建议分组的情况</strong>
+        <span>总线设备电压不同</span>
+        <span>执行器启动或堵转电流较大</span>
+        <span>线缆较长或设备较多</span>
+        <span>需要独立断电维护</span>
+      </div>
+    </section>
+
+    <section id="specs" class="section">
       <div class="container specs-layout">
         <div>
-          <p class="eyebrow">Specifications</p>
-          <h2>TTL Adapter (A) 已确认规格参数</h2>
-          <div class="table-wrap">
-            <table>
-              <tbody>
-                <tr><th>产品型号</th><td>TTL Adapter (A)</td></tr>
-                <tr><th>产品定位</th><td>面向机器人与嵌入式控制的超小型驱动 / 通信模块</td></tr>
-                <tr><th>供电电压</th><td>5~25.2V，支持 6S 电压输入；输入电压需与所接总线舵机 / 关节 / 轮毂电机的电压匹配</td></tr>
-                <tr><th>供电接口</th><td>5.5 x 2.1 mm DC5521（DC-005H-D020）</td></tr>
-                <tr><th>额定电流</th><td>板载高质量 DC 插座额定电流可达 7A</td></tr>
-                <tr><th>通信接口</th><td>USB Type-C、UART RX/TX（2.54 mm 排针）、单线 TTL 板间接口 GH1.25-3P</td></tr>
-                <tr><th>舵机控制接口</th><td>单线 TTL 总线舵机 / 关节控制接口 HX-5264-3P x2</td></tr>
-                <tr><th>板间接口</th><td>单线 TTL 板间通信接口 GH1.25-3P x2</td></tr>
-                <tr><th>板载尺寸</th><td>27 x 35 mm</td></tr>
-                <tr><th>定位孔直径</th><td>2.1 mm</td></tr>
-                <tr><th>定位孔间距</th><td>13 x 20 mm</td></tr>
-                <tr><th>支持对象</th><td>Feetech HLS / STS / SCS 系列总线舵机，灵影 EoAT Node (A) 总线节点板</td></tr>
-                <tr><th>总线容量</th><td>总线上支持多达 253 个 HLS / STS / SCS 系列总线舵机（供电需满足功率要求）</td></tr>
-                <tr><th>结构资料</th><td>可提供 STEP 模型，详情需联系客户支持</td></tr>
-              </tbody>
-            </table>
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>关键参数</h2>
+          <div class="spec-list">
+            <div><span>主机接口</span><strong>USB Type-C / UART RX TX </strong></div>
+            <div><span>总线类型</span><strong>单线 TTL</strong></div>
+            <div><span>最高通信速率</span><strong>3 Mbps</strong></div>
+            <div><span>输入电压</span><strong>5–25.2V</strong></div>
+            <div><span>DC 插座额定电流</span><strong>7A</strong></div>
+            <div><span>板载尺寸</span><strong>27 × 35 mm</strong></div>
+            <div><span>定位孔</span><strong>直径 2.1 mm</strong></div>
+            <div><span>安装孔距</span><strong>13 × 20 mm</strong></div>
           </div>
         </div>
-        <aside>
-          <img src="assets/size.jpg" alt="TTL Adapter (A) 尺寸图与板载概览图">
-          <p>尺寸图给出了 27 mm 宽度、35.3 mm 总长度、20 mm 内部孔距、2.1 mm 定位孔直径和 13 x 20 mm 安装孔距。正文参数采用图中表格与标注里可直接确认的信息。</p>
+        <aside class="why-card">
+          <p class="eyebrow">WHY IT FITS</p>
+          <h3>简单接线，易于集成</h3>
+          <ul>
+            <li>三种实用信号输入方式，无需手动切换</li>
+            <li>多板串联，方便<a class="dark-link" href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer">分组供电 / 供电解耦</a></li>
+            <li>小尺寸，适合机器人内部安装</li>
+            <li>提供 Python 与 C/C++ 开发教程</li>
+          </ul>
         </aside>
       </div>
     </section>
 
-    <section id="package" class="section">
+    <section id="package" class="section soft-section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Package options</p>
-          <h2>可按交付内容选择不同套装</h2>
-          <p>现有素材已经明确给出三种配件组合，适合区分“只买驱动板”“带数据线调试”“带电源即插即用”三类采购场景。</p>
+          <p class="eyebrow">PACKAGE OPTIONS</p>
+          <h2>套装选择</h2>
         </div>
         <div class="package-grid">
-          <article>
-            <h3>套装一</h3>
-            <p>TTL Adapter (A) 驱动板 + 连接线</p>
-            <ul>
-              <li>双头反向公头 GH1.25-3P 全黑 30 cm 连接线（不含端子长度）</li>
-            </ul>
-          </article>
-          <article>
-            <h3>套装二</h3>
-            <p>驱动板 + 连接线 + Type-C 数据线</p>
-            <ul>
-              <li>适合 PC 或单板电脑调参与调试</li>
-            </ul>
-          </article>
-          <article>
-            <h3>套装三</h3>
-            <p>驱动板 + 连接线 + Type-C 数据线 + 12V 3A DC5521 电源</p>
-            <ul>
-              <li>适合直接上电验证和演示环境</li>
-            </ul>
-          </article>
+          <article><span>01</span><h3>基础套装</h3><p>TTL Adapter (A)<br>GH1.25-3P 连接线</p></article>
+          <article><span>02</span><h3>调试套装</h3><p>基础套装<br>USB Type-C 数据线</p></article>
+          <article><span>03</span><h3>上电套装</h3><p>调试套装<br>12V 3A DC5521 电源</p></article>
         </div>
-        <div class="panel image-panel">
-          <img src="assets/package.jpg" alt="TTL Adapter (A) 套装和配件清单图">
-        </div>
+        <p class="package-note">套装内容以实际销售页面为准。新套装图需采用相同视角、相同间距拍摄，不在图片内标注文字。</p>
       </div>
     </section>
 
-    <section class="section soft">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Product gallery</p>
-          <h2>真实产品素材可直接用于评审、培训与二次发布</h2>
-          <p>以下图片均来自现有产品实拍与详情素材，保留开发板接入、模块近景和典型控制对象视角，方便后续在商城、说明文档或 Wiki 中复用。</p>
-        </div>
-        <div class="gallery-grid">
-          <figure>
-            <img src="assets/photo-dev.jpg" alt="TTL Adapter (A) 连接开发板的实拍图">
-            <figcaption>开发板接入实拍</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/photo-module.jpg" alt="TTL Adapter (A) 通信模块实拍图">
-            <figcaption>通信模块近景</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/photo-servo.jpg" alt="TTL Adapter (A) 配套舵机实拍图">
-            <figcaption>配套总线舵机示例</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/scene.jpg" alt="TTL Adapter (A) 机器人应用场景图">
-            <figcaption>机器人集成场景</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container cta">
+    <section id="support" class="section">
+      <div class="container support-grid">
         <div>
-          <p class="eyebrow">Next step</p>
-          <h2>可继续补充正式 Wiki、软件下载和接线示例</h2>
-          <p>当前页面已经完成中文响应式首版，并预留官网返回入口与 Wiki 按钮。后续适合补充正式 Wiki 地址、软件下载入口、线序图和 SDK 文档跳转。</p>
+          <p class="eyebrow">DEVELOPMENT SUPPORT</p>
+          <h2>提供完整教程，方便敏捷开发</h2>
+          <p>调试工具、SDK 与开发教程等资料可参考产品 Wiki。</p>
         </div>
-        <a href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料页（待更新）</a>
+        <div class="support-items">
+          <a href="https://wiki.lygion.ai/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer"><strong>TTL Adapter (A) Wiki</strong><span>接口、参数与接线说明</span></a>
+          <a href="https://wiki.lygion.ai/" target="_blank" rel="noopener noreferrer"><strong>开发教程</strong><span>调试工具、SDK 与示例</span></a>
+          <a href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer"><strong>供电分组教程</strong><span>多电压、大电流与 Hub 级联</span></a>
+          <a href="https://wiki.lygion.ai/reference/bus-devices/ttl-adapter-a/hardware-overview/" target="_blank" rel="noopener noreferrer"><strong>结构资料</strong><span>STEP 模型与结构集成</span></a>
+        </div>
+      </div>
+      <div class="container cta">
+        <div><strong>需要了解更多？</strong><span>从这里开始了解如何使用该产品。</span></div>
+        <a class="button primary" href="https://wiki.lygion.ai/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer">打开产品 Wiki</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <span>LYGION 灵影 · TTL Adapter (A)</span>
-      <a href="https://lygion.ai/">返回 lygion.ai</a>
-    </div>
+    <div class="container"><span>LYGION 灵影 · TTL Adapter (A)</span><a href="https://wiki.lygion.ai/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer">产品 Wiki</a><a href="https://lygion.ai/">返回 lygion.ai</a></div>
   </footer>
 </body>
 </html>
