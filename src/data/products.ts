@@ -349,12 +349,12 @@ export const products: Product[] = [
     slug: "ttl-adapter-a",
     module: "bus-devices",
     status: "available",
-    image: "/product-pages/TTL-Adapter-A/assets/hero.jpg",
+    image: "/product-pages/TTL-Adapter-A/assets/hero-2.webp",
     detailPath: "/product-pages/TTL-Adapter-A/index.html",
-    name: { zh: "TTL Adapter (A) 总线舵机驱动板", en: "TTL Adapter (A) Bus Servo Adapter" },
+    name: { zh: "TTL Adapter (A) 总线设备驱动板", en: "TTL Adapter (A) Bus Devices Adapter" },
     summary: {
-      zh: "支持 USB Type-C、UART RX/TX 与单线 TTL 接入的超小型 TTL 总线舵机通信模块。",
-      en: "A compact TTL bus servo adapter supporting USB Type-C, UART RX/TX, and single-wire TTL control."
+      zh: "支持 USB Type-C、UART RX/TX 与单线 TTL 接入的超小型 TTL 总线设备通信模块。",
+      en: "A compact TTL bus devices adapter supporting USB Type-C, UART RX/TX, and single-wire TTL control."
     },
     description: {
       zh: "面向机器人原型、嵌入式控制和多舵机系统集成，兼顾调试、通信、供电和系统扩展。",
