@@ -41,7 +41,9 @@ const moduleProducts = getProductsByModule(module.id as ModuleId);
         {
           moduleProducts.map((product) => (
             <a class="product-card" href={getProductDetailPath(product, lang)}>
-              <img src={product.image} alt="" loading="lazy" />
+              <span class="product-card-media">
+                <img src={product.image} alt="" loading="lazy" />
+              </span>
               <div>
                 <span class={`tag accent-${module.accent}`}>{module.name[lang]}</span>
                 <h3>{product.name[lang]}</h3>

@@ -40,8 +40,8 @@ export const modules: {
       en: "Reliable low-level devices for robot control, sensing, and connectivity."
     },
     description: {
-      zh: "总线设备负责把执行器、传感器、控制器和上位机连接成稳定的数据通路，适合实验室调试、产品验证和小批量集成。",
-      en: "Bus devices connect actuators, sensors, controllers, and host systems into a reliable data path for lab debugging, validation, and integration."
+      zh: "总线设备负责把执行器、传感器、控制器和上位机连接成稳定的数据通路，简化机器人系统复杂度，提升开发和运行效率。",
+      en: "Bus devices connect actuators, sensors, controllers, and host systems into a reliable data path for simpler robot system integration and faster development."
     }
   },
   {
@@ -50,8 +50,8 @@ export const modules: {
     navKey: "robotModules",
     name: { zh: "机器人模组", en: "Robot Modules" },
     summary: {
-      zh: "可复用的执行、感知与计算单元，加速原型到产品。",
-      en: "Reusable actuation, perception, and compute units from prototype to product."
+      zh: "可复用的执行、感知与计算单元，降低机器人设计门槛，提升使用效率。",
+      en: "Reusable actuation, perception, and compute units for simpler robot design and faster deployment."
     },
     description: {
       zh: "机器人模组把复杂能力打包成独立单元，降低整机开发中的机械、电气、控制和软件集成成本。",
@@ -79,109 +79,16 @@ export const modules: {
     name: { zh: "灵影开源", en: "Lygion Open" },
     summary: {
       zh: "开放硬件、软件工具链与参考设计，连接开发者生态。",
-      en: "Open hardware, software toolchains, and reference designs for builders."
+      en: "Open hardware, software toolchains, and reference designs for developers."
     },
     description: {
-      zh: "灵影开源用于沉淀公开资料、参考设计、示例代码和开发文档，让外部开发者可以更快理解与复用。",
-      en: "Lygion Open collects public resources, reference designs, sample code, and documentation for external builders."
+      zh: "公开资料、参考设计、示例代码和开发文档，让开发者可以更快理解与复用。",
+      en: "Public resources, reference designs, sample code, and documentation for developers."
     }
   }
 ];
 
 export const products: Product[] = [
-  {
-    slug: "lg-bus-core",
-    module: "bus-devices",
-    status: "prototype",
-    image: "/assets/products/bus-core.svg",
-    name: { zh: "LG-Bus Core 控制网关", en: "LG-Bus Core Gateway" },
-    summary: {
-      zh: "机器人多总线接入、调试与状态监控的紧凑型网关。",
-      en: "A compact gateway for multi-bus access, debugging, and status monitoring."
-    },
-    description: {
-      zh: "适合作为机器人底层设备的统一接入点，聚合执行器、传感器和上位机之间的数据通路。",
-      en: "Designed as a unified access point for robot low-level devices, bridging actuators, sensors, and host systems."
-    },
-    highlights: {
-      zh: ["多协议接入预留", "板载状态指示", "适合实验室与产品验证"],
-      en: ["Multi-protocol ready", "On-board status indication", "Built for lab and product validation"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "总线网关 / 调试设备" },
-        { label: "接口", value: "CAN / UART / RS485 预留" },
-        { label: "状态", value: "原型 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Bus gateway / debug device" },
-        { label: "I/O", value: "CAN / UART / RS485 ready" },
-        { label: "Status", value: "Prototype demo" }
-      ]
-    }
-  },
-  {
-    slug: "lg-io-bridge",
-    module: "bus-devices",
-    status: "concept",
-    image: "/assets/products/io-bridge.svg",
-    name: { zh: "LG-IO Bridge 扩展板", en: "LG-IO Bridge" },
-    summary: {
-      zh: "用于传感器、按钮、指示灯与外设接入的 I/O 扩展设备。",
-      en: "An I/O expansion device for sensors, buttons, indicators, and peripherals."
-    },
-    description: {
-      zh: "面向快速搭建样机和小型控制柜，将常用数字量、模拟量与通信接口整理成统一节点。",
-      en: "A unified node for common digital, analog, and communication interfaces in prototypes and compact control cabinets."
-    },
-    highlights: {
-      zh: ["端子化接线", "统一设备地址", "适合快速验证"],
-      en: ["Terminal wiring", "Unified device addressing", "Fast validation friendly"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "I/O 扩展节点" },
-        { label: "接口", value: "DI / DO / ADC / PWM" },
-        { label: "状态", value: "概念 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "I/O expansion node" },
-        { label: "I/O", value: "DI / DO / ADC / PWM" },
-        { label: "Status", value: "Concept demo" }
-      ]
-    }
-  },
-  {
-    slug: "lg-power-node",
-    module: "bus-devices",
-    status: "prototype",
-    image: "/assets/products/power-node.svg",
-    name: { zh: "LG-Power Node 电源节点", en: "LG-Power Node" },
-    summary: {
-      zh: "用于机器人电源分配、保护与电流监测的紧凑节点。",
-      en: "A compact node for robot power distribution, protection, and current monitoring."
-    },
-    description: {
-      zh: "帮助研发团队在早期阶段清晰观察电源状态，并为整机集成提供标准化电源分配方式。",
-      en: "Helps teams observe power state early and provides a standardized distribution approach for robot integration."
-    },
-    highlights: {
-      zh: ["分路电流监测", "过流保护预留", "适合移动平台"],
-      en: ["Per-channel current monitoring", "Over-current protection ready", "Suitable for mobile platforms"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "电源分配节点" },
-        { label: "能力", value: "监测 / 保护 / 分配" },
-        { label: "状态", value: "原型 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Power distribution node" },
-        { label: "Capability", value: "Monitor / protect / distribute" },
-        { label: "Status", value: "Prototype demo" }
-      ]
-    }
-  },
   {
     slug: "dw69-drive-wheel-module",
     module: "robot-modules",
@@ -353,8 +260,8 @@ export const products: Product[] = [
     detailPath: "/product-pages/TTL-Adapter-A/index.html",
     name: { zh: "TTL Adapter (A) 总线设备驱动板", en: "TTL Adapter (A) Bus Devices Adapter" },
     summary: {
-      zh: "支持 USB Type-C、UART RX/TX 与单线 TTL 接入的超小型 TTL 总线设备通信模块。",
-      en: "A compact TTL bus devices adapter supporting USB Type-C, UART RX/TX, and single-wire TTL control."
+      zh: "方便让各类主流控制器接入各类机器人总线设备的紧凑型 TTL 总线适配器，简化机器人系统复杂度，提升开发和运行效率。",
+      en: "A compact TTL bus adapter for connecting various controllers to robot bus devices with simpler integration and faster development."
     },
     description: {
       zh: "面向机器人原型、嵌入式控制和多舵机系统集成，兼顾调试、通信、供电和系统扩展。",
@@ -385,8 +292,8 @@ export const products: Product[] = [
     detailPath: "/product-pages/TTL-Node-A/index.html",
     name: { zh: "TTL Node (A) 多功能总线节点板", en: "TTL Node (A) Multifunction Bus Node" },
     summary: {
-      zh: "集成 USB 调参、S.BUS 输入、双路 PWM 可调电源输出、RGB 状态灯和 TTL 总线扩展。",
-      en: "A multifunction node with USB setup, S.BUS input, dual PWM power outputs, RGB status, and TTL bus expansion."
+      zh: "集成 USB 调参、航模遥控器 S.BUS 信号输入、双路 PWM 可调电源输出、RGB 状态灯和 TTL 总线扩展。",
+      en: "A multifunction node with USB setup, RC controller S.BUS input, dual PWM power outputs, RGB status, and TTL bus expansion."
     },
     description: {
       zh: "适合给总线舵机、机械臂末端、移动机器人和自定义节点做统一接入。",
@@ -413,8 +320,11 @@ export const products: Product[] = [
     slug: "ttl-stepper-driver-a",
     module: "bus-devices",
     status: "available",
-    image: "/product-pages/TTL-Stepper-Driver-A/assets/hero.png",
-    detailPath: "/product-pages/TTL-Stepper-Driver-A/index.html",
+    image: "/product-pages/TTL-Stepper-Driver-A/assets/hero.webp",
+    detailPath: {
+      zh: "/product-pages/TTL-Stepper-Driver-A/index.html",
+      en: "/product-pages/TTL-Stepper-Driver-A/en/index.html"
+    },
     name: { zh: "TTL Stepper Driver (A) 总线步进电机驱动板", en: "TTL Stepper Driver (A)" },
     summary: {
       zh: "让上位机通过位置、速度和电流等指令控制步进电机，驱动板负责底层脉冲与速度插值。",
@@ -630,192 +540,6 @@ export const products: Product[] = [
         { label: "Role", value: "Robotic arm module" },
         { label: "Control", value: "CLI / Python SDK / JSON" },
         { label: "Detail page", value: "Static HTML package" }
-      ]
-    }
-  },
-  {
-    slug: "joint-module-alpha",
-    module: "robot-modules",
-    status: "concept",
-    image: "/assets/products/joint-alpha.svg",
-    name: { zh: "Joint Module Alpha", en: "Joint Module Alpha" },
-    summary: {
-      zh: "面向轻量机器人平台的关节执行模组概念样机。",
-      en: "A joint actuation module concept for lightweight robot platforms."
-    },
-    description: {
-      zh: "将执行、驱动、反馈与安装结构打包成独立单元，方便快速组合不同形态机器人。",
-      en: "Packages actuation, drive electronics, feedback, and mounting into one unit for fast robot composition."
-    },
-    highlights: {
-      zh: ["模块化机械接口", "统一电气连接", "便于系列化扩展"],
-      en: ["Modular mechanical interface", "Unified electrical connection", "Ready for product family expansion"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "关节执行模组" },
-        { label: "适用", value: "桌面机器人 / 移动机器人" },
-        { label: "状态", value: "概念 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Joint actuation module" },
-        { label: "Use", value: "Desktop robots / mobile robots" },
-        { label: "Status", value: "Concept demo" }
-      ]
-    }
-  },
-  {
-    slug: "vision-module-lite",
-    module: "robot-modules",
-    status: "prototype",
-    image: "/assets/products/vision-lite.svg",
-    name: { zh: "Vision Module Lite", en: "Vision Module Lite" },
-    summary: {
-      zh: "用于近距识别、视觉调试与小型机器人感知的视觉模组。",
-      en: "A vision module for near-field recognition, visual debugging, and small robot perception."
-    },
-    description: {
-      zh: "集成相机、补光、安装结构和软件接口，适合快速给机器人加入视觉感知能力。",
-      en: "Combines camera, lighting, mounting, and software interfaces for quickly adding visual perception."
-    },
-    highlights: {
-      zh: ["标准安装孔位", "补光结构预留", "支持视觉实验"],
-      en: ["Standard mounting points", "Lighting-ready structure", "Supports vision experiments"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "视觉感知模组" },
-        { label: "能力", value: "采集 / 调试 / 识别" },
-        { label: "状态", value: "原型 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Visual perception module" },
-        { label: "Capability", value: "Capture / debug / recognize" },
-        { label: "Status", value: "Prototype demo" }
-      ]
-    }
-  },
-  {
-    slug: "compute-carrier-s1",
-    module: "robot-modules",
-    status: "concept",
-    image: "/assets/products/compute-s1.svg",
-    name: { zh: "Compute Carrier S1", en: "Compute Carrier S1" },
-    summary: {
-      zh: "为机器人主控、边缘计算与扩展接口准备的载板概念。",
-      en: "A carrier board concept for robot main control, edge compute, and expansion interfaces."
-    },
-    description: {
-      zh: "用于整理计算核心、电源、网络和外设接口，让不同机器人项目复用一致的计算底座。",
-      en: "Organizes compute, power, network, and peripheral interfaces into a reusable computing base."
-    },
-    highlights: {
-      zh: ["计算核心可替换", "网络接口集中", "适合边缘推理"],
-      en: ["Replaceable compute core", "Centralized network interfaces", "Edge inference friendly"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "机器人计算载板" },
-        { label: "接口", value: "网络 / USB / 总线预留" },
-        { label: "状态", value: "概念 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Robot compute carrier" },
-        { label: "I/O", value: "Network / USB / bus ready" },
-        { label: "Status", value: "Concept demo" }
-      ]
-    }
-  },
-  {
-    slug: "lygion-mobile-base",
-    module: "robot-systems",
-    status: "prototype",
-    image: "/assets/products/mobile-base.svg",
-    name: { zh: "Lygion Mobile Base", en: "Lygion Mobile Base" },
-    summary: {
-      zh: "用于验证导航、感知与上层任务的移动机器人底盘。",
-      en: "A mobile robot base for validating navigation, perception, and high-level tasks."
-    },
-    description: {
-      zh: "面向研发验证场景，提供稳定的移动平台基础，方便集成不同传感器和上层应用。",
-      en: "A stable mobile platform foundation for R&D validation and integration with sensors and applications."
-    },
-    highlights: {
-      zh: ["标准化扩展位", "适合算法验证", "可连接灵影模组生态"],
-      en: ["Standard expansion points", "Algorithm validation friendly", "Connects with the Lygion module ecosystem"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "移动机器人整机" },
-        { label: "能力", value: "导航 / 感知 / 任务验证" },
-        { label: "状态", value: "原型 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Complete mobile robot" },
-        { label: "Capability", value: "Navigation / perception / task validation" },
-        { label: "Status", value: "Prototype demo" }
-      ]
-    }
-  },
-  {
-    slug: "desktop-arm-devkit",
-    module: "robot-systems",
-    status: "concept",
-    image: "/assets/products/desktop-arm.svg",
-    name: { zh: "Desktop Arm DevKit", en: "Desktop Arm DevKit" },
-    summary: {
-      zh: "用于教学、算法验证和桌面操作任务的机械臂开发套件。",
-      en: "A robotic arm development kit for education, algorithm validation, and desktop manipulation."
-    },
-    description: {
-      zh: "组合关节模组、控制器和开放软件接口，便于开发者验证抓取、轨迹规划与人机交互。",
-      en: "Combines joint modules, controllers, and open software interfaces for grasping, planning, and interaction experiments."
-    },
-    highlights: {
-      zh: ["桌面级体积", "适合教学演示", "开放控制接口"],
-      en: ["Desktop footprint", "Education friendly", "Open control interface"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "桌面机械臂整机" },
-        { label: "能力", value: "抓取 / 规划 / 教学" },
-        { label: "状态", value: "概念 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Desktop robot arm" },
-        { label: "Capability", value: "Grasp / plan / teach" },
-        { label: "Status", value: "Concept demo" }
-      ]
-    }
-  },
-  {
-    slug: "inspection-rover",
-    module: "robot-systems",
-    status: "concept",
-    image: "/assets/products/inspection-rover.svg",
-    name: { zh: "Inspection Rover", en: "Inspection Rover" },
-    summary: {
-      zh: "面向巡检、远程观察和移动传感任务的小型机器人平台。",
-      en: "A compact robot platform for inspection, remote observation, and mobile sensing."
-    },
-    description: {
-      zh: "为室内外轻量巡检场景准备，可扩展视觉、环境传感和远程控制能力。",
-      en: "Prepared for lightweight indoor and outdoor inspection, expandable with vision, environmental sensing, and remote control."
-    },
-    highlights: {
-      zh: ["传感器扩展位", "远程运维预留", "适合巡检原型"],
-      en: ["Sensor expansion points", "Remote operation ready", "Inspection prototype friendly"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "巡检机器人平台" },
-        { label: "能力", value: "移动 / 观察 / 采集" },
-        { label: "状态", value: "概念 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Inspection robot platform" },
-        { label: "Capability", value: "Move / observe / collect" },
-        { label: "Status", value: "Concept demo" }
       ]
     }
   },

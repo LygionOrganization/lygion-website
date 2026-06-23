@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TTL Stepper Driver (A) | TTL Bus Stepper Motor Driver | LYGION</title>
+  <meta name="description" content="TTL Stepper Driver (A) is a compact TTL bus stepper motor driver for robot joints, lead screws, wheels, turntables, and synchronized multi-axis mechanisms.">
+  <meta name="keywords" content="TTL Stepper Driver A, TTL bus stepper driver, robot stepper motor driver, lead screw control, synchronized stepper control">
+  <link rel="canonical" href="https://lygion.ai/product-pages/TTL-Stepper-Driver-A/en/index.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "TTL Stepper Driver (A)",
+    "brand": { "@type": "Brand", "name": "LYGION" },
+    "description": "A compact TTL bus stepper motor driver for position, velocity, and synchronized motion control.",
+    "category": "Robot stepper motor driver",
+    "image": "https://lygion.ai/product-pages/TTL-Stepper-Driver-A/assets/hero.webp"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="https://lygion.ai/en/" aria-label="Back to LYGION">
+        <span class="brand-mark">LY</span>
+        <span><strong>LYGION</strong><small>Robot hardware and open ecosystem</small></span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#why">Benefits</a>
+        <a href="#modes">Modes</a>
+        <a href="#system">Integration</a>
+        <a href="#quickstart">Quick Start</a>
+        <a href="#interfaces">Interfaces</a>
+        <a href="#specs">Specs</a>
+        <a href="#package">Package</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Taobao Store</a>
+        <a class="language-switch" href="../index.html" lang="zh-CN">中文</a>
+        <a class="nav-cta" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-stepper-driver-a/" target="_blank" rel="noopener noreferrer">Product Wiki</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">TTL STEPPER DRIVER</p>
+          <h1>Put stepper motors on the robot bus</h1>
+          <h3>TTL Stepper Driver (A)</h3>
+          <p class="lead">A TTL bus stepper driver for robot applications. The host sends position, speed, current, and mode commands; the driver handles the low-level motion control.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#modes">View Control Modes</a>
+            <a class="button secondary" href="#specs">View Key Specs</a>
+          </div>
+          <ul class="quick-specs" aria-label="Key specifications">
+            <li><strong>1 Mbps</strong><span>Default TTL bus rate</span></li>
+            <li><strong>DC 9-26V</strong><span>Motor power input</span></li>
+            <li><strong>1.5A</strong><span>Maximum phase current</span></li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <img src="../assets/hero-kit.webp" alt="TTL Stepper Driver (A) bus stepper motor driver kit">
+          <figcaption><span>TTL Stepper Driver (A)</span> Position / velocity / synchronized control</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Product highlights">
+      <div class="container proof-grid">
+        <div><strong>Bus Control</strong><span>Control stepper motors like bus servos.<br>Simple to use and easy to expand.</span></div>
+        <div><strong>Position / Velocity</strong><span>Precise joint positioning and continuous wheel rotation.<br>Velocity mode supports heartbeat protection for safer wheel applications.</span></div>
+        <div><strong>Sync Interface</strong><span>Suitable for dual lead screws, lifting stages, and synchronized multi-axis mechanisms.</span></div>
+        <div><strong>Limit Protection</strong><span>Low-level limit and motion boundary protection.</span></div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT IT SOLVES</p>
+          <h2>Control multiple stepper motors with less low-level code</h2>
+          <p>Traditional stepper control requires the controller to continuously generate pulses and handle speed curves, limits, and synchronization. TTL Stepper Driver (A) moves these tasks into the driver, so the host can send simple TTL bus commands instead.</p>
+        </div>
+        <div class="benefit-grid">
+          <article><span class="card-index">01</span><h3>Stepper motors as bus devices</h3><p>Multiple drivers can use independent IDs and share the same TTL bus, reducing wiring and software complexity.</p><strong>Multi-device control</strong></article>
+          <article><span class="card-index">02</span><h3>Smoother start and stop</h3><p>Speed and acceleration parameters are handled by the driver, reducing sudden mechanical shock.</p><strong>More controlled motion</strong></article>
+          <article><span class="card-index">03</span><h3>Limit handling at the driver</h3><p>Minimum and maximum limit inputs can stop dangerous motion directions without constant polling from the application layer.</p><strong>Safer mechanisms</strong></article>
+          <article><span class="card-index">04</span><h3>Readable driver state</h3><p>Read position, speed, voltage, temperature, motion state, and other status values for debugging and higher-level control.</p><strong>Observable motion system</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="modes" class="section soft-section">
+      <div class="container split-layout">
+        <div>
+          <p class="eyebrow">CONTROL MODES</p>
+          <h2>Three useful motion modes on one board</h2>
+          <div class="scene-list">
+            <div><strong>Position Mode</strong><span>Control absolute position and multi-turn motion for robot joints, turntables, and lead screw stages.</span></div>
+            <div><strong>Velocity Mode</strong><span>Continuous forward and reverse rotation with configurable speed and acceleration for wheels and conveyors.</span></div>
+            <div><strong>Slave / Sync Mode</strong><span>Use sync input and output signals to keep multiple motors moving together.</span></div>
+          </div>
+        </div>
+        <figure class="image-card">
+          <img src="../assets/position-mode-delta.webp" alt="TTL Stepper Driver (A) driving a Delta robot arm in position mode">
+          <figcaption>Position mode example: send a target position over the bus and let the driver move the mechanism.</figcaption>
+        </figure>
+      </div>
+      <div class="function-gallery media-gallery">
+        <figure class="image-card">
+          <img src="../assets/position-mode-delta.webp" alt="Position mode application">
+          <figcaption>Position mode: joints, turntables, and lead screw positioning.</figcaption>
+        </figure>
+        <figure class="image-card">
+          <img src="../assets/speed-mode-swerve.webp" alt="Velocity mode swerve wheel application">
+          <figcaption>Velocity mode: wheel modules, conveyors, and continuous rotation.</figcaption>
+        </figure>
+        <figure class="image-card">
+          <img src="../assets/sync-mode-leadscrew.webp" alt="Synchronized lead screw application">
+          <figcaption>Sync mode: dual lead screws and synchronized multi-axis mechanisms.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="system" class="section dark-section">
+      <div class="container split-layout reverse">
+        <figure class="image-card dark-card">
+          <img src="../assets/wiring-system.webp" alt="TTL Stepper Driver (A) complete TTL bus wiring">
+        </figure>
+        <div>
+          <p class="eyebrow">TTL BUS SYSTEM</p>
+          <h2>Works with common robot controllers</h2>
+          <p>PCs, Raspberry Pi, Jetson, and other SBCs can connect through TTL Adapter (A) over USB. ESP32, STM32, and other MCUs can connect through UART-to-single-wire-TTL hardware. Multiple drivers, encoders, and other TTL bus devices can form a shared low-level motion and sensing network.</p>
+          <div class="system-grid">
+            <div><strong>PC / SBC</strong><span>Use Python on a robot host to control multiple bus devices directly.</span></div>
+            <div><strong>MCU Controller</strong><span>Use C++ for embedded real-time motion control on ESP32, STM32, and similar controllers.</span></div>
+            <div><strong>Mixed Devices</strong><span>Work together with TTL encoders, bus servos, and other compatible devices.</span></div>
+          </div>
+          <a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-stepper-driver-a/" target="_blank" rel="noopener noreferrer">Open Wiki wiring and software guide</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="quickstart" class="section quickstart-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">EASY TO START</p>
+          <h2>Detailed tutorials for faster bring-up</h2>
+          <p>The Wiki provides FD software usage, Python quickstart, and C++ / Arduino examples. New users can first verify device connection and ID configuration, then test position, speed, limit, and synchronization behavior.</p>
+        </div>
+        <div class="workflow-grid">
+          <article><span>STEP 01</span><h3>Wire the basics</h3><p>Connect the stepper motor, power input, and TTL Adapter (A).</p></article>
+          <article><span>STEP 02</span><h3>Set the ID</h3><p>Devices on the same bus must use different IDs, so configure the ID before multi-device use.</p></article>
+          <article><span>STEP 03</span><h3>Run examples</h3><p>Use the open SDK and examples from the Wiki to control the motor from Python or C++.</p></article>
+        </div>
+        <div class="software-panel">
+          <div>
+            <p class="eyebrow">FD SOFTWARE</p>
+            <h3>Visual setup and debugging</h3>
+            <p>FD software is a useful first-step verification tool: confirm the device is online, change ID, tune current, speed, acceleration, and mode parameters, then move the settings into your program.</p>
+          </div>
+          <div class="example-grid">
+            <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-stepper-driver-a/" target="_blank" rel="noopener noreferrer"><strong>Python Control</strong><span>Set IDs, switch modes, control motion, and read status from PC, Raspberry Pi, Jetson, and RK platforms.</span></a>
+            <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-stepper-driver-a/" target="_blank" rel="noopener noreferrer"><strong>C++ / Arduino</strong><span>Integrate the driver with ESP32, STM32, and other embedded controllers.</span></a>
+            <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-stepper-driver-a/" target="_blank" rel="noopener noreferrer"><strong>Limits / Homing / Heartbeat</strong><span>Use low-level protection for lead screws, lifts, turntables, and continuous wheel motion.</span></a>
+          </div>
+        </div>
+        <div class="function-gallery media-gallery software-gallery">
+          <figure class="image-card">
+            <img src="../assets/fd-software-a-cn.webp" alt="FD software detecting TTL Stepper Driver device">
+            <figcaption>Confirm that the driver is online and check its ID and communication state.</figcaption>
+          </figure>
+          <figure class="image-card">
+            <img src="../assets/fd-software-b-cn.webp" alt="FD software parameter view for TTL Stepper Driver">
+            <figcaption>Visual parameters and status reduce first-time debugging effort.</figcaption>
+          </figure>
+          <figure class="image-card">
+            <img src="../assets/multi-driver-bus.webp" alt="Multiple TTL Stepper Drivers on the same bus">
+            <figcaption>Multiple drivers can share one TTL bus for multi-axis robot mechanisms.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="interfaces" class="section">
+      <div class="container install-layout">
+        <div>
+          <p class="eyebrow">BOARD INTERFACES</p>
+          <h2>Common motion interfaces on one compact board</h2>
+          <div class="install-grid">
+            <div><strong>5264-3P</strong><span>Power input and single-wire TTL bus communication.</span></div>
+            <div><strong>XH2.54-4P</strong><span>Bipolar stepper motor phases A+, A-, B-, B+.</span></div>
+            <div><strong>XH2.54-3P x2</strong><span>Minimum and maximum limit switch inputs. Optional.</span></div>
+            <div><strong>GH1.25-3P x2</strong><span>Sync control signal input and output. Optional.</span></div>
+            <div><strong>HC1.25-3P</strong><span>TTL Encoder can be placed on the same bus for the controller to read. Optional.</span></div>
+          </div>
+        </div>
+        <figure class="image-card">
+          <img src="../assets/limit-switch.webp" alt="TTL Stepper Driver (A) limit switch wiring">
+          <figcaption>Limit switches help the driver handle motion boundaries at the low level.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="specs" class="section soft-section">
+      <div class="container specs-layout">
+        <div>
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>Key Specs</h2>
+          <div class="spec-list">
+            <div><span>Motor Type</span><strong>Bipolar stepper motor</strong></div>
+            <div><span>Input Voltage</span><strong>DC 9-26V</strong></div>
+            <div><span>Max Phase Current</span><strong>1.5A</strong></div>
+            <div><span>Communication</span><strong>Single-wire TTL, default 1 Mbps</strong></div>
+            <div><span>Control Modes</span><strong>Position / Velocity / Slave sync mode</strong></div>
+            <div><span>Microstepping</span><strong>1, 1/2, 1/4, 1/8, 1/16, 1/32</strong></div>
+            <div><span>Readable Status</span><strong>Target position, speed, voltage, temperature, motion state</strong></div>
+            <div><span>Protection</span><strong>Over-voltage / under-voltage / over-temperature / limit / heartbeat protection</strong></div>
+          </div>
+        </div>
+        <aside class="why-card">
+          <p class="eyebrow">SELECTION NOTE</p>
+          <h3>Best for compact robot stepper actuators</h3>
+          <ul>
+            <li>Well suited for 42-series motors with body length around 40 mm or below.</li>
+            <li>Not recommended for motors with rated phase current above 1.5A.</li>
+            <li>Long-term high-current use increases heat and may trigger thermal protection.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="package" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">PACKAGE CONTENTS</p>
+          <h2>Package Contents</h2>
+          <p>The standard kit includes the driver board, bus cable, motor cable, sync cable, heat dissipation parts, and mounting accessories for basic bring-up.</p>
+        </div>
+        <div class="package-layout">
+          <figure class="image-card">
+            <img src="../assets/package.webp" alt="TTL Stepper Driver (A) package contents">
+            <figcaption>Actual package contents for quick accessory confirmation.</figcaption>
+          </figure>
+          <div class="package-table-wrap">
+            <table class="package-table">
+              <thead>
+                <tr><th>Name</th><th>Quantity</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>TTL Stepper Driver (A)</td><td>x1</td></tr>
+                <tr><td>5264-3P cable, 25 cm</td><td>x1</td></tr>
+                <tr><td>Stepper motor cable, 25 cm</td><td>x1</td></tr>
+                <tr><td>GH1.25-3P cable, 30 cm</td><td>x1</td></tr>
+                <tr><td>Aluminum heat sink</td><td>x1</td></tr>
+                <tr><td>Thermal silicone pad</td><td>x1</td></tr>
+                <tr><td>Round-head screws</td><td>M1.4*7 x3</td></tr>
+                <tr><td>Nuts</td><td>M1.4*1.4*2.3 x6</td></tr>
+                <tr><td>Washers</td><td>3*6*1.5 x2</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support-section">
+      <div class="container support-grid">
+        <div>
+          <p class="eyebrow">DEVELOPMENT SUPPORT</p>
+          <h2>Complete tutorials for fast integration</h2>
+          <p>Debugging tools, SDKs, examples, and hardware documents are organized in the product Wiki.</p>
+        </div>
+        <div class="support-items">
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-stepper-driver-a/" target="_blank" rel="noopener noreferrer"><strong>TTL Stepper Driver Wiki</strong><span>Wiring, parameters, and development resources</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer"><strong>TTL Adapter (A)</strong><span>Connect PC, SBC, and MCU to the TTL bus</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/" target="_blank" rel="noopener noreferrer"><strong>Power Grouping Tutorial</strong><span>Multi-voltage and high-current bus wiring notes</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/" target="_blank" rel="noopener noreferrer"><strong>Mechanical Resources</strong><span>STEP models and integration references</span></a>
+        </div>
+      </div>
+      <div class="container cta">
+        <div><strong>Want to put stepper motors into a bus system?</strong><span>TTL Stepper Driver (A) is built for applications that need to control multiple stepper motors together.</span></div>
+        <a class="button primary" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-stepper-driver-a/" target="_blank" rel="noopener noreferrer">Open Product Wiki</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>LYGION · TTL Stepper Driver (A) English product page</span>
+      <a href="https://lygion.ai/en/">Back to lygion.ai</a>
+    </div>
+  </footer>
+</body>
+</html>

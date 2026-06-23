@@ -3,25 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TTL Encoder E02 12bit 绝对角度总线磁编码器 | 灵影 LYGION</title>
-  <meta name="description" content="TTL Encoder E02 是一款直径 16mm、支持 DC 5-28V 供电和 1Mbps 单线 TTL 总线通信的 12bit 绝对角度磁编码器，适用于机械臂、灵巧手、同步轮、齿轮与减速器输出轴角度检测。">
-  <meta name="keywords" content="TTL Encoder E02,绝对值编码器,磁编码器,12bit编码器,机器人编码器,TTL总线编码器">
-  <link rel="canonical" href="https://lygion.ai/">
+  <title>TTL Encoder E02 | 12bit 绝对角度总线磁编码器 | 灵影 LYGION</title>
+  <meta name="description" content="TTL Encoder E02 是面向机器人关节、同步轮、齿轮和转向输出端的 12bit 绝对角度磁编码器，支持单线 TTL 总线、1 Mbps 默认通信、DC 5-28V 供电和多设备集中读取。">
+  <meta name="keywords" content="TTL Encoder E02,绝对角度编码器,12bit磁编码器,TTL总线编码器,机器人关节反馈,同步轮编码器,输出端角度检测">
+  <link rel="canonical" href="https://lygion.ai/product-pages/TTL-Encoder-E02/index.html">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "TTL Encoder E02",
+    "brand": { "@type": "Brand", "name": "LYGION 灵影" },
+    "description": "A compact 12-bit absolute magnetic encoder for robot joints and compact transmission feedback over a single-wire TTL bus.",
+    "category": "Robot absolute magnetic encoder",
+    "image": "https://lygion.ai/product-pages/TTL-Encoder-E02/assets/hero.jpg"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="home-link" href="https://lygion.ai/" aria-label="返回灵影官网">
-        <span class="logo-mark">LY</span>
-        <span><strong>LYGION 灵影</strong><small>返回官方网站</small></span>
+      <a class="brand" href="https://lygion.ai/" aria-label="返回灵影官网">
+        <span class="brand-mark">LY</span>
+        <span><strong>LYGION 灵影</strong><small>机器人硬件与开放生态</small></span>
       </a>
       <nav aria-label="页面导航">
-        <a href="#features">产品优势</a>
-        <a href="#applications">应用场景</a>
-        <a href="#specs">技术参数</a>
-        <a href="#install">安装说明</a>
-        <a class="wiki-link" href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料</a>
+        <a href="#why">为什么需要</a>
+        <a href="#scenes">应用场景</a>
+        <a href="#bus">总线接入</a>
+        <a href="#quickstart">快速上手</a>
+        <a href="#install">安装要点</a>
+        <a href="#specs">参数</a>
+        <a href="#shooting">拍摄清单</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">淘宝店铺</a>
+        <a class="nav-cta" href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer">产品 Wiki</a>
       </nav>
     </div>
   </header>
@@ -29,130 +44,262 @@
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">12bit absolute magnetic encoder</p>
-          <h1>TTL Encoder E02<br><span>绝对角度总线磁编码器</span></h1>
-          <p class="lead">面向机器人关节与紧凑型传动结构的角度、速度反馈方案。断电不丢单圈绝对角度，无需每次回零；单线 TTL 总线可同时连接多个编码器、舵机与灵影总线设备。</p>
+        <div class="hero-copy">
+          <p class="eyebrow">TTL ABSOLUTE ENCODER</p>
+          <h1>让关节知道自己在哪里</h1>
+          <h3>TTL Encoder E02</h3>
+          <p class="lead">一颗紧凑的 12bit 绝对角度磁编码器。装在关节、同步轮、齿轮或转向输出端，直接读取真实角度和速度，上电即可知道当前位置。</p>
           <div class="hero-actions">
-            <a class="primary" href="#specs">查看技术参数</a>
-            <a class="secondary" href="#" aria-label="Wiki 资料页面链接待更新">进入 Wiki 资料页</a>
+            <a class="button primary" href="#scenes">查看适用场景</a>
+            <a class="button secondary" href="#specs">查看关键参数</a>
           </div>
-          <p class="pending-note">Wiki 链接暂时保留，资料页更新后可直接替换链接地址。</p>
-        </div>
-        <div class="hero-media">
-          <img src="assets/hero.jpg" alt="TTL Encoder E02 绝对角度磁编码器正面实物图">
-        </div>
-      </div>
-      <div class="container stat-grid" aria-label="核心参数">
-        <div><strong>12bit</strong><span>最高角度分辨率</span></div>
-        <div><strong>1 Mbps</strong><span>默认总线波特率</span></div>
-        <div><strong>DC 5-28V</strong><span>宽电压供电</span></div>
-        <div><strong>16mm</strong><span>紧凑型板体直径</span></div>
-      </div>
-    </section>
-
-    <section id="features" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">核心优势</p>
-          <h2>真实关节角度，上电即可读取</h2>
-          <p>适合安装在减速器输出端、同步轮或齿轮内部，直接检测执行机构的实际输出角度，而不只依赖电机端估算。</p>
-        </div>
-        <div class="feature-grid">
-          <article><b>01</b><h3>绝对角度反馈</h3><p>断电后不丢失单圈绝对角度，上电即可获知当前位置，减少回零机构与初始化流程。</p></article>
-          <article><b>02</b><h3>角度与速度同步读取</h3><p>同时反馈位置和速度，支持多个设备同步读取，适合多关节机器人集中采样。</p></article>
-          <article><b>03</b><h3>单线 TTL 总线</h3><p>供电与通信布线简洁，ID 范围 1-252，可与灵影设备及飞特 STS、SMS、HLS 总线舵机混合使用。</p></article>
-          <article><b>04</b><h3>宽电压、低功耗</h3><p>支持 DC 5-28V 输入，典型功耗低于 10mA，便于接入不同电压等级的机器人系统。</p></article>
-          <article><b>05</b><h3>任意位置设定基准</h3><p>当前位置可设置为指定位置值，校准结果掉电保存，方便机械装配后的零位或基准位标定。</p></article>
-          <article><b>06</b><h3>紧凑型安装</h3><p>板体直径约 16mm，HC-1.25-3P 接口，适合机械臂、灵巧手和小型传动机构内部空间。</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="applications" class="section soft">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">应用场景</p>
-          <h2>为机器人关节和传动输出端提供闭环反馈</h2>
-          <ul class="check-list">
-            <li><strong>机械臂与 Leader Arm：</strong>读取各关节绝对角度，支持多编码器同步采样。</li>
-            <li><strong>灵巧手：</strong>在紧凑空间内获取手指关节位置与速度。</li>
-            <li><strong>同步轮、齿轮与减速器：</strong>直接测量输出端的真实角度。</li>
-            <li><strong>多设备总线系统：</strong>编码器可与总线步进驱动板、总线舵机共用通信链路。</li>
+          <ul class="quick-specs" aria-label="核心参数">
+            <li><strong>12bit</strong><span>单圈 4096 位置</span></li>
+            <li><strong>1 Mbps</strong><span>默认 TTL 总线通信</span></li>
+            <li><strong>DC 5-28V</strong><span>宽电压供电</span></li>
           </ul>
         </div>
-        <img src="assets/applications.png" alt="TTL Encoder E02 在机械臂、同步轮及多编码器系统中的应用">
+        <figure class="hero-media">
+          <img src="assets/hero.jpg" alt="TTL Encoder E02 绝对角度磁编码器">
+          <figcaption><span>TTL Encoder E02</span> 输出端角度 / 速度反馈模块</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section deep">
-      <div class="container split">
-        <img src="assets/bus-system.png" alt="TTL Encoder E02 单线 TTL 总线多设备连接示例">
+    <section class="proof-strip" aria-label="产品要点">
+      <div class="container proof-grid">
+        <div><strong>绝对角度</strong><span>断电不丢单圈位置，上电即可读取</span></div>
+        <div><strong>输出端反馈</strong><span>直接测量关节、轮组、齿轮的真实角度</span></div>
+        <div><strong>单线 TTL</strong><span>多个编码器共用一条总线，ID 独立</span></div>
+        <div><strong>紧凑安装</strong><span>约 16mm 板体，适合小型机器人结构</span></div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT IT SOLVES</p>
+          <h2>不是估算角度，而是读取真实输出</h2>
+          <p>电机端角度不一定等于机构输出端角度。TTL Encoder E02 可以放到真正需要反馈的位置，让机器人系统直接获得关节、同步轮、齿轮或舵轮转向端的绝对角度。</p>
+        </div>
+        <div class="benefit-grid">
+          <article>
+            <span class="card-index">01</span>
+            <h3>减少回零流程</h3>
+            <p>单圈绝对角度掉电保持，上电后即可读取当前位置，适合需要快速启动的关节和模组。</p>
+            <strong>上电即读</strong>
+          </article>
+          <article>
+            <span class="card-index">02</span>
+            <h3>反馈更靠近负载</h3>
+            <p>安装在减速器输出端或传动末端，能看到机械间隙、同步带弹性和输出结构带来的真实变化。</p>
+            <strong>输出端闭环</strong>
+          </article>
+          <article>
+            <span class="card-index">03</span>
+            <h3>多关节集中采样</h3>
+            <p>多个 E02 设置不同 ID 后可接入同一 TTL 总线，适合机械臂、灵巧手和底盘转向系统。</p>
+            <strong>一条总线，多点反馈</strong>
+          </article>
+          <article>
+            <span class="card-index">04</span>
+            <h3>结构小，接线少</h3>
+            <p>HC-1.25-3P 接口承载 GND、VCC、Signal，能塞进更紧凑的机器人内部空间。</p>
+            <strong>适合嵌入式安装</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="scenes" class="section soft-section">
+      <div class="container split-layout">
         <div>
-          <p class="eyebrow">单线总线系统</p>
-          <h2>一根总线连接整台机器人</h2>
-          <p>通过 TTL Adapter (A)、HC-1.25 8P Hub (A) 或带单线 TTL 接口的机器人控制板，可以把多个 E02 编码器接入同一总线。每台设备设置独立 ID 后，即可集中读取关节角度和速度。</p>
-          <div class="mini-grid">
-            <div><strong>PC / SBC</strong><span>Windows、Linux、macOS、树莓派、Jetson</span></div>
-            <div><strong>MCU</strong><span>ESP32、STM32、Arduino 框架控制器</span></div>
-            <div><strong>SDK</strong><span>提供 Python 与 C++ 示例入口</span></div>
+          <p class="eyebrow">APPLICATIONS</p>
+          <h2>哪里需要角度闭环，就把它装到哪里</h2>
+          <div class="scene-list">
+            <div><strong>机械臂 / Leader Arm</strong><span>读取每个关节的绝对角度，做示教、同步采样和姿态反馈。</span></div>
+            <div><strong>灵巧手与小型关节</strong><span>在有限空间里获取手指或连杆位置，降低复杂传感器安装成本。</span></div>
+            <div><strong>同步轮 / 齿轮 / 减速器</strong><span>直接检测输出端角度，适合与步进、舵机、减速结构组成闭环系统。</span></div>
+            <div><strong>舵轮转向输出端</strong><span>用于底盘转向绝对角度反馈，让转向模组上电后快速进入控制状态。</span></div>
+          </div>
+        </div>
+        <figure class="image-card">
+          <img src="assets/applications.png" alt="TTL Encoder E02 在机器人关节和传动结构中的应用">
+          <figcaption>建议后续替换为真实安装场景合成图：关节、同步轮、灵巧手、舵轮四类画面。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="bus" class="section dark-section">
+      <div class="container split-layout reverse">
+        <figure class="image-card dark-card">
+          <img src="assets/bus-system.png" alt="TTL Encoder E02 单线 TTL 总线多设备接入">
+        </figure>
+        <div>
+          <p class="eyebrow">TTL BUS SYSTEM</p>
+          <h2>多个编码器，共用一条总线</h2>
+          <p>通过 TTL Adapter (A)、Hub 板或带单线 TTL 接口的控制器，把多个 E02 编码器接入同一通信链路。每个设备设置独立 ID 后，上位机或 MCU 可以集中读取角度、速度和状态。</p>
+          <div class="system-grid">
+            <div><strong>PC / SBC</strong><span>通过 TTL Adapter (A) 接入，适合调试、标定和数据采集。</span></div>
+            <div><strong>MCU 控制器</strong><span>可由 ESP32、STM32、Arduino 等控制器读取反馈数据。</span></div>
+            <div><strong>混合总线</strong><span>可与兼容 TTL 总线设备配合，形成统一底层反馈网络。</span></div>
+          </div>
+          <a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer">查看 Wiki 接线与软件资料</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="quickstart" class="section quickstart-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">EASY TO START</p>
+          <h2>不用先写完整程序，也能先把角度读出来</h2>
+          <p>Wiki 已提供 FD 调试软件、Python 快速上手、C++ / Arduino 快速上手等入口。对新用户来说，可以先用软件确认设备在线，再用例程读取位置和速度，最后再接入自己的控制程序。</p>
+        </div>
+        <div class="workflow-grid">
+          <article><span>STEP 01</span><h3>连接电脑或开发板</h3><p>通过 TTL Adapter (A) 接入 PC、树莓派、Jetson；或用 MCU 接入 TTL 总线，先确认供电和设备 ID。</p></article>
+          <article><span>STEP 02</span><h3>打开 FD 软件配置设备</h3><p>搜索设备、查看 ID 与波特率、确认通信状态。需要多设备共线时，先逐个修改 ID，避免冲突。</p></article>
+          <article><span>STEP 03</span><h3>运行例程读取数据</h3><p>Python 适合 PC / SBC 快速验证；C++ / Arduino 适合 ESP32、STM32 等嵌入式控制器读取角度和速度。</p></article>
+        </div>
+        <div class="software-panel">
+          <div>
+            <p class="eyebrow">FD SOFTWARE</p>
+            <h3>先看到数据，再写控制逻辑</h3>
+            <p>对编码器类产品，FD 软件最有价值的是“确认设备确实在线、ID 没冲突、波特率匹配”。这一步能把接线问题、供电问题和程序问题分开排查，降低第一次上手的挫败感。</p>
+          </div>
+          <div class="example-grid">
+            <a href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer"><strong>Python 读取</strong><span>快速读取单圈位置、多圈位置和速度反馈。</span></a>
+            <a href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer"><strong>C++ / Arduino</strong><span>把 E02 接入 MCU 项目，用于关节反馈和嵌入式控制。</span></a>
+            <a href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer"><strong>校准与多圈</strong><span>装配后设置基准位置，并理解单圈与多圈读数边界。</span></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="specs" class="section">
+    <section id="install" class="section">
+      <div class="container install-layout">
+        <div>
+          <p class="eyebrow">MAGNET INSTALLATION</p>
+          <h2>径向磁铁对准 IC，角度才可靠</h2>
+          <p>TTL Encoder E02 通过检测径向磁铁旋转来输出角度。安装时应让磁铁与编码器 IC 保持同心，并控制合理间距；机械结构越稳，反馈越可信。</p>
+          <div class="install-grid">
+            <div><strong>同心</strong><span>磁铁旋转轴线尽量对准编码器 IC 中心。</span></div>
+            <div><strong>间距</strong><span>建议约 1mm，最大不建议超过 1.5mm。</span></div>
+            <div><strong>固定</strong><span>磁铁和编码器板都需要可靠固定，避免振动导致读数波动。</span></div>
+            <div><strong>校准</strong><span>装配完成后，可将当前位置设置为需要的基准值。</span></div>
+          </div>
+        </div>
+        <figure class="image-card">
+          <img src="assets/installation.png" alt="TTL Encoder E02 径向磁铁安装示意">
+          <figcaption>说明图建议保留；后续可补拍真实磁铁与编码器间距特写。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="specs" class="section soft-section">
       <div class="container specs-layout">
         <div>
-          <p class="eyebrow">技术参数</p>
-          <h2>TTL Encoder E02 参数表</h2>
-          <div class="table-wrap">
-            <table>
-              <tbody>
-                <tr><th>产品类型</th><td>绝对角度磁编码器</td></tr>
-                <tr><th>通信方式</th><td>单线 TTL 总线</td></tr>
-                <tr><th>默认波特率</th><td>1 Mbps</td></tr>
-                <tr><th>默认 ID / ID 范围</th><td>1 / 1-252</td></tr>
-                <tr><th>供电电压</th><td>DC 5-28V</td></tr>
-                <tr><th>工作电流</th><td>&lt;10mA</td></tr>
-                <tr><th>角度分辨率</th><td>最高 12bit，单圈 0-4095</td></tr>
-                <tr><th>多圈位置范围</th><td>0-65534；最高精度下约 16 圈，圈数掉电不保存</td></tr>
-                <tr><th>速度反馈单位</th><td>步/秒</td></tr>
-                <tr><th>接口</th><td>HC-1.25-3P</td></tr>
-                <tr><th>引脚定义</th><td>- / + / S，对应 GND / VCC / Signal</td></tr>
-                <tr><th>板体直径</th><td>约 16mm</td></tr>
-                <tr><th>基准校准</th><td>支持任意位置基准设置，校准结果掉电保存</td></tr>
-              </tbody>
-            </table>
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>关键参数</h2>
+          <div class="spec-list">
+            <div><span>产品类型</span><strong>12bit 绝对角度磁编码器</strong></div>
+            <div><span>通信方式</span><strong>单线 TTL 总线</strong></div>
+            <div><span>默认波特率</span><strong>1 Mbps</strong></div>
+            <div><span>默认 ID / 范围</span><strong>1 / 1-252</strong></div>
+            <div><span>供电电压</span><strong>DC 5-28V</strong></div>
+            <div><span>工作电流</span><strong>&lt; 10mA</strong></div>
+            <div><span>角度分辨率</span><strong>单圈 0-4095</strong></div>
+            <div><span>速度反馈</span><strong>步/秒，带方向</strong></div>
+            <div><span>接口</span><strong>HC-1.25-3P</strong></div>
+            <div><span>引脚定义</span><strong>- / + / S = GND / VCC / Signal</strong></div>
+            <div><span>板体直径</span><strong>约 16mm</strong></div>
+            <div><span>基准校准</span><strong>支持任意位置设定，掉电保存</strong></div>
           </div>
         </div>
-        <aside>
-          <img src="assets/overview.jpg" alt="TTL Encoder E02 产品正反面和核心特性">
-          <p>页面参数根据现有产品教程及详情页资料整理。正式机械设计与批量应用前，请以最新 Wiki 文档和产品资料包为准。</p>
+        <aside class="why-card">
+          <p class="eyebrow">BEST FOR</p>
+          <h3>小型机器人输出端反馈</h3>
+          <ul>
+            <li>需要上电读取绝对角度</li>
+            <li>需要多个关节共用总线</li>
+            <li>需要检测减速后真实输出</li>
+            <li>需要紧凑、低功耗、易布线的反馈模块</li>
+          </ul>
         </aside>
       </div>
     </section>
 
-    <section id="install" class="section soft">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">安装说明</p>
-          <h2>径向磁铁与编码器 IC 保持同心</h2>
-          <p>编码器通过检测径向磁铁的旋转角度输出位置与速度。安装时建议磁铁与编码器 IC 上表面保持约 1mm 间距，最大不建议超过 1.5mm，并尽量保证旋转轴线同心。</p>
-          <div class="notice"><strong>注意：</strong>产品需要配合径向磁铁使用；结构件与磁铁是否包含在套装中，请以实际销售配置为准。</div>
+    <section id="shooting" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SHOOTING CHECKLIST</p>
+          <h2>后续补拍这些图，页面宣传力会更完整</h2>
+          <p>当前页面先复用已有示意素材。下面这些画面建议按优先级补拍，替换后能更快让用户理解“装在哪里、怎么接、为什么有用”。</p>
         </div>
-        <img src="assets/installation.png" alt="TTL Encoder E02 与径向磁铁的安装间距和工作原理">
+        <div class="shoot-grid">
+          <article>
+            <span>01 / 主图</span>
+            <h3>编码器 + 径向磁铁 + 线材套装平铺</h3>
+            <p>白底或浅灰底，编码器正面朝上，旁边放 HC-1.25-3P 线材和径向磁铁。用于首屏主图和产品列表图。</p>
+          </article>
+          <article>
+            <span>02 / 安装理解</span>
+            <h3>磁铁与 IC 间距特写</h3>
+            <p>微距拍摄，画面标注约 1mm 间距和同心关系。用于安装区块，降低用户装配疑虑。</p>
+          </article>
+          <article>
+            <span>03 / 应用场景</span>
+            <h3>同步轮或齿轮输出端安装</h3>
+            <p>展示编码器装在传动输出端，而不是只拍裸板。用于解释“真实输出角度反馈”。</p>
+          </article>
+          <article>
+            <span>04 / 总线系统</span>
+            <h3>多个 E02 + TTL Adapter + Hub 接线</h3>
+            <p>至少 2-3 个编码器接入同一总线，线材走向清楚，设备标签朝向镜头。用于总线接入区块。</p>
+          </article>
+          <article>
+            <span>05 / 尺寸感</span>
+            <h3>与手指、硬币或尺子的比例图</h3>
+            <p>强调约 16mm 板体和紧凑安装优势。用于证明它能放进小型关节和灵巧手。</p>
+          </article>
+          <article>
+            <span>06 / 真实机器人</span>
+            <h3>机械臂、灵巧手或舵轮上的最终安装图</h3>
+            <p>选择最能代表客户场景的一张图做宽幅场景图，增强产品可信度和购买动机。</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section support-section">
+      <div class="container support-grid">
+        <div>
+          <p class="eyebrow">DOCUMENTATION</p>
+          <h2>从接线到读取数据，都放在 Wiki</h2>
+          <p>Wiki 页面可作为详细资料入口，页面正文只保留购买决策最需要的信息。</p>
+        </div>
+        <div class="support-items">
+          <a href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer"><strong>TTL Encoder E02 Wiki</strong><span>接线、通信、参数与使用说明</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer"><strong>TTL Adapter (A)</strong><span>PC / SBC / MCU 接入 TTL 总线</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/" target="_blank" rel="noopener noreferrer"><strong>总线设备资料</strong><span>查看灵影 TTL 总线生态</span></a>
+          <a href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer"><strong>淘宝店铺</strong><span>查看购买与套装配置</span></a>
+        </div>
+      </div>
       <div class="container cta">
-        <div><p class="eyebrow">资料与教程</p><h2>接线、SDK、示例代码和下载资料</h2><p>Wiki 页面将集中提供最新教程、软件、模型和下载链接。</p></div>
-        <a href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料页（待更新）</a>
+        <div>
+          <strong>需要给机器人加角度反馈？</strong>
+          <span>TTL Encoder E02 适合从单个关节验证，到多关节总线系统集成。</span>
+        </div>
+        <a class="button primary" href="https://lygionorganization.github.io/lygion-wiki/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer">查看产品 Wiki</a>
       </div>
     </section>
   </main>
 
-  <footer><div class="container"><span>LYGION 灵影 · TTL Encoder E02</span><a href="https://lygion.ai/">返回 lygion.ai</a></div></footer>
+  <footer>
+    <div class="container">
+      <span>LYGION 灵影 · TTL Encoder E02 中文响应式详情页</span>
+      <a href="https://lygion.ai/">返回 lygion.ai</a>
+    </div>
+  </footer>
 </body>
 </html>

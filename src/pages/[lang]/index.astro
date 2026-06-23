@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { copy, isLanguage, languages, wikiLinks, type Language } from "../../data/i18n";
-import { getProductDetailPath, getProductsByModule, modules, products, type ModuleId } from "../../data/products";
+import { getProductDetailPath, getProductsByModule, modules, type ModuleId } from "../../data/products";
 
 export function getStaticPaths() {
   return languages.map((lang) => ({ params: { lang } }));
@@ -69,19 +69,44 @@ const moduleIcons: Record<ModuleId, string> = {
         <p class="eyebrow">Product Matrix</p>
         <h2>{t.featuredTitle}</h2>
       </div>
-      <div class="product-grid">
+      <div class="product-module-list">
         {
-          products.map((product) => {
-            const module = modules.find((item) => item.id === product.module);
+          modules.map((module) => {
+            const moduleProducts = getProductsByModule(module.id);
+
+            if (!moduleProducts.length) {
+              return null;
+            }
+
             return (
-              <a class="product-card" href={getProductDetailPath(product, lang)}>
-                <img src={product.image} alt="" loading="lazy" />
-                <div>
-                  <span class={`tag accent-${module?.accent ?? "cyan"}`}>{module?.name[lang]}</span>
-                  <h3>{product.name[lang]}</h3>
-                  <p>{product.summary[lang]}</p>
+              <section class="product-module-group" aria-labelledby={`products-${module.id}`}>
+                <div class="product-module-heading">
+                  <div>
+                    <p class="eyebrow">Product Type</p>
+                    <h3 id={`products-${module.id}`}>{module.name[lang]}</h3>
+                    <p>{module.description[lang]}</p>
+                  </div>
+                  <a class={`text-link accent-${module.accent}`} href={`/${lang}/modules/${module.id}/`}>
+                    {module.name[lang]}
+                  </a>
                 </div>
-              </a>
+                <div class="product-grid">
+                  {
+                    moduleProducts.map((product) => (
+                      <a class="product-card" href={getProductDetailPath(product, lang)}>
+                        <span class="product-card-media">
+                          <img src={product.image} alt="" loading="lazy" />
+                        </span>
+                        <div>
+                          <span class={`tag accent-${module.accent}`}>{module.name[lang]}</span>
+                          <h3>{product.name[lang]}</h3>
+                          <p>{product.summary[lang]}</p>
+                        </div>
+                      </a>
+                    ))
+                  }
+                </div>
+              </section>
             );
           })
         }
