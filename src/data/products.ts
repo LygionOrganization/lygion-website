@@ -320,7 +320,7 @@ export const products: Product[] = [
     slug: "ttl-stepper-driver-a",
     module: "bus-devices",
     status: "available",
-    image: "/product-pages/TTL-Stepper-Driver-A/assets/hero.webp",
+    image: "/product-pages/TTL-Stepper-Driver-A/assets/hero-2.webp",
     detailPath: {
       zh: "/product-pages/TTL-Stepper-Driver-A/index.html",
       en: "/product-pages/TTL-Stepper-Driver-A/en/index.html"
