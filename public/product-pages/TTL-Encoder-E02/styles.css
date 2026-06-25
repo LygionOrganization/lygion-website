@@ -32,6 +32,7 @@ nav a { padding: 9px 11px; border-radius: 8px; font-size: 14px; }
 nav a:hover { background: var(--soft); color: var(--blue); }
 nav .nav-cta { margin-left: 5px; background: var(--blue); color: #fff; }
 nav .nav-cta:hover { background: var(--blue-dark); color: #fff; }
+.language-switch { border: 1px solid #bac8d3; font-weight: 800; }
 .store-link { color: var(--blue); font-weight: 800; }
 
 .hero { padding: 92px 0 74px; overflow: hidden; background: radial-gradient(circle at 10% 15%, rgba(8, 117, 209, .14), transparent 32%), linear-gradient(135deg, #f7fafc 0%, #edf5fa 60%, #fff 100%); }
@@ -85,8 +86,13 @@ h3 { margin-bottom: 8px; font-size: 21px; line-height: 1.35; }
 .scene-list strong, .scene-list span, .install-grid strong, .install-grid span { display: block; }
 .scene-list span, .install-grid span { margin-top: 5px; color: var(--muted); font-size: 13px; }
 .image-card { margin: 0; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
-.image-card img { width: 100%; aspect-ratio: 4 / 3; border-radius: 10px; object-fit: contain; background: #f7f8f9; }
+.image-card img { width: 100%; aspect-ratio: 4 / 3; border-radius: 10px; object-fit: contain; background: #fff; }
 .image-card figcaption { margin: 12px 4px 0; color: var(--muted); font-size: 13px; }
+.media-grid { display: grid; gap: 16px; }
+.two-up { grid-template-columns: repeat(2, 1fr); }
+.three-up { grid-template-columns: repeat(3, 1fr); }
+.platform-grid { margin-top: 24px; }
+.aside-image { width: 100%; margin: 18px 0 8px; border-radius: 10px; background: #fff; }
 
 .dark-section { background: var(--navy); color: #fff; }
 .dark-section .eyebrow { color: #73bfff; }
@@ -151,7 +157,7 @@ footer a { color: var(--blue); }
   nav { width: 100%; padding-bottom: 3px; }
   .hero-grid, .split-layout, .split-layout.reverse, .install-layout, .specs-layout, .support-grid, .software-panel { grid-template-columns: 1fr; }
   .hero-grid { gap: 40px; }
-  .benefit-grid, .proof-grid, .shoot-grid, .workflow-grid, .example-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefit-grid, .proof-grid, .shoot-grid, .workflow-grid, .example-grid, .three-up { grid-template-columns: repeat(2, 1fr); }
   .proof-grid div:nth-child(3) { border-left: 1px solid var(--line); }
 }
 
@@ -161,7 +167,7 @@ footer a { color: var(--blue); }
   h1 { font-size: 42px; }
   h2 { font-size: 32px; }
   .lead { max-width: 100%; font-size: 16px; }
-  .quick-specs, .benefit-grid, .proof-grid, .install-grid, .system-grid, .shoot-grid, .support-items, .workflow-grid, .example-grid { grid-template-columns: 1fr; }
+  .quick-specs, .benefit-grid, .proof-grid, .install-grid, .system-grid, .shoot-grid, .support-items, .workflow-grid, .example-grid, .two-up, .three-up { grid-template-columns: 1fr; }
   .proof-grid div, .proof-grid div:first-child, .proof-grid div:nth-child(3) { border-left: 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .proof-grid div:last-child { border-bottom: 0; }
   .section { padding: 70px 0; }

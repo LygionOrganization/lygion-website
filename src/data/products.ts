@@ -257,7 +257,10 @@ export const products: Product[] = [
     module: "bus-devices",
     status: "available",
     image: "/product-pages/TTL-Adapter-A/assets/hero-2.webp",
-    detailPath: "/product-pages/TTL-Adapter-A/index.html",
+    detailPath: {
+      zh: "/product-pages/TTL-Adapter-A/index.html",
+      en: "/product-pages/TTL-Adapter-A/en/index.html"
+    },
     name: { zh: "TTL Adapter (A) 总线设备驱动板", en: "TTL Adapter (A) Bus Devices Adapter" },
     summary: {
       zh: "方便让各类主流控制器接入各类机器人总线设备的紧凑型 TTL 总线适配器，简化机器人系统复杂度，提升开发和运行效率。",
@@ -289,7 +292,10 @@ export const products: Product[] = [
     module: "bus-devices",
     status: "available",
     image: "/product-pages/TTL-Node-A/assets/hero.webp",
-    detailPath: "/product-pages/TTL-Node-A/index.html",
+    detailPath: {
+      zh: "/product-pages/TTL-Node-A/index.html",
+      en: "/product-pages/TTL-Node-A/en/index.html"
+    },
     name: { zh: "TTL Node (A) 多功能总线节点板", en: "TTL Node (A) Multifunction Bus Node" },
     summary: {
       zh: "集成 USB 调参、航模遥控器 S.BUS 信号输入、双路 PWM 可调电源输出、RGB 状态灯和 TTL 总线扩展。",
@@ -355,8 +361,11 @@ export const products: Product[] = [
     slug: "ttl-encoder-e02",
     module: "bus-devices",
     status: "available",
-    image: "/product-pages/TTL-Encoder-E02/assets/hero.jpg",
-    detailPath: "/product-pages/TTL-Encoder-E02/index.html",
+    image: "/product-pages/TTL-Encoder-E02/assets/hero.webp",
+    detailPath: {
+      zh: "/product-pages/TTL-Encoder-E02/index.html",
+      en: "/product-pages/TTL-Encoder-E02/en/index.html"
+    },
     name: { zh: "TTL Encoder E02 绝对角度总线磁编码器", en: "TTL Encoder E02 Absolute Magnetic Encoder" },
     summary: {
       zh: "面向机器人关节与紧凑传动结构的 12bit 绝对角度、速度反馈方案。",
@@ -387,7 +396,7 @@ export const products: Product[] = [
     slug: "ttl-5264-8p-hub-a",
     module: "bus-devices",
     status: "available",
-    image: "/product-pages/TTL-5264-8P-Hub-A/assets/hero.jpg",
+    image: "/product-pages/TTL-5264-8P-Hub-A/assets/hub-hero.webp",
     detailPath: "/product-pages/TTL-5264-8P-Hub-A/index.html",
     name: { zh: "TTL-5264 8P Hub (A) 总线分线板", en: "TTL-5264 8P Hub (A)" },
     summary: {
@@ -419,7 +428,7 @@ export const products: Product[] = [
     slug: "hc-1-25-8p-hub-a",
     module: "bus-devices",
     status: "available",
-    image: "/product-pages/HC-1.25-8P-Hub-A/assets/hero.jpg",
+    image: "/product-pages/HC-1.25-8P-Hub-A/assets/hub-hero.webp",
     detailPath: "/product-pages/HC-1.25-8P-Hub-A/index.html",
     name: { zh: "HC-1.25_8P_Hub_(A) TTL 总线舵机分线板", en: "HC-1.25 8P Hub (A)" },
     summary: {

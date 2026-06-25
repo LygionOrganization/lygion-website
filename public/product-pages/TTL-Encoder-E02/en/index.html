@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TTL Encoder E02 | 12-bit Absolute TTL Bus Magnetic Encoder | LYGION</title>
+  <meta name="description" content="TTL Encoder E02 is a compact 12-bit absolute magnetic encoder for robot joints, reducer output shafts, timing pulleys, leader arms, and multi-device TTL bus angle feedback.">
+  <meta name="keywords" content="TTL Encoder E02, 12-bit absolute encoder, magnetic encoder, TTL bus encoder, robot joint feedback, reducer output encoder, leader arm input">
+  <link rel="canonical" href="https://lygion.ai/product-pages/TTL-Encoder-E02/en/index.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "TTL Encoder E02",
+    "brand": { "@type": "Brand", "name": "LYGION" },
+    "description": "A compact 12-bit absolute magnetic encoder for real-time joint angle and speed feedback over a TTL bus.",
+    "category": "Robot absolute magnetic encoder",
+    "image": "https://lygion.ai/product-pages/TTL-Encoder-E02/assets/hero.webp"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="https://lygion.ai/en/" aria-label="Return to LYGION home">
+        <span class="brand-mark">LY</span>
+        <span><strong>LYGION</strong><small>Robot hardware and open ecosystem</small></span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#why">Benefits</a>
+        <a href="#interfaces">Board Detail</a>
+        <a href="#bus">Bus System</a>
+        <a href="#software">FD Software</a>
+        <a href="#install">Installation</a>
+        <a href="#specs">Specs</a>
+        <a href="#package">Package</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Taobao Store</a>
+        <a class="language-switch" href="../index.html" lang="zh-CN">中文</a>
+        <a class="nav-cta" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer">Product Wiki</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">TTL ABSOLUTE ENCODER</p>
+          <h1>Real-time 360° absolute angle feedback</h1>
+          <h3>TTL Encoder E02</h3>
+          <p class="lead">A compact 12-bit absolute magnetic encoder for robot joints, reducer output shafts, grippers, and leader arms. Read the real joint angle and speed directly over a TTL bus. Calibration settings are retained after power-off, so the current joint angle is available immediately after startup.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#install">View Installation</a>
+            <a class="button secondary" href="#specs">View Key Specs</a>
+          </div>
+          <ul class="quick-specs" aria-label="Key specifications">
+            <li><strong>12-bit</strong><span>4096 positions per turn</span></li>
+            <li><strong>TTL Bus</strong><span>Read and control multiple bus devices together</span></li>
+            <li><strong>Output Feedback</strong><span>Angle and speed measurement</span></li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <img src="../assets/size-reference.webp" alt="TTL Encoder E02 and radial magnet size reference">
+          <figcaption><span>TTL Encoder E02</span> 12-bit absolute angle / speed feedback module</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Product highlights">
+      <div class="container proof-grid">
+        <div><strong>Absolute Angle</strong><span>Read the current position immediately after power-on</span></div>
+        <div><strong>Output-Side Sensing</strong><span>Measure the mechanism where motion actually happens</span></div>
+        <div><strong>Single-Wire TTL</strong><span>Use multiple encoders and other TTL devices on one bus</span></div>
+        <div><strong>Compact Design</strong><span>Built for lightweight, small-joint robot mechanisms</span></div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT IT SOLVES</p>
+          <h2>Why use an output-side absolute encoder?</h2>
+          <p>TTL Encoder E02 gives the controller real mechanism feedback instead of only estimating from the motor side. It powers up with a known absolute angle, keeps calibration settings after power-off, and can share the same TTL bus with other robot devices.</p>
+        </div>
+        <div class="benefit-grid">
+          <article><span class="card-index">01</span><h3>Position Available at Startup</h3><p>The single-turn absolute angle can be read immediately. This is useful for joints and steering modules that should recover state quickly without a homing routine.</p><strong>No homing wait</strong></article>
+          <article><span class="card-index">02</span><h3>Closer to the Load</h3><p>Mount it near a timing pulley, gear, reducer output, or inside the joint to measure the angle after backlash, belt stretch, and transmission error.</p><strong>Better reducer-side feedback</strong></article>
+          <article><span class="card-index">03</span><h3>One Bus for Many Devices</h3><p>Multiple encoders and other TTL bus devices can share one communication line, which keeps robot arms, grippers, and steering modules easier to wire and expand.</p><strong>Control all bus devices through one link</strong></article>
+          <article><span class="card-index">04</span><h3>Easy to Embed</h3><p>The compact round board and HC1.25 connector fit small robot mechanisms where sensor space is limited.</p><strong>Designed for embedded mounting</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interfaces" class="section soft-section">
+      <div class="container split-layout">
+        <div>
+          <p class="eyebrow">BOARD DETAIL</p>
+          <h2>Main board resources</h2>
+          <div class="scene-list">
+            <div><strong>Magnetic Encoder IC</strong><span>Detects the rotation of the radial magnet. During installation, the magnet center should be aligned with the IC as closely as possible. A 6 x 2.5 mm radial magnet is included.</span></div>
+            <div><strong>HC1.25-3P TTL Bus and Power Port</strong><span>Connect GND / VCC / Signal to the TTL bus. The included cable can connect one encoder directly, or multiple encoders can be connected through a <a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/hub-boards/hc-1-25-8p-hub-a/" target="_blank" rel="noopener noreferrer">Hub Board</a>.</span></div>
+          </div>
+        </div>
+        <div class="media-grid two-up">
+          <figure class="image-card"><img src="../assets/board-front.webp" alt="TTL Encoder E02 front detail"><figcaption>HC1.25-3P connector</figcaption></figure>
+          <figure class="image-card"><img src="../assets/board-back.webp" alt="TTL Encoder E02 back detail"><figcaption>Magnetic encoder IC</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="bus" class="section dark-section">
+      <div class="container split-layout reverse">
+        <figure class="image-card dark-card">
+          <img src="../assets/bus-overview.webp" alt="Multiple TTL Encoder E02 modules on one TTL bus">
+        </figure>
+        <div>
+          <p class="eyebrow">TTL BUS SYSTEM</p>
+          <h2>Multiple encoders, multiple device types, one bus</h2>
+          <p>Use <a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer">TTL Adapter (A)</a>, a <a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/hub-boards/hc-1-25-8p-hub-a/" target="_blank" rel="noopener noreferrer">Hub Board</a>, or a controller with single-wire TTL to place multiple encoders and other bus devices on the same communication link. After assigning each device a unique ID, a host or MCU can read and control them centrally.</p>
+          <div class="system-grid">
+            <div><strong>PC / Jetson / Raspberry Pi</strong><span>Use Python to read and control TTL bus devices directly.</span></div>
+            <div><strong>ESP32 / STM32 / Arduino</strong><span>Use C++ or Arduino-style development for embedded robot control.</span></div>
+            <div><strong>Mixed TTL Bus</strong><span>Can work together with LYGION TTL devices and compatible Feetech TTL bus servos such as the SCS and STS series.</span></div>
+          </div>
+          <a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer">Open the wiring and software guide</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="software" class="section quickstart-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FD SOFTWARE</p>
+          <h2>Detailed tutorials make the first setup easier</h2>
+          <p>The Wiki provides FD software setup, Python quick start, and C++ / Arduino examples. FD software helps separate wiring, power, and software issues, so the first bring-up is much less frustrating.</p>
+        </div>
+        <div class="software-panel">
+          <div>
+            <h3>Search the device, check status, and read angle data</h3>
+            <p>Connect E02 through <a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer">TTL Adapter (A)</a> or another USB-to-single-wire-TTL controller, then use FD software to search for the device. Once the readings are stable, integrate the encoder with your own project using the Python, C++ / Arduino examples in the Wiki.</p>
+          </div>
+          <figure class="image-card dark-card">
+            <img src="../assets/fd-software-en.webp" alt="FD software reading TTL Encoder E02">
+          </figure>
+        </div>
+        <div class="media-grid three-up platform-grid">
+          <figure class="image-card"><img src="../assets/jetson-use.webp" alt="Using TTL Encoder E02 with Jetson"><figcaption>Jetson setup</figcaption></figure>
+          <figure class="image-card"><img src="../assets/raspberry-pi-use.webp" alt="Using TTL Encoder E02 with Raspberry Pi"><figcaption>Raspberry Pi setup</figcaption></figure>
+          <figure class="image-card"><img src="../assets/esp32-use.webp" alt="Using TTL Encoder E02 with ESP32"><figcaption>ESP32 / MCU setup</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="section">
+      <div class="container install-layout">
+        <div>
+          <p class="eyebrow">MAGNET INSTALLATION</p>
+          <h2>Installation notes</h2>
+          <p>TTL Encoder E02 measures angle by sensing the rotation of a radial magnet. For reliable readings, align the magnet rotation axis with the center of the encoder IC and keep the magnet-to-IC distance around 0.8-1.5 mm. A stable mechanical mount gives more stable feedback.</p>
+          <div class="install-grid">
+            <div><strong>Concentricity</strong><span>Keep the magnet rotation axis as close as possible to the center of the encoder IC.</span></div>
+            <div><strong>Gap</strong><span>Design for about 1 mm spacing between the magnet and IC; 0.8-1.5 mm is usable.</span></div>
+            <div><strong>Fixing</strong><span>Secure both the magnet and the encoder board to avoid vibration or off-axis rotation causing unstable readings.</span></div>
+            <div><strong>Calibration</strong><span>After assembly, set the current position as the reference angle. Calibration parameters are retained after power-off.</span></div>
+          </div>
+        </div>
+        <figure class="image-card">
+          <img src="../assets/magnet-gap.webp" alt="TTL Encoder E02 magnet and IC installation gap">
+          <figcaption>The relative position between the magnet and encoder IC is the key to accurate readings.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">APPLICATIONS</p>
+          <h2>Application Examples</h2>
+        </div>
+        <div class="media-grid three-up">
+          <figure class="image-card"><img src="../assets/timing-pulley-install.webp" alt="TTL Encoder E02 mounted at a timing pulley output"><figcaption>Timing pulley output feedback</figcaption></figure>
+          <figure class="image-card"><img src="../assets/robot-arm-joint.webp" alt="TTL Encoder E02 installed in a robot arm joint"><figcaption>Robot arm joint installation</figcaption></figure>
+          <figure class="image-card"><img src="../assets/leader-arm-input.webp" alt="TTL Encoder E02 used in a leader arm input device"><figcaption>Leader arm / teaching input</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="section">
+      <div class="container specs-layout">
+        <div>
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>Key Specifications</h2>
+          <div class="spec-list">
+            <div><span>Product type</span><strong>12-bit absolute magnetic encoder</strong></div>
+            <div><span>Model</span><strong>TTL Encoder E02</strong></div>
+            <div><span>Angle feedback</span><strong>12-bit absolute angle; single-turn range 0-4095 (360°); supports multi-turn counting, but turn count is not retained after power-off</strong></div>
+            <div><span>Speed feedback</span><strong>Unit: step/s</strong></div>
+            <div><span>Bus</span><strong>Single-wire TTL @ 1 Mbps; baud rate configurable</strong></div>
+            <div><span>Device ID</span><strong>Range 1-252; default ID 1</strong></div>
+            <div><span>Sync read time</span><strong>0.835 ms @ 5 devices; 1.56 ms @ 10 devices<br>2.285 ms @ 15 devices; 3.01 ms @ 20 devices</strong></div>
+            <div><span>Sync read rate (theoretical)</span><strong>1197.6 Hz @ 5 devices; 641 Hz @ 10 devices<br>437.6 Hz @ 15 devices; 332.2 Hz @ 20 devices</strong></div>
+            <div><span>Sync read rate (ESP32S3 measured)</span><strong>924.5 Hz @ 5 devices; 526.3 Hz @ 10 devices<br>366.3 Hz @ 15 devices; 279.2 Hz @ 20 devices</strong></div>
+            <div><span>Packet loss</span><strong>0 at 1 Mbps, 279 Hz sync read with 20 encoders</strong></div>
+            <div><span>Reference position</span><strong>Set the current position as any supported encoder value for later angle reference; retained after power-off</strong></div>
+            <div><span>Power input</span><strong>DC 5-28 V</strong></div>
+            <div><span>Power consumption</span><strong>Operating current &lt; 10 mA</strong></div>
+            <div><span>Connector</span><strong>HC-1.25-3P (- / + / S)</strong></div>
+            <div><span>Size / weight</span><strong>16 mm diameter; PCB weight &lt; 1 g</strong></div>
+            <div><span>Installation requirement</span><strong>Radial magnet should be concentric with the encoder IC, with about 1 mm spacing</strong></div>
+            <div><span>Package contents</span><strong>Encoder x1; 6 x 2.5 mm radial magnet x1; HC-1.25-3P cable x1</strong></div>
+            <div><span>Typical uses</span><strong>Output-side angle feedback, speed feedback, leader-arm input</strong></div>
+            <div><span>Integration</span><strong><a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer">TTL Adapter (A)</a>, <a class="text-link" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/hub-boards/hc-1-25-8p-hub-a/" target="_blank" rel="noopener noreferrer">Hub Board</a><br>MCU TTL bus interface</strong></div>
+            <div><span>Development support</span><strong>FD software, Wiki documentation, Python / C++ / Arduino examples</strong></div>
+          </div>
+        </div>
+        <aside class="why-card">
+          <p class="eyebrow">SIZE</p>
+          <h3>Built for compact robot mechanisms</h3>
+          <img class="aside-image" src="../assets/size-reference.webp" alt="TTL Encoder E02 size reference">
+          <ul>
+            <li>Compact board for joints and transmission outputs</li>
+            <li>Suitable for synchronized multi-joint angle acquisition</li>
+            <li>Can be verified in FD software before writing code</li>
+            <li>Can share a bus with other TTL devices</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="package" class="section soft-section">
+      <div class="container split-layout">
+        <figure class="image-card">
+          <img src="../assets/package.webp" alt="TTL Encoder E02 package contents">
+          <figcaption>TTL Encoder E02 package contents</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">PACKAGE</p>
+          <h2>Package Contents</h2>
+          <div class="scene-list">
+            <div><strong>TTL Encoder E02 x1</strong><span>12-bit absolute TTL bus magnetic encoder</span></div>
+            <div><strong>6 x 2.5 mm radial magnet x1</strong><span>Works with the encoder IC to measure rotation angle</span></div>
+            <div><strong>HC-1.25-3P cable x1</strong><span>For connecting to the TTL bus system</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support-section">
+      <div class="container support-grid">
+        <div>
+          <p class="eyebrow">DOCUMENTATION</p>
+          <h2>Complete tutorials for faster development</h2>
+          <p>Use the product Wiki for setup tools, SDK examples, wiring notes, and development tutorials.</p>
+        </div>
+        <div class="support-items">
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer"><strong>TTL Encoder E02 Wiki</strong><span>Wiring, communication, parameters, and usage notes</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer"><strong>TTL Adapter (A)</strong><span>Connect PC, SBC, and MCU systems to the TTL bus</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer"><strong>Power Grouping</strong><span>Multi-voltage, high-current, and hub-based bus wiring</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/downloads/" target="_blank" rel="noopener noreferrer"><strong>Mechanical Files</strong><span>STEP models and related downloads</span></a>
+        </div>
+      </div>
+      <div class="container cta">
+        <div><strong>Need angle sensing for multiple robot joints?</strong><span>TTL Encoder E02 can be integrated into many compact robot feedback systems.</span></div>
+        <a class="button primary" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer">Open Product Wiki</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>LYGION · TTL Encoder E02 English product page</span>
+      <a href="https://lygion.ai/en/">Back to lygion.ai</a>
+    </div>
+  </footer>
+</body>
+</html>
