@@ -40,7 +40,7 @@ const moduleProducts = getProductsByModule(module.id as ModuleId);
       <div class="product-grid">
         {
           moduleProducts.map((product) => (
-            <a class="product-card" href={getProductDetailPath(product, lang)}>
+            <a class="product-card" href={getProductDetailPath(product, lang)} target="_blank" rel="noopener noreferrer">
               <span class="product-card-media">
                 <img src={product.image} alt="" loading="lazy" />
               </span>

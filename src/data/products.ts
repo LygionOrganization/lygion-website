@@ -430,7 +430,7 @@ export const products: Product[] = [
     status: "available",
     image: "/product-pages/HC-1.25-8P-Hub-A/assets/hub-hero.webp",
     detailPath: "/product-pages/HC-1.25-8P-Hub-A/index.html",
-    name: { zh: "HC-1.25_8P_Hub_(A) TTL 总线舵机分线板", en: "HC-1.25 8P Hub (A)" },
+    name: { zh: "HC-1.25_8P_Hub_(A) 总线设备分线板", en: "HC-1.25 8P Hub (A)" },
     summary: {
       zh: "面向 HC-1.25-3P 总线舵机的 8 路并联分线与紧凑安装 Hub。",
       en: "A compact 8-port hub for HC-1.25-3P TTL bus servo wiring."
@@ -462,7 +462,7 @@ export const products: Product[] = [
     status: "available",
     image: "/product-pages/Robot-Driver-ESP32S3-Lite/assets/hero.png",
     detailPath: "/product-pages/Robot-Driver-ESP32S3-Lite/index.html",
-    name: { zh: "Robot Driver with ESP32S3 Lite 控制板", en: "Robot Driver with ESP32S3 Lite" },
+    name: { zh: "Robot Driver with ESP32S3 Lite 机器人下位机控制板", en: "Robot Driver with ESP32S3 Lite" },
     summary: {
       zh: "集成 Web 控制台、本地按键交互、动作任务文件和上位机 JSON 通信的一体化机器人控制板。",
       en: "An ESP32-S3 robot controller with Web console, local controls, task files, and host JSON communication."

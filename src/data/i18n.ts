@@ -37,7 +37,7 @@ export const copy = {
     backHome: "返回首页",
     backModule: "返回模块",
     githubEyebrow: "Lygion GitHub",
-    ctaTitle: "SDK 与例程正在持续开源",
+    ctaTitle: "SDK 与例程持续更新",
     ctaLead:
       "我们会在灵影 GitHub 仓库中发布产品 SDK、通信协议示例、机器人控制例程和参考工程，帮助开发者更快完成接入与验证。",
     githubButton: "访问 GitHub 仓库",
@@ -66,7 +66,7 @@ export const copy = {
     backHome: "Back home",
     backModule: "Back to module",
     githubEyebrow: "Lygion GitHub",
-    ctaTitle: "SDKs and examples are being open-sourced",
+    ctaTitle: "Updating SDKs and Examples",
     ctaLead:
       "Lygion publishes product SDKs, communication examples, robot control demos, and reference projects on GitHub so developers can integrate and validate faster.",
     githubButton: "Open GitHub Repositories",
