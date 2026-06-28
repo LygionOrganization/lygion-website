@@ -48,7 +48,7 @@
           <p class="eyebrow">TTL BUS HUB</p>
           <h1>TTL 总线设备分线板</h1>
           <h3>TTL-5264 8P Hub (A)</h3>
-          <p class="lead">面向 5264-3P 接口设备的总线分线板。把通信、供电和分线功能整理在一块小板上，让总线设备接线更清楚、更容易扩展。</p>
+          <p class="lead">面向 5264-3P 接口设备的总线分线板。把通信、供电和分线功能整理在一块小板上，让总线设备接线更容易扩展。</p>
           <div class="hero-actions">
             <a class="button primary" href="#devices">可扩展设备</a>
             <a class="button secondary" href="#specs">关键参数</a>
@@ -79,32 +79,72 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">WHAT IT SOLVES</p>
-          <h2>简单的板子，解决复杂的分线</h2>
-          <p>机器人上经常需要把多个执行器接入同一条 TTL 总线。TTL-5264 8P Hub (A) 不改变通信协议，只负责把总线和电源可靠分配到多个 5264-3P 接口，适合在调试台、机器人底盘、机械臂和多轴机构里做集中接线。</p>
+          <h2>产品特性</h2>
+          <p>机器人需要把多个不同供电需求的总线设备并入 TTL 总线同时控制。TTL-5264 8P Hub (A) 不改变通信协议，只负责把总线和电源可靠分配到多个 5264-3P 接口，尺寸小巧，易于集成在多种应用场景中。</p>
         </div>
         <div class="benefit-grid">
-          <article><span class="card-index">01</span><h3>接口集中</h3><p>8 个 5264-3P 接口排列在同一块板上，设备数量变多时也能保持线束整洁。</p><strong>适合多执行器系统</strong></article>
-          <article><span class="card-index">02</span><h3>共用总线</h3><p>多个 TTL 总线设备设置不同 ID 后接入同一条通信线，由上位机或 MCU 集中控制。</p><strong>一条总线控制多个设备</strong></article>
-          <article><span class="card-index">03</span><h3>统一供电入口</h3><p>减少一对一接线带来的混乱，让电源和信号路径更容易确认。</p><strong>调试更快</strong></article>
-          <article><span class="card-index">04</span><h3>适合原型开发</h3><p>插拔、替换和排查设备都更方便，适合机器人原型阶段快速搭建。</p><strong>降低接线成本</strong></article>
+          <article><span class="card-index">01</span><h3>接口集中</h3><p>8 个 5264-3P 接口排列在同一块板上，设备数量变多时也能保持线束整洁。</p><strong>将多个设备并入总线</strong></article>
+          <article><span class="card-index">02</span><h3>尺寸紧凑</h3><p>仅 44x21mm，适用于对空间敏感的四足、六足、机械臂等项目。</p><strong>适合空间受限的应用场景</strong></article>
+          <article><span class="card-index">03</span><h3>多板并联</h3><p>方便多板/多组舵机使用不同电源、控制多组不同电压的总线设备</p><strong>支持<a class="text-link" href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer">分组供电/供电解耦</a></strong></article>
+          <article><span class="card-index">04</span><h3>易于集成</h3><p>板载 DC5521 插座与接线端子，方便接入多种电源。</p><strong>降低接线成本</strong></article>
         </div>
       </div>
     </section>
 
-    <section id="wiring" class="section soft-section">
-      <div class="container split-layout">
+    <section id="power-grouping" class="section">
+      <div class="container split-layout reverse">
         <div>
-          <p class="eyebrow">WIRING</p>
-          <h2>一端接入主控，另一端扩展设备</h2>
+          <p class="eyebrow">POWER GROUPING</p>
+          <h2>分组供电</h2>
+          <p>通过多块 Hub 并联，可以让不同电压规格的总线设备并入同一条通信总线，同时由各自匹配的电源独立供电。例如图中两组设备分别使用 DC 12V 与 DC 7.4V 为 Hub 供电，供电电源互不影响。</p>
           <div class="scene-list">
-            <div><strong>主控侧</strong><span>可通过 TTL Adapter (A)、Robot Driver 或 MCU 的 TTL 总线接口接入通信线与电源。</span></div>
-            <div><strong>设备侧</strong><span>8 路 5264-3P 接口用于连接 TTL Stepper Driver、SC-1500-C024、SC-1500-C023 等设备。</span></div>
-            <div><strong>使用建议</strong><span>多设备共线时，为每个设备设置独立 ID，并根据负载电流选择合适的供电线径与电源容量。</span></div>
+            <div><strong>通信共线</strong><span>多组设备共享 TTL 通信总线。</span></div>
+            <div><strong>电源分组</strong><span>每组设备连接与其额定电压匹配的独立电源，避免不同供电规格互相影响。</span></div>
           </div>
         </div>
-        <figure class="image-card">
-          <img src="assets/hub-kit.webp" alt="TTL-5264 8P Hub (A) 与连接线">
-          <figcaption>Hub 板与连接线，适合直接加入机器人总线系统。</figcaption>
+        <figure class="image-card technical-image">
+          <img src="assets/power-grouping-cropped.webp" alt="TTL-5264 8P Hub 分组供电接线示意图">
+          <figcaption>不同电压的总线设备可共用通信总线，并按组独立供电。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="onboard-resources" class="section soft-section">
+      <div class="container split-layout">
+        <figure class="image-card technical-image">
+          <img src="assets/resource-cropped.webp" alt="TTL-5264 8P Hub 板载资源编号图">
+          <figcaption>板载接口与安装资源</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">ONBOARD RESOURCES</p>
+          <h2>板载资源</h2>
+          <ol class="resource-list">
+            <li><strong>01</strong><span>KF301-2P 供电端子，与 DC5521 供电接口内部相连，任接其一即可。</span></li>
+            <li><strong>02</strong><span>电源指示灯。</span></li>
+            <li><strong>03</strong><span>直径 3mm 安装固定孔，共 4 个。</span></li>
+            <li><strong>04</strong><span>DC5521 供电接口，支持 DC 5–28V 输入。</span></li>
+            <li><strong>05</strong><span>单线 TTL 板间通信接口（GH-1.25-3P）。</span></li>
+            <li><strong>06</strong><span>8 个 5264-3P 总线设备接口。</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="dimensions" class="section">
+      <div class="container split-layout reverse">
+        <div>
+          <p class="eyebrow">DIMENSIONS</p>
+          <h2>结构尺寸</h2>
+          <p>板体外形紧凑，宽度 21mm、主体长度 41mm，包含外伸接口的总长度约 43.3mm。安装孔直径为 3mm，横向孔距 15mm，纵向孔距 35mm。</p>
+          <div class="dimension-grid" aria-label="主要结构尺寸">
+            <div><strong>21mm</strong><span>板体宽度</span></div>
+            <div><strong>43.3mm</strong><span>总长度</span></div>
+            <div><strong>Ø3mm</strong><span>安装孔径</span></div>
+          </div>
+        </div>
+        <figure class="image-card technical-image">
+          <img src="assets/structure-cropped.webp" alt="TTL-5264 8P Hub 结构尺寸图">
+          <figcaption>尺寸单位：mm。</figcaption>
         </figure>
       </div>
     </section>
@@ -113,13 +153,13 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">EXPAND DEVICES</p>
-          <h2>可扩展的典型设备</h2>
-          <p>适合连接较大接口的 TTL 总线执行器。下面是常见组合：一个 Hub 板，把多个驱动或舵机接到同一条总线。</p>
+          <h2>可扩展设备</h2>
+          <p>适合连接 HX5264-3P 接口的 TTL 总线设备：灵影(Lygion)的总线产品，飞特(Feetech)的 STS、HLS、SCS 系列总线舵机</p>
         </div>
         <div class="media-grid three-up">
-          <figure class="image-card"><img src="assets/ttl-stepper-driver.webp" alt="TTL Stepper Driver (A)"><figcaption>TTL Stepper Driver (A)：总线步进电机驱动板。</figcaption></figure>
-          <figure class="image-card"><img src="assets/servo-sc1500-c024.webp" alt="SC-1500-C024 TTL 总线舵机"><figcaption>SC-1500-C024：适合机器人关节和执行机构。</figcaption></figure>
-          <figure class="image-card"><img src="assets/servo-sc1500-c023.webp" alt="SC-1500-C023 TTL 总线舵机"><figcaption>SC-1500-C023：可与其它 TTL 总线设备共线控制。</figcaption></figure>
+          <figure class="image-card"><img src="assets/ttl-stepper-driver.webp" alt="TTL Stepper Driver (A)"><figcaption>总线步进电机驱动板：TTL Stepper Driver (A)</figcaption></figure>
+          <figure class="image-card"><img src="assets/servo-sc1500-c024.webp" alt="SC-1500-C024 TTL 总线舵机"><figcaption>总线舵机：SC-1500-C024</figcaption></figure>
+          <figure class="image-card"><img src="assets/servo-sc1500-c023.webp" alt="SC-1500-C023 TTL 总线舵机"><figcaption>总线舵机：SC-1500-C023</figcaption></figure>
         </div>
       </div>
     </section>
@@ -131,12 +171,12 @@
         </figure>
         <div>
           <p class="eyebrow">BUS SYSTEM</p>
-          <h2>让多设备接线保持清楚</h2>
-          <p>Hub 板的价值不是“增加功能”，而是把总线系统变得更容易搭建。多台驱动、多只舵机接到同一条总线后，上位机只需要按设备 ID 发送指令，接线和维护都更直观。</p>
+          <h2>接线简单，易于使用</h2>
+          <p>Hub 板适用于使用多种总线设备的机器人系统。多个驱动器、多个编码器、多只舵机接到同一条总线后，上位机只需要按设备 ID 发送指令，即可通过 USB 或 UART 接口与总线设备进行通信。</p>
           <div class="system-grid">
-            <div><strong>机械臂</strong><span>多个关节设备集中接入一条总线。</span></div>
-            <div><strong>移动底盘</strong><span>轮组、转向和其它执行器统一布线。</span></div>
-            <div><strong>实验平台</strong><span>快速插拔设备，验证控制逻辑。</span></div>
+            <div><strong>设备混用</strong><span>不同类型的总线设备可以连接到同一条总线上。</span></div>
+            <div><strong>控制简单</strong><span>通过统一的接口和协议，简化设备控制流程。</span></div>
+            <div><strong>接线清晰</strong><span>减少接线复杂度，提高系统可维护性。</span></div>
           </div>
           <a class="text-link" href="https://wiki.lygion.ai/reference/bus-devices/hub-boards/ttl-5264-8p-hub-a/" target="_blank" rel="noopener noreferrer">查看 Wiki 接线说明</a>
         </div>
@@ -152,15 +192,17 @@
             <div><span>产品类型</span><strong>TTL 总线分线板</strong></div>
             <div><span>型号</span><strong>TTL-5264 8P Hub (A)</strong></div>
             <div><span>设备接口</span><strong>8 路 5264-3P</strong></div>
-            <div><span>典型设备</span><strong>TTL Stepper Driver (A)、SC-1500-C024、SC-1500-C023</strong></div>
-            <div><span>总线类型</span><strong>单线 TTL 总线</strong></div>
-            <div><span>用途</span><strong>多设备共线通信、集中供电、线束整理</strong></div>
+            <div><span>典型设备</span><strong>TTL Stepper Driver、飞特(Feetech)STS、HLS、SCS 系列舵机</strong></div>
+            <div><span>总线类型</span><strong>单线 TTL</strong></div>
+            <div><span>用途</span><strong>多设备并入总线、<a class="text-link" href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer">分组供电/供电解耦</a></strong></div>
           </div>
         </div>
         <aside class="why-card">
           <p class="eyebrow">NOTE</p>
-          <h3>Hub 不改变通信协议</h3>
-          <p>它只是把同一条 TTL 总线分配到多个接口。实际可接设备数量取决于设备 ID、总线长度、供电能力和线束质量。</p>
+          <h3>温馨提示</h3>
+          <p>1. 分线板支持灵影和飞特的 5264-3P 接口设备、其它品牌的设备请自行评估接口线序是否兼容。<br>
+             2. 产品提供 2D、3D图纸，详情可参考 <a class="text-link" href="https://wiki.lygion.ai/reference/bus-devices/hub-boards/ttl-5264-8p-hub-a/" target="_blank" rel="noopener noreferrer">产品 Wiki</a>。<br>
+             3. 供电需根据总线设备的电压要求进行供电，电流根据舵机负载大小进行选择。可联系客服推荐。<br></p>
           <img src="assets/hub-front.webp" alt="TTL-5264 8P Hub (A) 正面">
         </aside>
       </div>
@@ -177,7 +219,7 @@
           <h2>包装清单</h2>
           <div class="package-list">
             <div><strong>TTL-5264 8P Hub (A)</strong><span>x1</span></div>
-            <div><strong>5264-3P 连接线</strong><span>x1</span></div>
+            <div><strong>GH1.25-3P 连接线（用于分组供电/供电解耦）</strong><span>x1</span></div>
           </div>
         </div>
       </div>
@@ -187,12 +229,12 @@
       <div class="container support-grid">
         <div>
           <p class="eyebrow">SUPPORT</p>
-          <h2>接线、供电和设备 ID 设置</h2>
-          <p>如果你是第一次搭建 TTL 总线系统，建议先用 Wiki 确认接线方向、供电方式和设备 ID 设置，再逐个增加设备。</p>
+          <h2>提供完整教程，方便敏捷开发</h2>
+          <p>调试工具、SDK 与开发教程等资料可参考产品 Wiki。</p>
         </div>
         <div class="support-items">
           <a href="https://wiki.lygion.ai/reference/bus-devices/hub-boards/ttl-5264-8p-hub-a/" target="_blank" rel="noopener noreferrer"><strong>产品 Wiki</strong><span>接线说明与使用建议</span></a>
-          <a href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer"><strong>淘宝店铺</strong><span>查看产品与配套线材</span></a>
+          <a href="https://wiki.lygion.ai/tutorials/power-grouping-and-decoupling/" target="_blank" rel="noopener noreferrer"><strong>分组供电/供电解耦</strong><span>多种电压、大电流与 Hub 级联</span></a>
         </div>
       </div>
     </section>

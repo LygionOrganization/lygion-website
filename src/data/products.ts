@@ -397,7 +397,10 @@ export const products: Product[] = [
     module: "bus-devices",
     status: "available",
     image: "/product-pages/TTL-5264-8P-Hub-A/assets/hub-hero.webp",
-    detailPath: "/product-pages/TTL-5264-8P-Hub-A/index.html",
+    detailPath: {
+      zh: "/product-pages/TTL-5264-8P-Hub-A/index.html",
+      en: "/product-pages/TTL-5264-8P-Hub-A/en/index.html"
+    },
     name: { zh: "TTL-5264 8P Hub (A) 总线分线板", en: "TTL-5264 8P Hub (A)" },
     summary: {
       zh: "把一条 TTL 总线整理成 8 路 5264-3P 设备接口，并统一供电入口、级联通信和安装结构。",
@@ -429,7 +432,10 @@ export const products: Product[] = [
     module: "bus-devices",
     status: "available",
     image: "/product-pages/HC-1.25-8P-Hub-A/assets/hub-hero.webp",
-    detailPath: "/product-pages/HC-1.25-8P-Hub-A/index.html",
+    detailPath: {
+      zh: "/product-pages/HC-1.25-8P-Hub-A/index.html",
+      en: "/product-pages/HC-1.25-8P-Hub-A/en/index.html"
+    },
     name: { zh: "HC-1.25_8P_Hub_(A) 总线设备分线板", en: "HC-1.25 8P Hub (A)" },
     summary: {
       zh: "面向 HC-1.25-3P 总线舵机的 8 路并联分线与紧凑安装 Hub。",

@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev --host 127.0.0.1 --port 5300",
+    "dev": "astro dev --host 127.0.0.1 --port 5400",
     "build": "astro build",
-    "preview": "astro preview --host 127.0.0.1 --port 5301"
+    "preview": "astro preview --host 127.0.0.1 --port 5401"
   },
   "dependencies": {},
   "devDependencies": {
