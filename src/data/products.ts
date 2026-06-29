@@ -466,7 +466,7 @@ export const products: Product[] = [
     slug: "robot-driver-esp32s3-lite",
     module: "bus-devices",
     status: "available",
-    image: "/product-pages/Robot-Driver-ESP32S3-Lite/assets/hero.png",
+    image: "/product-pages/Robot-Driver-ESP32S3-Lite/assets/hero-system.webp",
     detailPath: "/product-pages/Robot-Driver-ESP32S3-Lite/index.html",
     name: { zh: "Robot Driver with ESP32S3 Lite 机器人下位机控制板", en: "Robot Driver with ESP32S3 Lite" },
     summary: {
