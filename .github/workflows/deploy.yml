@@ -1,0 +1,143 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build overseas English site
+        env:
+          PUBLIC_DEFAULT_LANGUAGE: en
+        run: npm run build
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      - name: Build Chinese mainland site
+        env:
+          PUBLIC_DEFAULT_LANGUAGE: zh
+        run: npm run build
+
+      - name: Package Chinese mainland site
+        run: tar -C dist -czf aliyun-site.tar.gz .
+
+      - name: Upload Aliyun artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aliyun-site
+          path: aliyun-site.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy-pages:
+    name: Deploy overseas site to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  deploy-aliyun:
+    name: Deploy Chinese mainland site to Aliyun ECS
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: aliyun-production
+    env:
+      ALIYUN_HOST: ${{ secrets.ALIYUN_HOST }}
+      ALIYUN_PORT: ${{ secrets.ALIYUN_PORT }}
+      ALIYUN_USER: ${{ secrets.ALIYUN_USER }}
+      ALIYUN_PATH: ${{ secrets.ALIYUN_PATH }}
+    steps:
+      - name: Validate deployment settings
+        shell: bash
+        run: |
+          set -euo pipefail
+          for variable in ALIYUN_HOST ALIYUN_USER ALIYUN_PATH; do
+            if [ -z "${!variable}" ]; then
+              echo "::error::Missing GitHub environment secret: ${variable}"
+              exit 1
+            fi
+          done
+          if [ -z "${ALIYUN_PORT}" ]; then
+            echo "ALIYUN_PORT=22" >> "$GITHUB_ENV"
+          fi
+
+      - name: Download Chinese mainland site
+        uses: actions/download-artifact@v5
+        with:
+          name: aliyun-site
+
+      - name: Configure SSH
+        env:
+          ALIYUN_SSH_KEY: ${{ secrets.ALIYUN_SSH_KEY }}
+          ALIYUN_KNOWN_HOSTS: ${{ secrets.ALIYUN_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$ALIYUN_SSH_KEY" || {
+            echo "::error::Missing GitHub environment secret: ALIYUN_SSH_KEY"
+            exit 1
+          }
+          test -n "$ALIYUN_KNOWN_HOSTS" || {
+            echo "::error::Missing GitHub environment secret: ALIYUN_KNOWN_HOSTS"
+            exit 1
+          }
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$ALIYUN_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' "$ALIYUN_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Upload release
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="/tmp/lygion-${GITHUB_SHA}.tar.gz"
+          scp -P "$ALIYUN_PORT" aliyun-site.tar.gz \
+            "${ALIYUN_USER}@${ALIYUN_HOST}:${archive}"
+          ssh -p "$ALIYUN_PORT" "${ALIYUN_USER}@${ALIYUN_HOST}" \
+            bash -s -- "$ALIYUN_PATH" "$GITHUB_SHA" "$archive" <<'REMOTE'
+          set -euo pipefail
+          deploy_root="$1"
+          release_id="$2"
+          archive="$3"
+          release_dir="${deploy_root}/releases/${release_id}"
+          mkdir -p "$release_dir"
+          tar -xzf "$archive" -C "$release_dir"
+          ln -sfn "$release_dir" "${deploy_root}/current.next"
+          mv -Tf "${deploy_root}/current.next" "${deploy_root}/current"
+          rm -f "$archive"
+          REMOTE

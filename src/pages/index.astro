@@ -1,24 +1,26 @@
 ---
+const configuredLanguage = import.meta.env.PUBLIC_DEFAULT_LANGUAGE;
+const defaultLanguage = configuredLanguage === "en" ? "en" : "zh";
+const htmlLanguage = defaultLanguage === "en" ? "en" : "zh-CN";
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang={htmlLanguage}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <title>Lygion Robotics</title>
-    <script is:inline>
-      const language = navigator.language || navigator.userLanguage || "zh";
-      const target = language.toLowerCase().startsWith("zh") ? "/zh/" : "/en/";
-      window.location.replace(target);
+    <script is:inline define:vars={{ defaultLanguage }}>
+      window.location.replace(`/${defaultLanguage}/`);
     </script>
     <noscript>
-      <meta http-equiv="refresh" content="0; url=/zh/" />
+      <meta http-equiv="refresh" content={`0; url=/${defaultLanguage}/`} />
     </noscript>
   </head>
   <body>
-    <a href="/zh/">进入中文站</a>
-    <a href="/en/">English</a>
+    <a href={`/${defaultLanguage}/`}>
+      {defaultLanguage === "en" ? "Enter the English site" : "进入中文站"}
+    </a>
   </body>
 </html>

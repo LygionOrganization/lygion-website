@@ -1,0 +1,19 @@
+# Add this site block to the existing /etc/caddy/Caddyfile.
+# It can coexist with the wiki.lygion.ai site block.
+lygion.ai {
+	root * /var/www/lygion.ai/current
+	encode zstd gzip
+	file_server
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+	}
+
+	log {
+		output file /var/log/caddy/lygion.ai.access.log {
+			roll_size 20MiB
+			roll_keep 5
+		}
+	}
+}

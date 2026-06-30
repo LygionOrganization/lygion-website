@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot Driver with ESP32S3 Lite | Open-Source Robot Controller | LYGION</title>
+  <meta name="description" content="Robot Driver with ESP32S3 Lite is an open-source ESP32-S3 robot controller with a browser interface, local task execution, host-side JSON APIs, and TTL, RS485, and CAN actuator buses.">
+  <meta name="keywords" content="Robot Driver with ESP32S3 Lite,ESP32-S3 robot controller,robot sub-controller,Web control,TTL bus,RS485,CAN,JSON,PlatformIO">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Robot Driver with ESP32S3 Lite",
+    "brand": { "@type": "Brand", "name": "LYGION" },
+    "description": "An open-source ESP32-S3 robot controller that can run independently or serve as an actuator sub-controller for a host computer.",
+    "category": "Robot controller board",
+    "image": "https://lygion.ai/product-pages/Robot-Driver-ESP32S3-Lite/assets/hero-system.webp"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/en/" aria-label="Back to the LYGION website">
+        <span class="brand-mark">LY</span>
+        <span><strong>LYGION</strong><small>Robotics hardware and open ecosystem</small></span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#role">Core functions</a>
+        <a href="#start">Quick start</a>
+        <a href="#wireless">Wireless control</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#development">Development</a>
+        <a href="#specs">Specs</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Taobao Store</a>
+        <a class="language-switch" href="../index.html" lang="zh-CN">中文</a>
+        <a class="nav-cta" href="#package">Packages</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">ESP32-S3 ROBOT CONTROLLER</p>
+          <h1>Open-source robot control built on ESP32-S3</h1>
+          <h2>Robot Driver with ESP32S3 Lite</h2>
+          <p class="lead">Run browser-based control and motion tasks directly on the board, or use it as a sub-controller for a PC, Raspberry Pi, or Jetson. TTL, RS485, and CAN interfaces connect common robot actuators.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#start">Quick start</a>
+            <a class="button secondary" href="#development">Development interfaces</a>
+          </div>
+          <ul class="quick-specs" aria-label="Key specifications">
+            <li><strong>ESP32-S3</strong><span>Wi-Fi and local task execution</span></li>
+            <li><strong>6–20V DC</strong><span>Actuator power input</span></li>
+            <li><strong>TTL / RS485 / CAN</strong><span>Three actuator bus options</span></li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <img src="../assets/hero-system.webp" alt="Robot Driver with ESP32S3 Lite board and OLED control module">
+          <figcaption><span>Robot Driver</span> Main board and local control module</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Product highlights">
+      <div class="container proof-grid">
+        <div><strong>Standalone operation</strong><span>Browser control and offline motion tasks</span></div>
+        <div><strong>Cross-platform control</strong><span>Works from computers, phones, and tablets</span></div>
+        <div><strong>Multiple actuator buses</strong><span>Connect servos, joints, and hub motors</span></div>
+        <div><strong>Open for development</strong><span>Open examples with development tutorials</span></div>
+      </div>
+    </section>
+
+    <section id="role" class="section">
+      <div class="container role-layout">
+        <div>
+          <p class="eyebrow">WHAT IT DOES</p>
+          <h2>Core functions</h2>
+          <p>Robot Driver sits between a host computer and the robot actuators. It receives commands, manages bus devices, and can execute tasks without a host. Custom firmware can also move motion interpolation and kinematics onto the controller, reducing host-side workload.</p>
+          <div class="role-list">
+            <div><strong>Standalone controller</strong><span>The onboard Wi-Fi hotspot and Web interface support device setup, motion control, and task editing.</span></div>
+            <div><strong>Robot sub-controller</strong><span>Human-readable JSON commands make integration and debugging straightforward. Local motion and kinematics logic can simplify the host application.</span></div>
+            <div><strong>Peripheral gateway</strong><span>TTL, RS485, and CAN devices share one host-side control point, with additional expansion available through ESP32-S3 GPIO.</span></div>
+          </div>
+        </div>
+        <figure class="media-frame">
+          <img src="../assets/devices.webp" alt="Robot Driver connected to several robot bus devices">
+          <figcaption>Connect bus servos, joint actuators, and other robot devices.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="start" class="section dark-section">
+      <div class="container start-layout">
+        <div>
+          <p class="eyebrow">QUICK START</p>
+          <h2>First motion in three steps</h2>
+          <div class="step-list">
+            <article><span>1</span><div><h3>Connect the device and power</h3><p>Connect the bus device and use a supply voltage that matches the actuator rating.</p></div></article>
+            <article><span>2</span><div><h3>Open the Web interface</h3><p>Join the controller's Wi-Fi network and open <code>192.168.4.1</code> in a browser.</p></div></article>
+            <article><span>3</span><div><h3>Configure and control</h3><p>Change device IDs, test bus devices, and build motion tasks from the Web interface.</p></div></article>
+          </div>
+          <div class="power-warning">
+            <strong>Power note</strong>
+            <p>USB Type-C can power the controller, OLED, and Wi-Fi, but it does not replace the actuator power supply.</p>
+          </div>
+        </div>
+        <figure class="dark-media">
+          <img src="../assets/installed-robot.webp" alt="Robot Driver connected to several bus servos">
+          <figcaption>Bring multiple bus devices into one control system.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="wireless" class="section soft-section">
+      <div class="container wireless-layout">
+        <figure class="media-frame wide-media">
+          <img src="../assets/web-cross-platform.webp" alt="Robot Driver Web interface on a computer, phone, and tablet">
+          <figcaption>The same Web interface works across computers, phones, and tablets.</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">CROSS-PLATFORM WEB CONTROL</p>
+          <h2>Wireless control from any modern browser</h2>
+          <p>The controller starts its own Wi-Fi access point and hosts the control interface locally. A computer, phone, or tablet can connect for setup, device control, and motion task editing without installing an app.</p>
+          <div class="plain-list">
+            <div><strong>AP + STA</strong><span>Connect directly to the board or join an existing local network.</span></div>
+            <div><strong>Device setup</strong><span>Set the bus baud rate, test device IDs, and send JSON commands.</span></div>
+            <div><strong>Motion tasks</strong><span>Save action sequences and run them from a button or automatically at startup.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hardware" class="section">
+      <div class="container hardware-layout">
+        <div class="hardware-media">
+          <figure class="media-frame board-frame">
+            <img src="../assets/board-top.webp" alt="Top view of the Robot Driver with ESP32S3 Lite">
+            <figcaption>Robot Driver main board and OLED control module</figcaption>
+          </figure>
+          <figure class="media-frame control-frame">
+            <img src="../assets/local-control.webp" alt="Robot Driver OLED and five-way switch">
+            <figcaption>The OLED shows network and runtime status; the five-way switch provides local input.</figcaption>
+          </figure>
+        </div>
+        <div>
+          <p class="eyebrow">HARDWARE</p>
+          <h2>Control, communication, and local input on one board</h2>
+          <div class="hardware-groups">
+            <section><h3>Controller module</h3><p>ESP32-S3-WROOM-1 with native USB CDC and onboard Wi-Fi.</p></section>
+            <section><h3>Actuator buses</h3><p>Single-wire TTL, RS485, and CAN.</p></section>
+            <section><h3>Local interface</h3><p>0.91-inch OLED, five-way switch, and buzzer.</p></section>
+            <section><h3>Power</h3><p>6–20V DC input, onboard 5V 5A DC-DC for Raspberry Pi HAT use, and a 3.3V LDO for external peripherals.</p></section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="development" class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">HOST INTEGRATION</p>
+          <h2>Ready to use, open to customize</h2>
+          <p>Most projects can use Robot Driver as a self-contained sub-controller. When a robot needs custom kinematics, timing, or IO behavior, the firmware can be extended with Arduino and PlatformIO.</p>
+        </div>
+        <div class="host-gallery">
+          <figure class="media-frame">
+            <img src="../assets/host-usb-cdc.webp" alt="Robot Driver connected to a computer through USB CDC">
+            <figcaption><strong>USB CDC</strong>: reliable wired communication with a host computer.</figcaption>
+          </figure>
+          <figure class="media-frame">
+            <img src="../assets/host-sbc.webp" alt="Robot Driver mounted on a Raspberry Pi">
+            <figcaption><strong>HAT / UART</strong>: mounts as a Raspberry Pi HAT, communicates over UART, and can supply power to the Pi.</figcaption>
+          </figure>
+        </div>
+        <div class="development-grid">
+          <article><strong>USB CDC</strong><p>Wired communication for debugging and continuous control.</p></article>
+          <article><strong>HTTP</strong><p>Simple setup, low-rate commands, and rapid prototypes.</p></article>
+          <article><strong>WebSocket</strong><p>Real-time wireless commands and status updates.</p></article>
+          <article><strong>GPIO UART</strong><p>Embedded host-to-controller communication inside a robot.</p></article>
+        </div>
+        <div class="developer-band">
+          <div><h3>One data format</h3><p>USB CDC, HTTP, WebSocket, and GPIO UART use the same JSON command format.</p></div>
+          <div><h3>Firmware development</h3><p>Supports the Arduino framework and VS Code with PlatformIO. The onboard auto-download circuit simplifies firmware iteration.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="section">
+      <div class="container specs-layout">
+        <figure class="media-frame dimension-frame">
+          <img src="../assets/dimensions.webp" alt="Robot Driver with ESP32S3 Lite dimensions">
+          <figcaption>The main board is approximately 56 x 65mm; the OLED control module is 74mm long.</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>Key specifications</h2>
+          <div class="spec-list">
+            <div><span>Product role</span><strong>Standalone controller / robot sub-controller</strong></div>
+            <div><span>Controller</span><strong>ESP32-S3-WROOM-1</strong></div>
+            <div><span>Input voltage</span><strong>6–20V DC</strong></div>
+            <div><span>Actuator buses</span><strong>TTL / RS485 / CAN</strong></div>
+            <div><span>Host communication</span><strong>USB CDC / UART / HTTP / WebSocket</strong></div>
+            <div><span>Wireless communication</span><strong>Wi-Fi AP + STA / ESP-NOW</strong></div>
+            <div><span>Local interface</span><strong>OLED / five-way switch / buzzer</strong></div>
+            <div><span>Main board size</span><strong>Approx. 56 x 65mm</strong></div>
+            <div><span>Mounting-hole spacing</span><strong>49 x 58mm</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="package" class="section package-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">PACKAGE OPTIONS</p>
+          <h2>Package contents</h2>
+          <p>Included accessories may vary with the sales listing and shipping revision.</p>
+        </div>
+        <div class="package-grid">
+          <article>
+            <img src="../assets/package-basic.webp" alt="Robot Driver with ESP32S3 Lite basic package">
+            <div><span>Package 1</span><h3>Basic package</h3><p>Controller board, OLED five-way control module, and basic connection cables.</p></div>
+          </article>
+          <article>
+            <img src="../assets/package-powered.webp" alt="Robot Driver with ESP32S3 Lite package with power supply">
+            <div><span>Package 2</span><h3>Powered package</h3><p>The basic package plus a power supply for a ready-to-use test setup.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support-section">
+      <div class="container support-grid">
+        <div>
+          <p class="eyebrow">DEVELOPMENT SUPPORT</p>
+          <h2>Documentation for faster integration</h2>
+          <p>Use the English LYGION Wiki for wiring, software tools, examples, and development tutorials.</p>
+        </div>
+        <div class="support-items">
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/robot-driver-with-esp32s3-lite/" target="_blank" rel="noopener noreferrer"><strong>Robot Driver Product Wiki</strong><span>Wiring, specifications, and development resources</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/tutorials/install-arduino-ide/" target="_blank" rel="noopener noreferrer"><strong>Arduino IDE guide</strong><span>Development setup for straightforward projects</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/tutorials/platformio-development/" target="_blank" rel="noopener noreferrer"><strong>PlatformIO guide</strong><span>Development workflow for larger projects</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/downloads/" target="_blank" rel="noopener noreferrer"><strong>Mechanical resources</strong><span>STEP model downloads</span></a>
+        </div>
+      </div>
+      <div class="container cta">
+        <div><strong>Building a layered robot control system?</strong><span>Robot Driver provides local actuator control while the host focuses on higher-level planning.</span></div>
+        <a class="button primary" href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/robot-driver-with-esp32s3-lite/" target="_blank" rel="noopener noreferrer">Open Product Wiki</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© LYGION · Robot Driver with ESP32S3 Lite</span>
+      <a href="/en/">Back to the main site</a>
+    </div>
+  </footer>
+</body>
+</html>

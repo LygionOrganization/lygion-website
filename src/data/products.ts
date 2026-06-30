@@ -467,7 +467,10 @@ export const products: Product[] = [
     module: "bus-devices",
     status: "available",
     image: "/product-pages/Robot-Driver-ESP32S3-Lite/assets/hero-system.webp",
-    detailPath: "/product-pages/Robot-Driver-ESP32S3-Lite/index.html",
+    detailPath: {
+      zh: "/product-pages/Robot-Driver-ESP32S3-Lite/index.html",
+      en: "/product-pages/Robot-Driver-ESP32S3-Lite/en/index.html"
+    },
     name: { zh: "Robot Driver with ESP32S3 Lite 机器人下位机控制板", en: "Robot Driver with ESP32S3 Lite" },
     summary: {
       zh: "集成 Web 控制台、本地按键交互、动作任务文件和上位机 JSON 通信的一体化机器人控制板。",

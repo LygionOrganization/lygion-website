@@ -28,12 +28,14 @@
         <span><strong>LYGION 灵影</strong><small>机器人硬件与开放生态</small></span>
       </a>
       <nav aria-label="页面导航">
-        <a href="#role">产品定位</a>
+        <a href="#role">核心功能</a>
         <a href="#start">快速上手</a>
         <a href="#wireless">无线控制</a>
         <a href="#hardware">硬件接口</a>
         <a href="#development">二次开发</a>
         <a href="#specs">参数</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">淘宝店铺</a>
+        <a class="language-switch" href="en/index.html" lang="en">EN</a>
         <a class="nav-cta" href="#package">套装</a>
       </nav>
     </div>
@@ -44,9 +46,9 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">ESP32-S3 ROBOT CONTROLLER</p>
-          <h1>Robot Driver with ESP32S3 Lite</h1>
-          <h2>连接主机与机器人执行器的控制板</h2>
-          <p class="lead">可独立运行 Web 控制和动作脚本，也可作为 PC、树莓派或 Jetson 的下位机，通过 TTL、RS485、CAN 接口控制执行器。</p>
+          <h1>基于 ESP32-S3 主控的开源机器人控制板</h1>
+          <h2>Robot Driver with ESP32S3 Lite</h2>
+          <p class="lead">可独立运行 Web 控制和动作脚本，也可作为 PC、树莓派或 Jetson 的下位机，通过 TTL、RS485、CAN 接口控制总线设备。</p>
           <div class="hero-actions">
             <a class="button primary" href="#start">快速上手</a>
             <a class="button secondary" href="#development">开发接口</a>
@@ -69,7 +71,7 @@
         <div><strong>独立运行</strong><span>浏览器控制与离线任务脚本</span></div>
         <div><strong>跨平台控制</strong><span>电脑、手机和平板均可使用</span></div>
         <div><strong>多总线接入</strong><span>连接舵机、关节和轮毂电机</span></div>
-        <div><strong>支持二次开发</strong><span>JSON 接口与 PlatformIO 固件开发</span></div>
+        <div><strong>支持二次开发</strong><span>例程完全开源，提供开发教程</span></div>
       </div>
     </section>
 
@@ -77,12 +79,12 @@
       <div class="container role-layout">
         <div>
           <p class="eyebrow">WHAT IT DOES</p>
-          <h2>它在机器人系统中做什么</h2>
-          <p>Robot Driver 位于主机与执行器之间，负责接收控制指令、管理总线设备，也可以脱离主机执行本地任务。</p>
+          <h2>核心功能</h2>
+          <p>Robot Driver 位于主机与执行器之间，可替主机承担一部分动作插值、正逆解计算算力，分担主机计算资源，负责接收控制指令、管理总线设备，也可以脱离主机独立执行任务。</p>
           <div class="role-list">
-            <div><strong>独立控制器</strong><span>通过 Web 页面调试设备、控制动作和保存任务。</span></div>
-            <div><strong>机器人下位机</strong><span>接收 PC、树莓派、Jetson 或其它主控发送的 JSON 指令。</span></div>
-            <div><strong>执行器网关</strong><span>为 TTL、RS485、CAN 执行器提供统一的主机侧入口。</span></div>
+            <div><strong>独立控制器</strong><span>板载 Wifi 支持自建热点，通过 Web 页面调试设备、控制动作和保存任务。</span></div>
+            <div><strong>机器人下位机</strong><span>接收 PC、树莓派、Jetson 或其它主控发送的 JSON 格式指令，JSON 指令人类可读易于调试。可执行高频正逆解计算，降低上位机程序复杂度，提升系统整体效率。</span></div>
+            <div><strong>机器人外设网关</strong><span>为 TTL、RS485、CAN 总线设备提供统一的主机侧入口，也可以通过 ESP32-S3 的 IO 口进行扩展。</span></div>
           </div>
         </div>
         <figure class="media-frame">
@@ -98,9 +100,9 @@
           <p class="eyebrow">QUICK START</p>
           <h2>三步完成首次控制</h2>
           <div class="step-list">
-            <article><span>1</span><div><h3>连接设备与动力电源</h3><p>选择对应总线接口，电源电压必须与执行器额定电压一致。</p></div></article>
-            <article><span>2</span><div><h3>打开 Web 控制台</h3><p>连接控制板热点，在浏览器访问 <code>192.168.4.1</code>。</p></div></article>
-            <article><span>3</span><div><h3>测试设备并保存任务</h3><p>确认设备 ID 和波特率，再调试动作或保存任务脚本。</p></div></article>
+            <article><span>1</span><div><h3>连接设备与电源</h3><p>连接总线设备，电源电压必须与执行器额定电压一致。</p></div></article>
+            <article><span>2</span><div><h3>打开 Web 应用</h3><p>手机连接控制板热点，在浏览器访问 <code>192.168.4.1</code>。</p></div></article>
+            <article><span>3</span><div><h3>控制总线设备</h3><p>可通过 Web 应用来为总线设备修改 ID，再控制总线设备或编辑动作脚本。</p></div></article>
           </div>
           <div class="power-warning">
             <strong>供电提醒</strong>
@@ -109,7 +111,7 @@
         </div>
         <figure class="dark-media">
           <img src="assets/installed-robot.webp" alt="Robot Driver 连接多种总线舵机">
-          <figcaption>实际接线时先确认接口、线序和执行器电压。</figcaption>
+          <figcaption>将多种总线设备并入控制系统。</figcaption>
         </figure>
       </div>
     </section>
@@ -118,16 +120,16 @@
       <div class="container wireless-layout">
         <figure class="media-frame wide-media">
           <img src="assets/web-cross-platform.webp" alt="电脑、手机和平板使用 Robot Driver Web 控制界面">
-          <figcaption>同一 Web 控制界面可在电脑、手机和平板使用。</figcaption>
+          <figcaption>Web 控制界面可在电脑、手机和平板等不同系统中使用。</figcaption>
         </figure>
         <div>
           <p class="eyebrow">CROSS-PLATFORM WEB CONTROL</p>
-          <h2>无需安装 App 的跨平台无线控制</h2>
-          <p>控制板提供 Wi-Fi 热点和 Web 控制界面。电脑、手机或平板连接后，都可以使用浏览器完成基础调试与控制。</p>
+          <h2>可跨平台无线控制</h2>
+          <p>控制板开机自带 Wi-Fi 热点和 Web 控制界面。电脑、手机或平板连接后，就可以使用浏览器完成基础调试、控制和任务脚本编辑。</p>
           <div class="plain-list">
             <div><strong>AP + STA</strong><span>支持热点直连，也可接入已有局域网。</span></div>
-            <div><strong>设备调试</strong><span>设置总线波特率、测试设备 ID 和发送 JSON。</span></div>
-            <div><strong>任务脚本</strong><span>保存多步动作，并绑定按键或开机执行。</span></div>
+            <div><strong>设备调试</strong><span>设置总线波特率、测试设备 ID 和发送 JSON 指令。</span></div>
+            <div><strong>任务脚本</strong><span>保存动作任务脚本，并绑定按键或开机自动执行。</span></div>
           </div>
         </div>
       </div>
@@ -149,10 +151,10 @@
           <p class="eyebrow">HARDWARE</p>
           <h2>控制、通信和本地交互集中在一块板上</h2>
           <div class="hardware-groups">
-            <section><h3>主控与交互</h3><p>ESP32-S3-WROOM-1、0.91 英寸 OLED、五向开关、蜂鸣器。</p></section>
+            <section><h3>主控模组</h3><p>ESP32-S3-WROOM-1、原生 USB CDC 与 板载 Wifi。</p></section>
             <section><h3>执行器接口</h3><p>单线 TTL、RS485、CAN。</p></section>
-            <section><h3>主机与扩展</h3><p>USB CDC、UART Type-C、2×5 HAT 与扩展 IO。</p></section>
-            <section><h3>电源</h3><p>DC 6–20V 输入，板载 5V 5A DC-DC 与 3.3V LDO。</p></section>
+            <section><h3>人机交互</h3><p>0.91 英寸 OLED、五向开关、蜂鸣器。</p></section>
+            <section><h3>电源</h3><p>DC 6–20V 输入，板载 5V 5A DC-DC（用做 HAT 板时为树莓派供电） 与 3.3V LDO（可扩展其它外设）。</p></section>
           </div>
         </div>
       </div>
@@ -162,17 +164,17 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">HOST INTEGRATION</p>
-          <h2>先用 JSON 接口集成，再按需修改固件</h2>
-          <p>多数项目可以把 Robot Driver 作为独立下位机使用。需要自定义实时逻辑或 IO 时，再进入 Arduino / PlatformIO 固件开发。</p>
+          <h2>到手即用，也支持自定义开发</h2>
+          <p>多数项目可以把 Robot Driver 作为独立下位机使用。需要自定义正逆解等计算功能时，再使用 Arduino / PlatformIO 进行二次开发。</p>
         </div>
         <div class="host-gallery">
           <figure class="media-frame">
             <img src="assets/host-usb-cdc.webp" alt="Robot Driver 通过 USB CDC 连接电脑">
-            <figcaption><strong>USB CDC</strong>：适合 PC 调试、日志与稳定通信。</figcaption>
+            <figcaption><strong>USB CDC</strong>：用于与上位机进行有线稳定通信。</figcaption>
           </figure>
           <figure class="media-frame">
             <img src="assets/host-sbc.webp" alt="Robot Driver 连接树莓派等单板电脑">
-            <figcaption><strong>HAT / UART</strong>：适合树莓派、Jetson 等机器人主机。</figcaption>
+            <figcaption><strong>HAT / UART</strong>：可做为树莓派 HAT 使用，使用 UART 通信，同时可为树莓派供电。</figcaption>
           </figure>
         </div>
         <div class="development-grid">
@@ -183,7 +185,7 @@
         </div>
         <div class="developer-band">
           <div><h3>统一数据格式</h3><p>USB CDC、HTTP、WebSocket 与 GPIO UART 使用统一 JSON 指令。</p></div>
-          <div><h3>固件开发</h3><p>支持 Arduino 框架与 VS Code + PlatformIO，板载 IO0 和 EN 用于下载与复位。</p></div>
+          <div><h3>固件开发</h3><p>支持 Arduino 框架与 VS Code + PlatformIO，板载自动下载电路，便于二次开发。</p></div>
         </div>
       </div>
     </section>
@@ -229,6 +231,26 @@
             <div><span>套装二</span><h3>含电源套装</h3><p>基础套装与配套电源，适合直接搭建测试环境。</p></div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section support-section">
+      <div class="container support-grid">
+        <div>
+          <p class="eyebrow">DEVELOPMENT SUPPORT</p>
+          <h2>提供完整教程，方便敏捷开发</h2>
+          <p>调试工具、SDK 与开发教程等资料可参考产品 Wiki。</p>
+        </div>
+        <div class="support-items">
+          <a href="https://wiki.lygion.ai/reference/bus-devices/robot-driver-with-esp32s3-lite/" target="_blank" rel="noopener noreferrer"><strong>Robot Driver with ESP32S3 Lite Wiki</strong><span>接线、参数与开发资料</span></a>
+          <a href="https://wiki.lygion.ai/tutorials/install-arduino-ide/" target="_blank" rel="noopener noreferrer"><strong>Arduino IDE 教程</strong><span>用于简单项目的开发</span></a>
+          <a href="https://wiki.lygion.ai/tutorials/platformio-development/" target="_blank" rel="noopener noreferrer"><strong>PlatformIO 开发教程</strong><span>用于复杂项目的开发</span></a>
+          <a href="https://wiki.lygion.ai/downloads/" target="_blank" rel="noopener noreferrer"><strong>结构资料</strong><span>STEP 模型</span></a>
+        </div>
+      </div>
+      <div class="container cta">
+        <div><strong>需要实现更高效的大小脑机器人系统？</strong><span>Robot Driver with ESP32S3 Lite 适用于需要高性能控制的机器人项目。</span></div>
+        <a class="button primary" href="https://wiki.lygion.ai/reference/bus-devices/robot-driver-with-esp32s3-lite/" target="_blank" rel="noopener noreferrer">查看产品 Wiki</a>
       </div>
     </section>
   </main>
