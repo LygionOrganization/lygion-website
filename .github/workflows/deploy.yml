@@ -33,10 +33,24 @@ jobs:
           PUBLIC_BASE_PATH: /lygion-website
         run: npm run build
 
+      - name: Package GitHub Pages artifact
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory dist \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            --exclude=".[^/]*" \
+            .
+
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          path: dist
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          if-no-files-found: error
+          retention-days: 1
 
       - name: Build Aliyun website
         env:
@@ -47,7 +61,7 @@ jobs:
         run: tar -C dist -czf aliyun-site.tar.gz .
 
       - name: Upload Aliyun artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: aliyun-site
           path: aliyun-site.tar.gz
@@ -67,7 +81,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
   deploy-aliyun:
     name: Deploy website to Aliyun ECS
@@ -96,7 +110,7 @@ jobs:
           fi
 
       - name: Download website
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: aliyun-site
 
