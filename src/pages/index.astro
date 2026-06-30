@@ -1,26 +1,31 @@
 ---
-const configuredLanguage = import.meta.env.PUBLIC_DEFAULT_LANGUAGE;
-const defaultLanguage = configuredLanguage === "en" ? "en" : "zh";
-const htmlLanguage = defaultLanguage === "en" ? "en" : "zh-CN";
+import { withBase } from "../utils/paths";
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+const englishPath = withBase("/en/");
 ---
 
 <!doctype html>
-<html lang={htmlLanguage}>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href={withBase("/favicon.png")} />
     <title>Lygion Robotics</title>
-    <script is:inline define:vars={{ defaultLanguage }}>
-      window.location.replace(`/${defaultLanguage}/`);
+    <script is:inline define:vars={{ basePath }}>
+      const browserLanguage = navigator.languages?.[0] || navigator.language || "en";
+      const normalizedLanguage = browserLanguage.toLowerCase();
+      const usesSimplifiedChinese =
+        /^zh-(cn|sg)(?:-|$)/.test(normalizedLanguage) ||
+        /^zh-hans(?:-|$)/.test(normalizedLanguage);
+      const targetLanguage = usesSimplifiedChinese ? "zh" : "en";
+      window.location.replace(`${basePath}/${targetLanguage}/`);
     </script>
     <noscript>
-      <meta http-equiv="refresh" content={`0; url=/${defaultLanguage}/`} />
+      <meta http-equiv="refresh" content={`0; url=${englishPath}`} />
     </noscript>
   </head>
   <body>
-    <a href={`/${defaultLanguage}/`}>
-      {defaultLanguage === "en" ? "Enter the English site" : "进入中文站"}
-    </a>
+    <a href={englishPath}>Enter the English site</a>
   </body>
 </html>

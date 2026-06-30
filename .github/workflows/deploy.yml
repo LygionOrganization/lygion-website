@@ -28,9 +28,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build overseas English site
+      - name: Build GitHub Pages backup
         env:
-          PUBLIC_DEFAULT_LANGUAGE: en
+          PUBLIC_BASE_PATH: /lygion-website
         run: npm run build
 
       - name: Upload GitHub Pages artifact
@@ -38,12 +38,12 @@ jobs:
         with:
           path: dist
 
-      - name: Build Chinese mainland site
+      - name: Build Aliyun website
         env:
-          PUBLIC_DEFAULT_LANGUAGE: zh
+          PUBLIC_BASE_PATH: /
         run: npm run build
 
-      - name: Package Chinese mainland site
+      - name: Package Aliyun website
         run: tar -C dist -czf aliyun-site.tar.gz .
 
       - name: Upload Aliyun artifact
@@ -55,7 +55,7 @@ jobs:
           retention-days: 7
 
   deploy-pages:
-    name: Deploy overseas site to GitHub Pages
+    name: Deploy backup to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -70,7 +70,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
   deploy-aliyun:
-    name: Deploy Chinese mainland site to Aliyun ECS
+    name: Deploy website to Aliyun ECS
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -95,7 +95,7 @@ jobs:
             echo "ALIYUN_PORT=22" >> "$GITHUB_ENV"
           fi
 
-      - name: Download Chinese mainland site
+      - name: Download website
         uses: actions/download-artifact@v5
         with:
           name: aliyun-site

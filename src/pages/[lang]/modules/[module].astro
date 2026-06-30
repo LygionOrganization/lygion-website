@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { copy, isLanguage, languages, type Language } from "../../../data/i18n";
 import { getProductDetailPath, getProductsByModule, modules, type ModuleId } from "../../../data/products";
+import { withBase } from "../../../utils/paths";
 
 export function getStaticPaths() {
   return languages.flatMap((lang) =>
@@ -22,7 +23,7 @@ const moduleProducts = getProductsByModule(module.id as ModuleId);
 <BaseLayout lang={lang} title={module.name[lang]} description={module.summary[lang]}>
   <main class="module-page">
     <section class={`module-hero accent-${module.accent}`}>
-      <a class="back-link" href={`/${lang}/`}>{t.backHome}</a>
+      <a class="back-link" href={withBase(`/${lang}/`)}>{t.backHome}</a>
       <p class="eyebrow">Lygion Portfolio</p>
       <h1>{module.name[lang]}</h1>
       <p>{module.description[lang]}</p>
@@ -40,9 +41,9 @@ const moduleProducts = getProductsByModule(module.id as ModuleId);
       <div class="product-grid">
         {
           moduleProducts.map((product) => (
-            <a class="product-card" href={getProductDetailPath(product, lang)} target="_blank" rel="noopener noreferrer">
+            <a class="product-card" href={withBase(getProductDetailPath(product, lang))} target="_blank" rel="noopener noreferrer">
               <span class="product-card-media">
-                <img src={product.image} alt="" loading="lazy" />
+                <img src={withBase(product.image)} alt="" loading="lazy" />
               </span>
               <div>
                 <span class={`tag accent-${module.accent}`}>{module.name[lang]}</span>

@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { copy, isLanguage, languages, type Language } from "../../../data/i18n";
 import { getModule, products } from "../../../data/products";
+import { withBase } from "../../../utils/paths";
 
 export function getStaticPaths() {
   return languages.flatMap((lang) =>
@@ -23,12 +24,12 @@ const module = getModule(product.module);
   <main class="detail-page">
     <section class="detail-hero">
       <div class="detail-copy">
-        <a class="back-link" href={`/${lang}/modules/${product.module}/`}>{t.backModule}</a>
+        <a class="back-link" href={withBase(`/${lang}/modules/${product.module}/`)}>{t.backModule}</a>
         <span class={`tag accent-${module?.accent ?? "cyan"}`}>{module?.name[lang]}</span>
         <h1>{product.name[lang]}</h1>
         <p>{product.description[lang]}</p>
       </div>
-      <img class="detail-image" src={product.image} alt="" loading="eager" />
+      <img class="detail-image" src={withBase(product.image)} alt="" loading="eager" />
     </section>
 
     <section class="detail-grid">

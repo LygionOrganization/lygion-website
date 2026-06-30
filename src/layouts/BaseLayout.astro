@@ -1,6 +1,7 @@
 ---
 import { copy, languageLabels, wikiLinks, type Language } from "../data/i18n";
 import { modules } from "../data/products";
+import { withBase } from "../utils/paths";
 import "../styles/global.css";
 
 type Props = {
@@ -16,6 +17,13 @@ const pageTitle = title ? `${title} | Lygion` : "Lygion";
 const pageDescription = description ?? t.heroLead;
 const currentPath = Astro.url.pathname;
 const alternatePath = currentPath.replace(`/${lang}`, `/${alternateLang}`);
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+const publicPath = basePath && currentPath.startsWith(basePath)
+  ? currentPath.slice(basePath.length)
+  : currentPath;
+const canonicalUrl = new URL(publicPath, Astro.site);
+const alternatePublicPath = publicPath.replace(`/${lang}`, `/${alternateLang}`);
+const alternateUrl = new URL(alternatePublicPath, Astro.site);
 ---
 
 <!doctype html>
@@ -24,14 +32,18 @@ const alternatePath = currentPath.replace(`/${lang}`, `/${alternateLang}`);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={pageDescription} />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={lang === "zh" ? "zh-Hans" : "en"} href={canonicalUrl} />
+    <link rel="alternate" hreflang={alternateLang === "zh" ? "zh-Hans" : "en"} href={alternateUrl} />
+    <link rel="alternate" hreflang="x-default" href={new URL("/en/", Astro.site)} />
+    <link rel="icon" type="image/png" href={withBase("/favicon.png")} />
     <title>{pageTitle}</title>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href={`/${lang}/`} aria-label="Lygion home">
+      <a class="brand" href={withBase(`/${lang}/`)} aria-label="Lygion home">
         <span class="brand-mark">
-          <img src="/assets/lygion-logo-mark.png" alt="" />
+          <img src={withBase("/assets/lygion-logo-mark.png")} alt="" />
         </span>
         <span>
           <strong>Lygion</strong>
@@ -40,7 +52,7 @@ const alternatePath = currentPath.replace(`/${lang}`, `/${alternateLang}`);
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href={wikiLinks[lang]} target="_blank" rel="noreferrer">{t.nav.wiki}</a>
-        {modules.map((module) => <a href={`/${lang}/modules/${module.id}/`}>{t.nav[module.navKey]}</a>)}
+        {modules.map((module) => <a href={withBase(`/${lang}/modules/${module.id}/`)}>{t.nav[module.navKey]}</a>)}
         <a href="mailto:hello@lygion.ai">{t.nav.contact}</a>
       </nav>
       <a class="language-switch" href={alternatePath}>
