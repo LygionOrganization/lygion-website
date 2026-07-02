@@ -94,7 +94,7 @@ public/product-pages/{product-slug}/
 例如 DW69 当前放在：
 
 ```text
-public/product-pages/dw69/
+public/product-pages/DW69/
   index.html
   en/
     index.html
@@ -105,10 +105,10 @@ public/product-pages/dw69/
 然后在 `src/data/products.ts` 中给产品增加：
 
 ```ts
-image: "/product-pages/dw69/assets/hero-product.jpg",
+image: "/product-pages/DW69/assets/hero-product.jpg",
 detailPath: {
-  zh: "/product-pages/dw69/index.html",
-  en: "/product-pages/dw69/en/index.html"
+  zh: "/product-pages/DW69/index.html",
+  en: "/product-pages/DW69/en/index.html"
 },
 ```
 

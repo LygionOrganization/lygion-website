@@ -176,3 +176,11 @@ footer a { color: var(--blue); }
   .cta { align-items: flex-start; flex-direction: column; }
   footer .container { align-items: flex-start; flex-direction: column; padding: 20px 0; }
 }
+/* Shared LYGION brand mark */
+.brand-mark,.logo-mark{display:grid;width:36px;height:36px;place-items:center;border-radius:8px;background:linear-gradient(135deg,#00b7d8,#ff4d8d);color:#fff}
+.brand-mark img,.logo-mark img{width:24px;height:24px;object-fit:contain}
+
+/* Higher-contrast secondary text on dark surfaces */
+.dark-section p,
+.dark-section figcaption,
+.developer-band p{color:#edf3f7}

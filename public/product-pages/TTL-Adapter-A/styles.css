@@ -195,3 +195,18 @@ footer a { color: var(--blue); }
   .spec-list div { grid-template-columns: 1fr; gap: 4px; }
   .spec-list strong { text-align: left; }
 }
+/* Shared LYGION brand mark */
+.brand-mark,.logo-mark{display:grid;width:36px;height:36px;place-items:center;border-radius:8px;background:linear-gradient(135deg,#00b7d8,#ff4d8d);color:#fff}
+.brand-mark img,.logo-mark img{width:24px;height:24px;object-fit:contain}
+
+/* Higher-contrast secondary text on dark surfaces */
+.dark-section p,
+.dark-section figcaption,
+.dark-section .platform-row span,
+.dark-section .light-heading > p:last-child,
+.dark-section .path-grid article > p:last-child,
+.power-section .section-heading > p:last-of-type,
+.power-section .power-rules p,
+.power-section .power-checklist span,
+.why-card p,
+.why-card li{color:#edf3f7}

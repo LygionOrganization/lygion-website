@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SW69-TTL Swerve Drive Module for Omnidirectional Robots | LYGION</title>
+  <meta name="description" content="SW69-TTL combines steering, wheel drive, absolute steering-angle feedback and single-wire TTL bus control in one swerve drive module for omnidirectional mobile robots.">
+  <meta name="keywords" content="SW69-TTL,swerve drive module,omnidirectional robot,robot chassis,single-wire TTL bus,absolute encoder">
+  <link rel="canonical" href="https://lygion.ai/product-pages/SW69-TTL/en/index.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lygion.ai/product-pages/SW69-TTL/index.html">
+  <link rel="alternate" hreflang="en" href="https://lygion.ai/product-pages/SW69-TTL/en/index.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "SW69-TTL",
+    "brand": { "@type": "Brand", "name": "LYGION" },
+    "description": "A robot swerve drive module integrating steering, wheel drive, absolute angle feedback and single-wire TTL bus control.",
+    "category": "Robot swerve drive module",
+    "image": "https://lygion.ai/product-pages/SW69-TTL/assets/hero.webp"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="https://lygion.ai/en/" target="_blank" rel="noopener noreferrer" aria-label="Back to the LYGION website">
+        <span class="brand-mark"><img src="/assets/lygion-logo-mark.png" alt=""></span>
+        <span><strong>LYGION</strong><small>Robotics hardware and open ecosystem</small></span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#advantages">Benefits</a>
+        <a href="#structure">Structure</a>
+        <a href="#control">Control</a>
+        <a href="#development">Development</a>
+        <a href="#specs">Specs</a>
+        <a href="#package">Package</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Taobao</a>
+        <a class="language-switch" href="../index.html" lang="zh-CN">中文</a>
+        <a class="nav-cta" href="https://lygionorganization.github.io/lygion-wiki/en/reference/modules/sw69-ttl/" target="_blank" rel="noopener noreferrer">Wiki</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">SWERVE DRIVE MODULE</p>
+          <h1>Omnidirectional<br>Chassis Module</h1>
+          <h3>SW69-TTL</h3>
+          <p class="lead">A ready-to-integrate chassis unit that combines steering, wheel drive, absolute steering-angle feedback and bus control for omnidirectional mobile robots.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#structure">Explore structure &amp; dimensions</a>
+            <a class="button secondary" href="#control">View bus wiring</a>
+          </div>
+          <ul class="quick-specs" aria-label="Product highlights">
+            <li><strong>50 kg</strong><span>Load capacity per module</span></li>
+            <li><strong>Ø69 mm</strong><span>Drive wheel diameter</span></li>
+            <li><strong>Single-wire TTL</strong><span>One bus for drive and feedback</span></li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <img src="../assets/hero.webp" alt="SW69-TTL swerve drive module with two TTL Stepper Driver A boards">
+          <figcaption><span>SW69-TTL</span> mechanical swerve module with two TTL bus motor drivers</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Product overview">
+      <div class="container proof-grid">
+        <div><strong>Integrated steering and drive</strong><span>Separate stepper motors control wheel orientation and travel</span></div>
+        <div><strong>Absolute steering feedback</strong><span>Reads the wheel angle at power-up for reliable initialization without homing</span></div>
+        <div><strong>Bus-based wiring</strong><span>Drivers and encoder use independent IDs on a shared link, simplifying host wiring</span></div>
+        <div><strong>Open chassis resources</strong><span>Reference mechanics and kinematics code support further development</span></div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section">
+      <div class="container value-layout">
+        <div class="section-heading">
+          <p class="eyebrow">PRODUCT POSITIONING</p>
+          <h2>A straightforward path to omnidirectional motion</h2>
+          <p>SW69-TTL is designed for mobile platforms that need forward, lateral and diagonal travel as well as in-place rotation. Its mechanics, motors, drivers and steering-angle feedback are packaged as one module for simpler chassis integration and commissioning.</p>
+        </div>
+        <div class="value-grid">
+          <article><span>01</span><h3>High-torque steering</h3><p>A stepper motor turns the wheel assembly through a timing-belt reduction. Open kinematics code and tutorials are available for chassis control.</p></article>
+          <article><span>02</span><h3>Stepper wheel drive</h3><p>The drive motor controls direction, speed and motion targets for the 69 mm wheel, with strong low-speed behavior, smooth starts and stops, and heartbeat protection.</p></article>
+          <article><span>03</span><h3>Absolute wheel-angle feedback</h3><p>The encoder reports the current steering angle and retains calibration data without power, so the module can initialize without a homing cycle.</p></article>
+          <article><span>04</span><h3>Shared bus communication</h3><p>Both TTL Stepper Driver (A) boards and the encoder connect to one single-wire TTL bus, alongside LYGION bus devices or compatible Feetech bus servos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure" class="section soft-section">
+      <div class="container">
+        <div class="section-heading structure-heading">
+          <p class="eyebrow">PRODUCT STRUCTURE</p>
+          <h2>A compact, installation-ready assembly</h2>
+          <p>The module combines a high-strength 6061 aluminum CNC frame, separate steering and drive motors, and a timing-belt reduction in a straightforward mechanical layout.</p>
+        </div>
+        <div class="product-gallery">
+          <figure class="gallery-main">
+            <img src="../assets/IMG_1392.webp" alt="Close-up of the SW69-TTL wheel assembly and dual-motor layout" loading="lazy">
+            <figcaption><strong>Full-range steering</strong><span>The wheel assembly rotates through 360° and supports installation at different chassis orientations.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/IMG_1393.webp" alt="Side view and top mounting face of the SW69-TTL module" loading="lazy">
+            <figcaption><strong>Top mounting face</strong><span>Attaches to the chassis while preserving clearance for the motors and transmission; it can also mount to 20-series aluminum extrusion.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/IMG_1394.webp" alt="SW69-TTL timing-belt steering transmission and tensioner detail" loading="lazy">
+            <figcaption><strong>Timing-belt steering</strong><span>The belt reduction increases steering torque and helps absorb impact. An absolute magnetic encoder is integrated into the assembly.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/IMG_1395.webp" alt="SW69-TTL drive wheel and steering transmission" loading="lazy">
+            <figcaption><strong>Wheel and transmission</strong><span>A protective grommet at the wheel assembly helps prevent damage to the cable exit.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/IMG_1396.webp" alt="Front view of the SW69-TTL swerve drive module" loading="lazy">
+            <figcaption><strong>Front view</strong><span>The compact arrangement suits robots with limited integration space.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/IMG_1397.webp" alt="Side profile and motor arrangement of the SW69-TTL module" loading="lazy">
+            <figcaption><strong>Side view</strong><span>Multiple mounting points provide flexibility when attaching the module to a chassis.</span></figcaption>
+          </figure>
+        </div>
+        <figure class="dimension-card">
+          <img src="../assets/drawing.webp" alt="SW69-TTL mechanical drawing with dimensions and M4 mounting holes" loading="lazy">
+          <figcaption><strong>Envelope and mounting dimensions</strong><span>Dimensions are in millimeters. The drawing shows the Ø69 mm drive wheel, top mounting face, 108 × 40 mm hole spacing and eight M4 threaded holes.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="control" class="section dark-section">
+      <div class="container">
+        <div class="section-heading control-heading">
+          <p class="eyebrow">TTL BUS INTEGRATION</p>
+          <h2>Control multiple modules over one bus</h2>
+          <p>Each SW69-TTL uses two TTL Stepper Driver (A) boards—one for steering and one for wheel drive. Once the two drivers, absolute encoder and other bus devices have unique IDs, a single host controller can address them together.</p>
+        </div>
+        <figure class="wiring-card">
+          <img src="../assets/wiring.webp" alt="Raspberry Pi connected to three SW69-TTL modules through a TTL Adapter and hub" loading="lazy">
+          <figcaption>Example wiring: a Raspberry Pi, TTL Adapter, hub, six motor drivers and three SW69-TTL modules share one communication link.</figcaption>
+        </figure>
+        <div class="control-steps">
+          <article><span>STEP 01</span><h3>Assign device IDs</h3><p>Give every driver and encoder a unique ID, then verify communication with each device.</p></article>
+          <article><span>STEP 02</span><h3>Join the bus</h3><p>Connect the stepper motors, drivers and absolute encoder to the shared bus.</p></article>
+          <article><span>STEP 03</span><h3>Build the application</h3><p>Use the open examples as a starting point for an omnidirectional chassis controller.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="development" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CONFIGURATION &amp; DEVELOPMENT</p>
+          <h2>Bring-up without writing test code</h2>
+          <p>FD software can discover bus devices, change IDs, plot feedback and configure driver parameters. Verify communication, steering and wheel drive on one module before moving to application control from a PC, SBC or MCU.</p>
+        </div>
+        <div class="software-grid">
+          <figure>
+            <img src="../assets/fd-software-en.webp" alt="FD software displaying an absolute-angle feedback plot and bus device list" loading="lazy">
+            <figcaption><strong>Feedback monitoring</strong><span>Discover devices and inspect position, speed and status data.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/fd-software-b-en.webp" alt="FD software parameter page for TTL Stepper Driver A" loading="lazy">
+            <figcaption><strong>Parameter setup</strong><span>Read, edit and save motor-driver settings.</span></figcaption>
+          </figure>
+        </div>
+        <div class="development-grid">
+          <article><strong>PC / Linux / SBC</strong><p>Connect through TTL Adapter (A), then use the Python examples for device discovery, setup and motion control.</p></article>
+          <article><strong>ESP32 / STM32 and other MCUs</strong><p>Connect through a single-wire TTL interface and use the C++ or Arduino examples for embedded control.</p></article>
+          <article><strong>Omnidirectional chassis control</strong><p>After confirming wheel direction and steering zero, implement the kinematics for the chassis wheelbase, track width and module orientation.</p></article>
+        </div>
+        <figure class="open-source-card">
+          <div>
+            <p class="eyebrow">REFERENCE DESIGN</p>
+            <h2>Omnidirectional chassis reference</h2>
+            <p>This model demonstrates a typical SW69-TTL installation. Download the STEP model from LYGION Open and adapt the chassis around your battery, controller, sensors and enclosure.</p>
+            <a class="button secondary" href="https://lygion.ai/en/modules/lygion-open/" target="_blank" rel="noopener noreferrer">Explore LYGION Open</a>
+          </div>
+          <img src="../assets/open-source_example.webp" alt="3D reference chassis built with three SW69-TTL swerve drive modules" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section id="specs" class="section soft-section">
+      <div class="container specs-layout">
+        <div>
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>Key specifications</h2>
+          <div class="spec-list">
+            <div><span>Model</span><strong>SW69-TTL</strong></div>
+            <div><span>Product type</span><strong>Omnidirectional chassis swerve drive module</strong></div>
+            <div><span>Load capacity per module</span><strong>50 kg</strong></div>
+            <div><span>Drive wheel diameter</span><strong>Ø69 mm</strong></div>
+            <div><span>Top mounting holes</span><strong>8 × M4</strong></div>
+            <div><span>Main mounting-hole spacing</span><strong>108 × 40 mm</strong></div>
+            <div><span>Steering drive</span><strong>Stepper motor with timing-belt reduction</strong></div>
+            <div><span>Wheel drive</span><strong>Stepper motor</strong></div>
+            <div><span>Steering feedback</span><strong>Absolute angle encoder</strong></div>
+            <div><span>Communication</span><strong>Single-wire TTL bus</strong></div>
+            <div><span>Motor drivers</span><strong>TTL Stepper Driver (A) × 2</strong></div>
+          </div>
+        </div>
+        <aside class="integration-card spec-visual">
+          <img src="../assets/drawing.webp" alt="Key mounting dimensions of the SW69-TTL swerve drive module" loading="lazy">
+          <h3>Mechanical integration note</h3>
+          <p>Use the drawing for initial chassis layout. Before machining the chassis plate or finalizing ground clearance and cable routing, verify the hole pattern, screw length and motion envelope against the purchased version.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="package" class="section">
+      <div class="container package-layout">
+        <div>
+          <p class="eyebrow">PACKAGE CONTENTS</p>
+          <h2>Module, drivers<br>and connection cables</h2>
+          <p class="section-copy">One swerve drive module, two TTL Stepper Driver (A) boards and the matching connection cables.</p>
+          <ul class="package-list">
+            <li>SW69-TTL swerve drive module × 1</li>
+            <li>TTL Stepper Driver (A) × 2</li>
+            <li>Connection cable set × 1</li>
+          </ul>
+          <a class="button secondary package-button" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Visit the Taobao Store</a>
+        </div>
+        <figure class="package-media">
+          <img src="../assets/package.webp" alt="SW69-TTL module, two motor drivers and connection cable set" loading="lazy">
+          <figcaption>SW69-TTL package shown. Actual contents depend on the configuration selected on the product listing.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="support" class="section support-section">
+      <div class="container support-grid">
+        <div>
+          <p class="eyebrow">DOCUMENTATION</p>
+          <h2>Wiring, setup and development resources</h2>
+          <p>SW69-TTL combines bus motor drivers, an absolute angle encoder and the mechanical module. Use the corresponding Wiki pages to confirm interfaces, parameters and example code.</p>
+        </div>
+        <div class="support-items">
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-stepper-driver-a/" target="_blank" rel="noopener noreferrer"><strong>TTL Stepper Driver (A)</strong><span>Wiring, control modes, parameters and development</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-encoder-e02/" target="_blank" rel="noopener noreferrer"><strong>TTL Encoder E02</strong><span>Absolute angle, communication and calibration</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/bus-devices/ttl-adapter-a/" target="_blank" rel="noopener noreferrer"><strong>TTL Adapter (A)</strong><span>Connect a PC, SBC or MCU to the TTL bus</span></a>
+          <a href="https://lygionorganization.github.io/lygion-wiki/en/reference/modules/sw69-ttl/" target="_blank" rel="noopener noreferrer"><strong>SW69-TTL Wiki</strong><span>Software, examples and available downloads</span></a>
+        </div>
+      </div>
+      <div class="container cta">
+        <div><strong>Ready to build an omnidirectional chassis?</strong><span>Start with the driver and encoder wiring, ID setup and software guides.</span></div>
+        <a class="button primary" href="https://lygionorganization.github.io/lygion-wiki/en/reference/modules/sw69-ttl/" target="_blank" rel="noopener noreferrer">Open the Product Wiki</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>LYGION · SW69-TTL English product page</span>
+      <div><a href="https://lygionorganization.github.io/lygion-wiki/en/" target="_blank" rel="noopener noreferrer">Technical Wiki</a><a href="https://lygion.ai/en/modules/lygion-open/" target="_blank" rel="noopener noreferrer">LYGION Open</a><a href="https://lygion.ai/en/" target="_blank" rel="noopener noreferrer">Back to lygion.ai</a></div>
+    </div>
+  </footer>
+</body>
+</html>

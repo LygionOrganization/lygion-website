@@ -13,3 +13,15 @@
 footer{border-top:1px solid var(--line);color:var(--muted)}footer .container{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}footer a{color:var(--blue)}
 @media(max-width:980px){.header-inner{align-items:flex-start;flex-direction:column;padding:12px 0}nav{width:100%;padding-bottom:3px}.hero-grid,.split-layout,.split-layout.reverse,.install-layout,.specs-layout,.support-grid,.software-panel,.package-layout{grid-template-columns:1fr}.hero-grid{gap:40px}.benefit-grid,.proof-grid,.shoot-grid,.function-gallery,.workflow-grid,.example-grid{grid-template-columns:repeat(2,1fr)}.proof-grid div:nth-child(3){border-left:1px solid var(--line)}}
 @media(max-width:680px){.container{width:min(100% - 28px,1160px)}.hero{padding:58px 0 48px}h1{font-size:42px}h2{font-size:32px}.lead{max-width:100%;font-size:16px}.quick-specs,.benefit-grid,.proof-grid,.install-grid,.system-grid,.shoot-grid,.support-items,.function-gallery,.workflow-grid,.example-grid{grid-template-columns:1fr}.proof-grid div,.proof-grid div:first-child,.proof-grid div:nth-child(3){border-left:0;border-right:0;border-bottom:1px solid var(--line)}.proof-grid div:last-child{border-bottom:0}.section{padding:70px 0}.spec-list div{grid-template-columns:1fr;gap:4px}.spec-list strong{text-align:left}.cta,footer .container{align-items:flex-start;flex-direction:column}.cta .button{width:100%}}
+/* Shared LYGION brand mark */
+.brand-mark,.logo-mark{display:grid;width:36px;height:36px;place-items:center;border-radius:8px;background:linear-gradient(135deg,#00b7d8,#ff4d8d);color:#fff}
+.brand-mark img,.logo-mark img{width:24px;height:24px;object-fit:contain}
+
+/* Higher-contrast secondary text on dark surfaces */
+.dark-section p,
+.dark-section figcaption,
+.dark-section .system-grid span,
+.why-card p,
+.why-card li,
+.software-panel p,
+.software-panel .example-grid span{color:#edf3f7}

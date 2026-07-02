@@ -1,0 +1,4 @@
+interface:
+  display_name: "LYGION 产品详情页"
+  short_description: "按照统一规范创建、更新并检查灵影中英文产品详情页面"
+  default_prompt: "使用 $update-lygion-product-page 更新这个产品的中英文详情页。"

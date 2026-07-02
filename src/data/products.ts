@@ -93,34 +93,34 @@ export const products: Product[] = [
     slug: "dw69-drive-wheel-module",
     module: "robot-modules",
     status: "available",
-    image: "/product-pages/dw69/assets/hero-product.jpg",
+    image: "/product-pages/DW69/assets/hero.webp",
     detailPath: {
-      zh: "/product-pages/dw69/index.html",
-      en: "/product-pages/dw69/en/index.html"
+      zh: "/product-pages/DW69/index.html",
+      en: "/product-pages/DW69/en/index.html"
     },
-    name: { zh: "DW69 机器人底盘驱动轮模组", en: "DW69 Chassis Drive Wheel Module" },
+    name: { zh: "DW69 机器人底盘驱动轮模组", en: "DW69 Robot Chassis Stepper Drive Wheel Module" },
     summary: {
       zh: "69mm 驱动轮、减速步进电机、安装结构与 TTL 控制接口整合为一个底盘驱动单元。",
-      en: "A 69mm drive wheel module integrating wheel, geared stepper motor, mounting structure, and TTL control."
+      en: "A 69mm drive wheel module combining a geared stepper motor, load-bearing wheel structure, flexible mounting, and TTL bus control."
     },
     description: {
-      zh: "DW69 是以独立资料包形式接入主站的产品详情页示例。它的 HTML、CSS 和图片素材都保存在同一个产品文件夹内。",
-      en: "DW69 is a product detail page added as a standalone asset package. Its HTML, CSS, and images live together in one product folder."
+      zh: "轮内法兰轴承承担车体载荷，侧面 M6 与正面 M4 安装位可用于钣金或铝型材底盘；提供两轮平衡、钣金四驱和铝型材四驱 STEP 参考设计。",
+      en: "An in-wheel flange bearing carries chassis load, while side M6 and front M4 mounting points support sheet-metal and aluminum-profile chassis. Three open STEP chassis references are available."
     },
     highlights: {
-      zh: ["独立详情页资料包", "真实图片素材", "适合复杂长详情页"],
-      en: ["Standalone detail package", "Real product imagery", "Suited for rich long-form product pages"]
+      zh: ["69mm 减速步进驱动轮", "轮内轴承承重", "三种开源底盘模型"],
+      en: ["69mm geared stepper drive wheel", "In-wheel bearing load support", "Three open chassis models"]
     },
     specs: {
       zh: [
         { label: "定位", value: "底盘驱动轮模组" },
         { label: "轮径", value: "69mm" },
-        { label: "详情页", value: "静态资料包 HTML" }
+        { label: "推荐载重", value: "单模组约 12kg" }
       ],
       en: [
         { label: "Role", value: "Chassis drive wheel module" },
         { label: "Wheel", value: "69mm" },
-        { label: "Detail page", value: "Static HTML package" }
+        { label: "Recommended load", value: "Approx. 12kg per module" }
       ]
     }
   },
@@ -128,31 +128,34 @@ export const products: Product[] = [
     slug: "4240by-g5-2",
     module: "robot-modules",
     status: "available",
-    image: "/product-pages/4240BY-G5.2/assets/hero.png",
-    detailPath: "/product-pages/4240BY-G5.2/index.html",
-    name: { zh: "4240BY-G5.2 42 步进行星减速电机", en: "4240BY-G5.2 Geared Stepper Motor" },
+    image: "/product-pages/4240BY-G5.2/assets/hero.webp",
+    detailPath: {
+      zh: "/product-pages/4240BY-G5.2/index.html",
+      en: "/product-pages/4240BY-G5.2/en/index.html"
+    },
+    name: { zh: "4240BY-G5.2 42 步进行星减速电机", en: "4240BY-G5.2 42-Size Planetary Geared Stepper Motor" },
     summary: {
       zh: "42 步进电机与 5.182:1 行星减速器一体化，适合关节、底盘、滑台和转台等小型运动机构。",
-      en: "A 42-size stepper motor with an integrated 5.182:1 planetary gearbox for compact motion mechanisms."
+      en: "A 42-size stepper motor with an integrated 5.182:1 planetary gearbox for joints, mobile bases, linear stages, lead screws, and rotary platforms."
     },
     description: {
       zh: "把 42 步进电机和行星减速器做成一体，兼顾紧凑体积、静态输出扭矩和低速控制特性。",
-      en: "Combines a 42-size stepper motor and planetary gearbox for compact size, higher holding torque, and smoother low-speed control."
+      en: "An integrated motor-and-gearbox assembly for applications that need more output torque, with standard mounting and optional TTL bus drive integration."
     },
     highlights: {
       zh: ["42 步进电机减速一体", "5.182:1 行星减速", "适合关节、底盘与滑台"],
-      en: ["Integrated geared stepper", "5.182:1 planetary gearbox", "For joints, chassis, and linear stages"]
+      en: ["Integrated motor and gearbox", "5.182:1 planetary reduction", "Optional LYGION TTL bus driver"]
     },
     specs: {
       zh: [
         { label: "定位", value: "步进减速电机" },
         { label: "减速比", value: "5.182:1" },
-        { label: "详情页", value: "静态资料包 HTML" }
+        { label: "输出静力矩", value: "约 14kg·cm" }
       ],
       en: [
         { label: "Role", value: "Geared stepper motor" },
         { label: "Gear ratio", value: "5.182:1" },
-        { label: "Detail page", value: "Static HTML package" }
+        { label: "Output holding torque", value: "Approx. 14kg·cm" }
       ]
     }
   },
@@ -160,7 +163,7 @@ export const products: Product[] = [
     slug: "dm42-g7220-e02",
     module: "robot-modules",
     status: "available",
-    image: "/product-pages/DM42-G7220-E02/assets/hero.png",
+    image: "/product-pages/DM42-G7220-E02/assets/hero.webp",
     detailPath: "/product-pages/DM42-G7220-E02/index.html",
     name: { zh: "DM42-G7220-E02 总线步进关节执行器", en: "DM42-G7220-E02 Bus Stepper Joint Actuator" },
     summary: {
@@ -192,7 +195,7 @@ export const products: Product[] = [
     slug: "sp3m72-e02",
     module: "robot-modules",
     status: "available",
-    image: "/product-pages/SP3M72-E02/assets/hero.png",
+    image: "/product-pages/SP3M72-E02/assets/hero.webp",
     detailPath: "/product-pages/SP3M72-E02/index.html",
     name: { zh: "SP3M72-E02 绝对磁编码器同步轮", en: "SP3M72-E02 Absolute Encoder Pulley" },
     summary: {
@@ -224,8 +227,11 @@ export const products: Product[] = [
     slug: "sw69-ttl",
     module: "robot-modules",
     status: "available",
-    image: "/product-pages/SW69-TTL/assets/hero.png",
-    detailPath: "/product-pages/SW69-TTL/index.html",
+    image: "/product-pages/SW69-TTL/assets/hero.webp",
+    detailPath: {
+      zh: "/product-pages/SW69-TTL/index.html",
+      en: "/product-pages/SW69-TTL/en/index.html"
+    },
     name: { zh: "SW69-TTL 全向移动底盘舵轮模组", en: "SW69-TTL Swerve Drive Module" },
     summary: {
       zh: "将转向、驱动、角度反馈和总线控制集成为一个标准底盘执行单元。",
@@ -236,8 +242,8 @@ export const products: Product[] = [
       en: "Works with chassis motion algorithms to support forward, lateral, diagonal, and in-place rotation movement."
     },
     highlights: {
-      zh: ["转向与驱动一体", "绝对角度反馈", "适合全向移动底盘"],
-      en: ["Integrated steering and drive", "Absolute angle feedback", "For omnidirectional chassis"]
+      zh: ["转向与驱动一体", "绝对角度反馈", "适合全向移动底盘", "简化接线"],
+      en: ["Integrated steering and drive", "Absolute angle feedback", "For omnidirectional chassis", "Simplified wiring"]
     },
     specs: {
       zh: [
@@ -501,7 +507,7 @@ export const products: Product[] = [
     slug: "linkarm-lt",
     module: "robot-systems",
     status: "available",
-    image: "/product-pages/LinkArm-LT/assets/hero.jpg",
+    image: "/product-pages/LinkArm-LT/assets/hero.webp",
     detailPath: "/product-pages/LinkArm-LT/index.html",
     name: { zh: "LinkArm-LT 轻量机械臂", en: "LinkArm-LT Lightweight Robotic Arm" },
     summary: {
@@ -533,7 +539,7 @@ export const products: Product[] = [
     slug: "linkarm-m",
     module: "robot-systems",
     status: "available",
-    image: "/product-pages/LinkArm-M/assets/hero.jpg",
+    image: "/product-pages/LinkArm-M/assets/hero.webp",
     detailPath: "/product-pages/LinkArm-M/index.html",
     name: { zh: "LinkArm-M 并联机械臂模组", en: "LinkArm-M Parallel Arm Module" },
     summary: {
