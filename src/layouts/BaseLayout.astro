@@ -51,9 +51,12 @@ const alternateUrl = new URL(alternatePublicPath, Astro.site);
         </span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
+        <a href="https://lygionorganization.github.io/lygion-website/" target="_blank" rel="noreferrer">
+          {t.nav.githubPages}
+        </a>
         <a href={wikiLinks[lang]} target="_blank" rel="noreferrer">{t.nav.wiki}</a>
         {modules.map((module) => <a href={withBase(`/${lang}/modules/${module.id}/`)}>{t.nav[module.navKey]}</a>)}
-        <a href="mailto:hello@lygion.ai">{t.nav.contact}</a>
+        <a href={withBase(`/${lang}/about/`)}>{t.nav.about}</a>
       </nav>
       <a class="language-switch" href={alternatePath}>
         {languageLabels[alternateLang]}

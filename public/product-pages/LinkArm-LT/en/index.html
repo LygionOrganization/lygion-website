@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkArm-LT | ESP32-S3 Parallel Robot Arm for Mobile Robots | LYGION</title>
+  <meta name="description" content="LinkArm-LT is a parallel robot arm for mobile robot integration, with a built-in ESP32-S3 controller, browser-based control, lower servo heat, and stable load handling.">
+  <meta name="keywords" content="LinkArm-LT,parallel robot arm,mobile robot arm,ESP32-S3 robot arm,browser controlled robot arm,mobile base integration,LYGION">
+  <link rel="canonical" href="https://lygion.ai/product-pages/LinkArm-LT/en/index.html">
+  <link rel="icon" type="image/webp" href="../assets/favicon.webp">
+  <link rel="stylesheet" href="../linkarm.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "LinkArm-LT",
+    "brand": { "@type": "Brand", "name": "LYGION" },
+    "description": "A parallel robot arm for mobile robot integration with a built-in ESP32-S3 controller and cross-platform Web App.",
+    "category": "Parallel robot arm",
+    "image": "https://lygion.ai/product-pages/LinkArm-LT/assets/01-hero.webp"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="https://lygion.ai/en/" aria-label="Back to the LYGION website">
+        <span class="brand-mark"><img src="../assets/lygion-logo-mark.webp" alt=""></span>
+        <span><strong>LYGION</strong><small>Robotics hardware and open ecosystem</small></span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#advantages">Why parallel</a>
+        <a href="#structure">Structure</a>
+        <a href="#dimensions">Drawing</a>
+        <a href="#specs">Specifications</a>
+        <a href="#controller">Controller</a>
+        <a href="#web">Web App</a>
+        <a href="#integration">Mobile integration</a>
+        <a href="#compare">LT vs M</a>
+        <a href="#tutorials">Tutorials</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Taobao Store</a>
+        <a class="language-switch" href="../index.html" lang="zh-CN">中文</a>
+        <a class="nav-cta" href="https://lygionorganization.github.io/lygion-wiki/en/reference/robots/linkarm-lt/" target="_blank" rel="noopener noreferrer">Wiki</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="variant-label">LT VERSION · BUILT-IN ESP32-S3 CONTROLLER</span>
+          <p class="eyebrow">MOBILE ROBOT ARM</p>
+          <h1>A parallel robot arm with built-in ESP32-S3 control</h1>
+          <p class="model-name">LinkArm-LT</p>
+          <p class="lead">The parallel linkage gives the arm a more stable mechanical structure while reducing servo heat under load, making thermal protection less likely to interrupt a task. LinkArm-LT includes an ESP32-S3 sub-controller and a cross-platform Web App for straightforward mobile robot integration.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#advantages">Why it works on a mobile base</a>
+            <a class="button secondary" href="#web">Explore the Web App</a>
+          </div>
+          <ul class="quick-specs" aria-label="Product highlights">
+            <li><strong>Parallel linkage</strong><span>Built for higher loads and structural stability</span></li>
+            <li><strong>ESP32-S3</strong><span>Controller board included, with open-source code</span></li>
+            <li><strong>Web App</strong><span>Works on computers, phones, and tablets</span></li>
+          </ul>
+        </div>
+        <figure class="product-media hero-product-media">
+          <img src="../assets/01-hero.webp" width="1600" height="900" alt="LinkArm-LT parallel robot arm with a built-in ESP32-S3 controller">
+          <figcaption><strong>LinkArm-LT</strong><span>A complete system combining the arm, ESP32-S3 sub-controller, and base</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Core product value">
+      <div class="container proof-grid">
+        <div><strong>Designed for mobile platforms</strong><span>A practical structure for carrying loads, maintaining stability, and working continuously.</span></div>
+        <div><strong>More usable payload</strong><span>Well suited to grasping, transfer, and tool-handling tasks on a mobile robot.</span></div>
+        <div><strong>Slower heat buildup</strong><span>Servos are less likely to enter thermal protection during sustained loaded operation.</span></div>
+        <div><strong>Flexible control options</strong><span>Open-source examples for the Web App, WebSocket, HTTP, and USB CDC.</span></div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHY PARALLEL</p>
+          <h2>Built for life on a mobile base</h2>
+          <p>Compared with a conventional serial arm, LinkArm-LT focuses on four things that matter when the arm becomes part of a moving robot.</p>
+        </div>
+        <div class="benefit-grid">
+          <article><span>01</span><h3>Carry useful payload in motion</h3><p>Higher payload capacity leaves more operating margin for grasping, transfer, and end-of-arm tools.</p><strong>More complete task capability</strong></article>
+          <article><span>02</span><h3>Stay mechanically stable</h3><p>The linkage provides firm mechanical support and reduces the effect of payload on arm posture.</p><strong>More composed while the base moves</strong></article>
+          <article><span>03</span><h3>Reduce servo heat</h3><p>Lower thermal stress under load is useful for repeated motion and tasks that hold a pose.</p><strong>Better suited to sustained operation</strong></article>
+          <article><span>04</span><h3>Avoid thermal interruptions</h3><p>Reducing the chance of servo over-temperature protection helps prevent unexpected pauses during a task.</p><strong>Higher system availability</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure" class="section soft-section">
+      <div class="container structure-layout">
+        <figure class="product-media structure-media">
+          <img src="../assets/common-01-lt-module-hero.webp" width="1600" height="900" loading="lazy" alt="Side view of the LinkArm-LT parallel robot arm in a folded posture">
+          <figcaption><strong>Parallel linkage</strong><span>Two linkage sets form a shared mechanical support, so the load is not carried by one joint alone.</span></figcaption>
+        </figure>
+        <div class="structure-copy">
+          <p class="eyebrow">STRUCTURE</p>
+          <h2>Let the mechanism carry more of the load</h2>
+          <p>LinkArm-LT takes a different mechanical approach from a typical serial arm. Its linkage and joint servos share the load, helping the arm stay stable while moving, starting, stopping, or holding position.</p>
+          <div class="fact-list">
+            <div><strong>Better load distribution</strong><span>Reduces long-duration, high-load demand on any single joint.</span></div>
+            <div><strong>Greater overall rigidity</strong><span>Arm posture stays more stable under load, during motion, and as the base accelerates or stops.</span></div>
+            <div><strong>Built for longer tasks</strong><span>Under the same workload, the servos are less likely to remain in a high-temperature state.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="container structure-gallery">
+        <figure class="product-media">
+          <img src="../assets/common-01-lt-module-hero-2.webp" width="1600" height="900" loading="lazy" alt="LinkArm-LT parallel robot arm extended upward">
+          <figcaption><strong>Raised posture</strong><span>The linkage geometry remains mechanically supported across different working positions.</span></figcaption>
+        </figure>
+        <figure class="product-media">
+          <img src="../assets/01-hero.webp" width="1600" height="900" loading="lazy" alt="Side view of the LinkArm-LT parallel robot arm extended horizontally">
+          <figcaption><strong>Side profile</strong><span>The arm extends and folds while keeping servo loading lower.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="dimensions" class="section dimensions-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MECHANICAL DRAWING</p>
+          <h2>Key integration dimensions</h2>
+          <p>A DXF drawing is available to support mechanical integration and further development.</p>
+        </div>
+        <div class="dimension-highlights" aria-label="Key specifications from the mechanical drawing">
+          <div><strong>1 kg</strong><span>Maximum payload</span></div>
+          <div><strong>330 mm</strong><span>Maximum reach</span></div>
+          <div><strong>180°</strong><span>Base rotation</span></div>
+          <div><strong>9–12.6 V</strong><span>Operating voltage</span></div>
+        </div>
+      </div>
+      <div class="container-wide">
+        <a class="drawing-card drawing-card-large" href="../assets/drawing.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size LinkArm-LT mechanical drawing in a new window">
+          <img src="../assets/drawing.webp" width="1335" height="1182" loading="lazy" alt="LinkArm-LT overall dimensions, base mounting patterns, and folded dimensions">
+          <span class="drawing-action">Open full-size drawing</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="specs" class="section specs-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>Product specifications</h2>
+          <p>Key specifications for the complete arm and its built-in ESP32-S3 sub-controller.</p>
+        </div>
+
+        <div class="spec-stack">
+          <article class="spec-table-card">
+            <div class="spec-table-header">
+              <span>LINKARM-LT</span>
+              <h3>Robot arm specifications</h3>
+            </div>
+            <table class="spec-table">
+              <caption>LinkArm-LT robot arm specifications</caption>
+              <tbody>
+                <tr class="spec-group-row"><th colspan="2" scope="colgroup">Mechanical</th></tr>
+                <tr><th scope="row">Arm weight</th><td>780 g (G-clamp not included)</td></tr>
+                <tr><th scope="row">Maximum payload</th><td>1 kg</td></tr>
+                <tr><th scope="row">Maximum reach</th><td>330 mm</td></tr>
+                <tr><th scope="row">Base rotation</th><td>180°</td></tr>
+                <tr><th scope="row">Repeatability</th><td>±8 mm (under the same payload)</td></tr>
+                <tr><th scope="row">Supported desktop thickness with G-clamp</th><td>7–50 mm</td></tr>
+
+                <tr class="spec-group-row"><th colspan="2" scope="colgroup">Electrical</th></tr>
+                <tr><th scope="row">Operating voltage</th><td>9–12.6 V (supports direct power from a 3S lithium battery)</td></tr>
+                <tr><th scope="row">Peak current</th><td>3 A</td></tr>
+                <tr><th scope="row">Communication interfaces</th><td>USB / UART / Wi-Fi</td></tr>
+                <tr><th scope="row">Power</th><td>36 W</td></tr>
+                <tr><th scope="row">Main controller</th><td>ESP32-S3</td></tr>
+
+                <tr class="spec-group-row"><th colspan="2" scope="colgroup">Control and features</th></tr>
+                <tr><th scope="row">Communication protocol</th><td>JSON over USB / WebSocket / HTTP / UART / ESP-NOW</td></tr>
+                <tr><th scope="row">Built-in inverse kinematics</th><td>Supported</td></tr>
+                <tr><th scope="row">Built-in trajectory planning</th><td>Supported</td></tr>
+                <tr><th scope="row">Web App</th><td>Supported</td></tr>
+                <tr><th scope="row">Wireless modes</th><td>AP / STA / AP+STA @ 2.4 GHz</td></tr>
+
+                <tr class="spec-group-row"><th colspan="2" scope="colgroup">Construction and mounting</th></tr>
+                <tr><th scope="row">Material</th><td>Aluminum alloy</td></tr>
+                <tr><th scope="row">Mounting patterns</th><td>70 × 63.5 mm (4 × 4 mm-diameter holes) / 36 × 50 mm (4 × 3 mm-diameter holes)</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="spec-table-card">
+            <div class="spec-table-header">
+              <span>BUILT-IN CONTROLLER</span>
+              <h3>ESP32-S3 sub-controller specifications</h3>
+            </div>
+            <table class="spec-table">
+              <caption>ESP32-S3 sub-controller specifications</caption>
+              <tbody>
+                <tr><th scope="row">Model</th><td>Robot_Driver_with_ESP32S3_lite_(A)</td></tr>
+                <tr><th scope="row">Controller module</th><td>ESP32-S3-WROOM-1 R8N8</td></tr>
+                <tr><th scope="row">Onboard resources</th><td>Automatic flashing circuit, 5 V / 5 A DC-DC step-down regulator, and 3.3 V LDO</td></tr>
+                <tr><th scope="row">Host communication</th><td>USB CDC, GPIO UART, USB UART, and Wi-Fi (WebSocket / HTTP)</td></tr>
+                <tr><th scope="row">Bus servo / joint interfaces</th><td>RS485, single-wire TTL, and CAN bus</td></tr>
+                <tr><th scope="row">Additional wireless communication</th><td>ESP-NOW communication with other ESP32 devices</td></tr>
+                <tr><th scope="row">Data format</th><td>JSON*</td></tr>
+                <tr><th scope="row">USB CDC command rate</th><td>80 commands/s</td></tr>
+                <tr><th scope="row">WebSocket command rate</th><td>62–66 commands/s (recommended wireless method)</td></tr>
+                <tr><th scope="row">HTTP request rate</th><td>40 commands/s (not recommended for high-rate control; occasional latency of approximately 0.3 s)</td></tr>
+                <tr><th scope="row">Power input</th><td>6–20 V; the actual voltage depends on the rated voltage of the controlled bus servos or joints</td></tr>
+                <tr><th scope="row">Expansion header</th><td>ESP32S3-IO: 21, 9, 12, 11, 10, 2, 7, 6, 3V3, GND</td></tr>
+                <tr><th scope="row">Software support</th><td>Fully open source: onboard examples (C++), Web App (HTML / JavaScript / CSS), and host examples (Python)</td></tr>
+                <tr><th scope="row">Typical use</th><td>Maker projects, education, engineering evaluation, and personal projects</td></tr>
+              </tbody>
+            </table>
+            <p class="spec-note"><strong>* UART0 note:</strong> UART0 is configured as a serial pass-through for servo commands by default. A simple configuration change enables JSON command interaction instead.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="controller" class="section dark-section">
+      <div class="container controller-layout">
+        <div class="controller-copy">
+          <p class="eyebrow">BUILT-IN CONTROLLER</p>
+          <h2>ESP32-S3 control is part of the arm</h2>
+          <p>LinkArm-LT ships with an open-source control stack that includes the Web App, forward and inverse kinematics, and a JSON command interface. The built-in controller handles arm execution, leaving the host computer free to focus on navigation, perception, and task logic.</p>
+          <div class="fact-list">
+            <div><strong>Start without setup overhead</strong><span>The arm creates its own Wi-Fi access point at startup. Connect a phone or tablet and begin controlling it without additional configuration.</span></div>
+            <div><strong>Simpler host integration</strong><span>Inverse kinematics and interpolation run on the sub-controller, so the host only needs to send concise JSON commands.</span></div>
+            <div><strong>Layered control architecture</strong><span>In the example shown, a Raspberry Pi acts as the host while the ESP32-S3 manages arm execution as the sub-controller.</span></div>
+          </div>
+        </div>
+        <figure class="product-media dark-media">
+          <img src="../assets/lt-02-lt-controller-installed.webp" width="1600" height="900" loading="lazy" alt="LinkArm-LT built-in ESP32-S3 controller connected to a Raspberry Pi host">
+          <figcaption><strong>Built-in sub-controller</strong><span>The ESP32-S3 controller is installed in the base and can connect to an external host computer.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="web" class="section web-section">
+      <div class="container web-layout">
+        <figure class="product-media web-media">
+          <img src="../assets/web-cross-platform.webp" loading="lazy" alt="LinkArm-LT Web App running on a computer, phone, and tablet">
+          <figcaption><strong>Cross-platform Web App</strong><span>The same browser interface adapts to desktop, phone, and tablet screens.</span></figcaption>
+        </figure>
+        <div class="web-copy">
+          <p class="eyebrow">CROSS-PLATFORM WEB APP</p>
+          <h2>Open a browser and start using the arm</h2>
+          <p>The Web App runs directly on LinkArm-LT's ESP32-S3 controller. No dedicated app needs to be installed: power on the arm, connect to its Wi-Fi access point, and open the interface in a browser.</p>
+          <div class="web-feature-list">
+            <div><strong>Desktop / phone / tablet</strong><span>Use one browser-based interface across common operating systems and device types.</span></div>
+            <div><strong>Device status and network setup</strong><span>View device information and configure Wi-Fi directly in the browser.</span></div>
+            <div><strong>Open-source examples</strong><span>All example code is open source for learning, adaptation, and further development.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="integration" class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MOBILE BASE INTEGRATION</p>
+          <h2>Ready for a wide range of mobile robots</h2>
+          <p>The parallel structure is designed around mobile robot requirements. End-of-arm interfaces can control DC devices and onboard RGB LEDs, while the included camera bracket provides a straightforward way to add a wrist-mounted camera.</p>
+        </div>
+        <div class="scenario-grid">
+          <article><span>SCENE 01</span><h3>TTL Node (A)</h3><p>A bus node at the end of the arm controls external devices through two adjustable-voltage DC switched outputs, two RGB LED channels, and an S.BUS input for remote-control applications.</p></article>
+          <article><span>SCENE 02</span><h3>Camera mounting</h3><p>An included camera bracket makes it possible to add an end-of-arm camera for first-person grasping and teleoperation.</p></article>
+          <article><span>SCENE 03</span><h3>JSON command interface</h3><p>A concise JSON command set and examples for multiple transports help developers integrate arm control without rebuilding the low-level motion stack.</p></article>
+        </div>
+        <div class="application-grid">
+          <figure class="product-media application-featured">
+            <img src="../assets/lt-03-lt-chassis-mounting.webp" width="1600" height="900" loading="lazy" alt="LinkArm-LT mounted on a mobile robot platform">
+            <figcaption><strong>Platform mounting</strong><span>The base bolts to a robot platform so the arm and other actuators can share the same mechanical system.</span></figcaption>
+          </figure>
+          <figure class="product-media">
+            <img src="../assets/loaded-operation.webp" loading="lazy" alt="LinkArm-LT grasping an object while mounted on a mobile base">
+            <figcaption><strong>Working with a payload</strong><span>The arm is mounted on the base and shown grasping an object.</span></figcaption>
+          </figure>
+          <figure class="product-media">
+            <img src="../assets/rover-render.webp" loading="lazy" alt="Concept rendering of LinkArm-LT integrated with a four-wheel mobile robot">
+            <figcaption><strong>Complete robot concept</strong><span>The arm integrates with the mobile base, battery, and host control system.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CHOOSE YOUR VERSION</p>
+          <h2>Same arm, different control boundary</h2>
+          <p>The main hardware distinction between LinkArm-LT and LinkArm-M is whether the ESP32-S3 sub-controller board is included.</p>
+        </div>
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead><tr><th>Comparison</th><th class="current">LinkArm-LT</th><th>LinkArm-M</th></tr></thead>
+            <tbody>
+              <tr><th>Arm structure</th><td class="current"><strong>Parallel robot arm</strong></td><td><strong>Parallel robot arm</strong></td></tr>
+              <tr><th>ESP32-S3 sub-controller</th><td class="current"><strong>Included</strong></td><td><strong>Not included</strong></td></tr>
+              <tr><th>Best suited to</th><td class="current">Users who want a complete sub-controller solution and less low-level integration work.</td><td>Users who already have their own controller, drive system, or robot control architecture.</td></tr>
+              <tr><th>Choose it when</th><td class="current">You want to bring the arm into a robot system more quickly.</td><td>You want to keep full control over the control hardware.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare-note">No additional differences are claimed here beyond the confirmed controller-board configuration.</p>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container choice-layout">
+        <div class="choice-copy">
+          <p class="eyebrow">DECISION</p>
+          <h2>When should you choose LinkArm-LT?</h2>
+          <p>Choose LT when you want a complete arm that can work on its own and move into full-system integration with less controller development.</p>
+        </div>
+        <article class="choice-card">
+          <span class="choice-model">LINKARM-M</span>
+          <h3>Choose the lower-cost version without the ESP32-S3 controller when:</h3>
+          <ul>
+            <li>Your project already has a controller and does not need an additional ESP32-S3 control board</li>
+            <li>Your team is comfortable with software integration and can build on the open-source Python examples we provide</li>
+          </ul>
+          <a class="button secondary" href="../../LinkArm-M/index.html" lang="zh-CN">View LinkArm-M (Chinese)</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="tutorials" class="section tutorial-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">TUTORIALS &amp; DOCUMENTATION</p>
+          <h2>Everything you need to get moving quickly</h2>
+          <p>Our tutorials and open-source examples take you from the first connection through browser control, command-based integration, and further development.</p>
+        </div>
+        <div class="tutorial-grid">
+          <article><span>01</span><h3>Quick start</h3><p>Power on the arm, connect to its Wi-Fi access point, open the Web App, and verify the first motion.</p></article>
+          <article><span>02</span><h3>Control and communication</h3><p>Learn the JSON command interface and USB CDC, WebSocket, and HTTP communication options.</p></article>
+          <article><span>03</span><h3>Open-source examples</h3><p>Continue development with the onboard firmware, Web App source, and Python host examples.</p></article>
+          <article><span>04</span><h3>Mounting and integration</h3><p>Use the drawings, mounting information, and product documentation to integrate the arm with a mobile base.</p></article>
+        </div>
+        <div class="tutorial-actions">
+          <a class="button primary" href="https://lygionorganization.github.io/lygion-wiki/en/reference/robots/linkarm-lt/" target="_blank" rel="noopener noreferrer">View all LinkArm-LT tutorials</a>
+          <a class="button secondary" href="../assets/drawing.webp" target="_blank" rel="noopener noreferrer">Open the full-size drawing</a>
+        </div>
+      </div>
+      <div class="container cta">
+        <div><strong>Need an arm that is ready to integrate with a mobile base?</strong><span>LinkArm-LT includes the ESP32-S3 sub-controller and cross-platform Web App.</span></div>
+        <a class="button primary" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Visit the Taobao Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>LYGION · LinkArm-LT</span>
+      <div><a href="https://lygionorganization.github.io/lygion-wiki/en/reference/robots/linkarm-lt/" target="_blank" rel="noopener noreferrer">Product Wiki</a><a href="https://lygion.ai/en/">Back to LYGION</a></div>
+    </div>
+  </footer>
+</body>
+</html>

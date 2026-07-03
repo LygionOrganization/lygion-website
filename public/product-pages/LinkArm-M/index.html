@@ -3,352 +3,314 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LinkArm-M 并联机械臂模组 | USB 串口控制、开源 Python SDK、移动底盘集成 | 灵影 LYGION</title>
-  <meta name="description" content="LinkArm-M 是灵影 LYGION 面向移动底盘与开发者的 3+1 自由度并联机械臂模组，支持 USB 串口控制、开源 Python SDK 与 CLI、IK/FK、JSON 输出、多机械臂控制，并适配 12V 3A 或 3S 锂电直供集成。">
-  <meta name="keywords" content="LinkArm-M,并联机械臂,移动底盘机械臂,Python SDK 机械臂,CLI 控制机械臂,IK FK 机械臂,Jetson 机械臂,灵影,LYGION">
-  <link rel="stylesheet" href="styles.css">
+  <title>LinkArm-M | 面向移动底盘集成的并联机械臂模组 | LYGION 灵影</title>
+  <meta name="description" content="LinkArm-M 是面向移动底盘集成的并联机械臂模组，不含 ESP32-S3 下位机驱动板，适合已有控制器与驱动方案的机器人系统。">
+  <meta name="keywords" content="LinkArm-M,并联机械臂模组,移动底盘机械臂,机器人机械臂,外部控制器机械臂,低温升机械臂,灵影,LYGION">
+  <link rel="canonical" href="https://lygion.ai/product-pages/LinkArm-M/index.html">
+  <link rel="icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="stylesheet" href="linkarm.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "LinkArm-M",
+    "brand": { "@type": "Brand", "name": "LYGION 灵影" },
+    "description": "面向移动底盘集成、不含 ESP32-S3 下位机驱动板的并联机械臂模组。",
+    "category": "机器人并联机械臂模组",
+    "image": "https://lygion.ai/product-pages/LinkArm-M/assets/01-hero.webp"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="home-link" href="https://lygion.ai/" aria-label="返回灵影官网">
-        <span class="logo-mark"><img src="/assets/lygion-logo-mark.png" alt=""></span>
-        <span><strong>LYGION 灵影</strong><small>返回官方网站</small></span>
+      <a class="brand" href="https://lygion.ai/" aria-label="返回灵影官网">
+        <span class="brand-mark"><img src="assets/lygion-logo-mark.webp" alt=""></span>
+        <span><strong>LYGION 灵影</strong><small>机器人硬件与开放生态</small></span>
       </a>
       <nav aria-label="页面导航">
-        <a href="#features">核心能力</a>
-        <a href="#sdk">SDK 接口</a>
-        <a href="#scenes">集成场景</a>
-        <a href="#specs">规格参数</a>
-        <a href="#faq">FAQ</a>
-        <a class="wiki-link" href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料</a>
+        <a href="#advantages">结构优势</a>
+        <a href="#structure">产品结构</a>
+        <a href="#dimensions">尺寸图</a>
+        <a href="#specs">产品参数</a>
+        <a href="#integration">控制集成</a>
+        <a href="#scenarios">底盘场景</a>
+        <a href="#compare">LT / M 选型</a>
+        <a href="#tutorials">教程资料</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">淘宝店铺</a>
+        <a class="language-switch" href="en/index.html" lang="en">EN</a>
+        <a class="nav-cta" href="https://wiki.lygion.ai/reference/robots/linkarm-m/" target="_blank" rel="noopener noreferrer">产品 Wiki</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-glow hero-glow-a"></div>
-      <div class="hero-glow hero-glow-b"></div>
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">3+1 DOF parallel arm module</p>
-          <h1>LinkArm-M<br><span>面向移动底盘与开发集成的轻量高负载机械臂模组</span></h1>
-          <p class="lead">现有资料显示，LinkArm-M 采用 3+1 自由度并联结构，重点不是“演示型机械臂”，而是更适合接入 Raspberry Pi、Jetson、RK 主控或 PC 的工程化执行模组。它保留 USB 串口主机控制方式，开放 CLI 与 Python SDK，并明确给出 IK / FK、状态读取、JSON 输出、多命令批量执行和多机械臂控制路径。</p>
+        <div>
+          <span class="variant-label">M 版本 · 不含 ESP32-S3 下位机</span>
+          <p class="eyebrow">MOBILE ROBOT ARM MODULE</p>
+          <h1>专为移动底盘设计的并联机械臂</h1>
+          <p class="model-name">LinkArm-M</p>
+          <p class="lead">特殊的并联结构让机械臂更稳定、舵机发热更小，也更不容易触发过热保护。M 版本不含 ESP32-S3 下位机驱动板，适合已有自己控制器的用户使用。</p>
           <div class="hero-actions">
-            <a class="primary" href="#specs">查看技术参数</a>
-            <a class="secondary" href="#sdk">了解 SDK 能力</a>
+            <a class="button primary" href="#advantages">为什么适合移动底盘</a>
+            <a class="button secondary" href="#dimensions">查看尺寸图</a>
           </div>
-          <div class="hero-note">
-            <strong>供电边界要先确认：</strong>USB 只负责通信，不给机械臂主动供电。资料明确要求使用 12V 直流电源且电源能力不低于 3A，或使用约 9~12.6V 的 3S 锂电直供。
-          </div>
+          <ul class="quick-specs" aria-label="产品要点">
+            <li><strong>并联结构</strong><span>面向大负载与结构稳定性</span></li>
+            <li><strong>外部控制</strong><span>不包含 ESP32-S3 下位机驱动板</span></li>
+            <li><strong>开源例程</strong><span>提供 Python 与 CLI 接口</span></li>
+          </ul>
         </div>
-        <div class="hero-visual">
-          <div class="hero-frame">
-            <img src="assets/hero.webp" alt="LinkArm-M 机械臂渲染主图">
-          </div>
-        </div>
-      </div>
-      <div class="container stat-grid">
-        <article><strong>330 mm</strong><span>官方资料给出的臂展 Reach</span></article>
-        <article><strong>约 700 g</strong><span>机械臂自重</span></article>
-        <article><strong>1 kg</strong><span>末端可提负载</span></article>
-        <article><strong>500000 bps</strong><span>默认串口波特率</span></article>
-        <article><strong>12V ≥ 3A</strong><span>推荐直流输入能力</span></article>
-        <article><strong>MIT 协议</strong><span>开放 SDK 便于二次开发</span></article>
-      </div>
-      <div class="container visual-strip" aria-label="LinkArm-M 关键实拍和集成场景">
-        <figure>
-          <img src="assets/intro.webp" alt="LinkArm-M 安装在移动底盘上的实拍图">
-          <figcaption>轻量并联结构适合移动底盘集成</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/payload.webp" alt="LinkArm-M 提起 1kg 负载的实拍图">
-          <figcaption>资料给出约 700g 自重与 1kg 末端负载</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/open-rover.webp" alt="LinkArm-M 与开源移动底盘组合示意">
-          <figcaption>底盘结构资料同样按 MIT 协议开放</figcaption>
+        <figure class="product-media hero-product-media">
+          <img src="assets/01-hero.webp" width="1600" height="900" alt="LinkArm-M 并联机械臂模组展开状态">
+          <figcaption><strong>LinkArm-M</strong><span>不含 ESP32-S3 下位机驱动板的机械臂模组版本</span></figcaption>
         </figure>
       </div>
     </section>
 
-    <section id="features" class="section">
+    <section class="proof-strip" aria-label="产品核心价值">
+      <div class="container proof-grid">
+        <div><strong>为移动平台设计</strong><span>实用的结构设计，适合大负载、稳定与持续工作。</span></div>
+        <div><strong>负载能力更强</strong><span>安装到移动机器人上，适合抓取、搬运与工具操作。</span></div>
+        <div><strong>负载温升更慢</strong><span>舵机持续负载更不容易触发过热保护。</span></div>
+        <div><strong>开源全部例程</strong><span>开源 Python 例程，包含 CLI 控制接口，方便用户进行二次开发。</span></div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Core capabilities</p>
-          <h2>把“能动起来”变成“便于编程、便于集成、便于批量调用”</h2>
-          <p>页面内容只整理当前素材中能直接确认的信息，不扩写未明确给出的控制器、协议或负载细节。现有资料的重点非常清楚：LinkArm-M 追求的是面向开发者的低门槛控制链路，以及适合移动平台的轻量化结构。</p>
+          <p class="eyebrow">WHY PARALLEL</p>
+          <h2>更适合安装到移动底盘上</h2>
+          <p>相较常见串联结构机械臂，LinkArm-M 把设计重点放在移动机器人更在意的四件事上。</p>
         </div>
-        <div class="feature-grid">
-          <article>
-            <b>01</b>
-            <h3>并联机械臂结构</h3>
-            <p>并联结构面向移动底盘应用，资料明确强调轻量高负载，并通过结构件吸收冲击，降低对舵机齿轮的瞬态冲击。</p>
-          </article>
-          <article>
-            <b>02</b>
-            <h3>开源 Python SDK + CLI</h3>
-            <p>既可在终端直接发命令，也可在 Python 脚本中导入 <code>RobotController</code> 控制对象继续二次开发。</p>
-          </article>
-          <article>
-            <b>03</b>
-            <h3>支持 IK / FK 与状态读取</h3>
-            <p>资料给出 IK 逆解、FK 正解和 <code>status</code> 状态读取路径，适合课堂演示、主控联调和自动化程序接入。</p>
-          </article>
-          <article>
-            <b>04</b>
-            <h3>多机械臂同步控制</h3>
-            <p>SDK 支持在一个 Python 脚本内同时实例化多个控制对象，适合“主控 + 双臂”或多工位实验平台。</p>
-          </article>
-          <article>
-            <b>05</b>
-            <h3>供电适配移动平台</h3>
-            <p>支持 12V 直流供电，电源能力要求不低于 3A；也支持约 9~12.6V 的 3S 锂电池直供。</p>
-          </article>
-          <article>
-            <b>06</b>
-            <h3>支持 JSON 输出与批量命令</h3>
-            <p>资料把 AI / Agent 场景讲得比较明确，支持 <code>--json-output</code> 和 <code>exec</code> 批量执行，便于把决策转成动作链。</p>
-          </article>
+        <div class="benefit-grid">
+          <article><span>01</span><h3>带着负载移动</h3><p>更高的负载能力，为底盘上的抓取、转运和工具操作留出余量。</p><strong>任务能力更完整</strong></article>
+          <article><span>02</span><h3>姿态更稳定</h3><p>特殊结构提供更稳定的机械支撑，减少负载对臂体姿态的影响。</p><strong>底盘运动时更从容</strong></article>
+          <article><span>03</span><h3>舵机发热更小</h3><p>负载工况下舵机热压力更低，适合反复动作或保持姿态的任务。</p><strong>持续工作更安心</strong></article>
+          <article><span>04</span><h3>更少过热中断</h3><p>降低触发舵机过热保护的可能，减少执行任务时的意外停机。</p><strong>系统可用性更高</strong></article>
         </div>
       </div>
     </section>
 
-    <section class="section panel">
-      <div class="container split">
-        <div class="media-card screen-card">
-          <img src="assets/reliable-control.webp" alt="LinkArm-M 指令分槽与双队列设计示意图">
-        </div>
-        <div>
-          <p class="eyebrow">Reliable control path</p>
-          <h2>连续控制和关键动作分流处理，减少“旧指令堆积拖慢实时响应”</h2>
-          <p>现有资料对控制链路给出了比较明确的解释：高频关节命令只保留最新目标值，适合实时运动；夹爪、PWM、LED 这类低频但关键的动作进入可靠队列，强调“必须送达”。对连续控制、远程操控或 AI 调度来说，这种设计比简单串口透传更容易把行为稳定下来。</p>
-          <ul class="check-list">
-            <li><strong>高频槽：</strong>用于关节运动目标更新，新目标到来会立即打断旧轨迹。</li>
-            <li><strong>可靠槽：</strong>用于夹爪、PWM、LED 等关键低频动作，强调完整执行。</li>
-            <li><strong>用户侧接口保持简单：</strong>资料说明这些策略由 SDK 底层实现，调用接口不需要额外理解队列细节。</li>
-            <li><strong>适合自动化流程：</strong>对“频繁位置更新 + 必须完成的末端动作”这类混合任务更友好。</li>
-          </ul>
-          <div class="notice">
-            <strong>适用边界：</strong>LinkArm-M 不是脱机机械臂。FAQ 明确写明它需要外部主机运行 SDK，经 USB 串口控制机械臂。
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sdk" class="section section-dark">
-      <div class="container split reverse">
-        <div>
-          <p class="eyebrow">Open SDK workflow</p>
-          <h2>从命令行验证到 Python 集成，现有资料已经给到完整上手路径</h2>
-          <p>LinkArm-M 当前提供的不是单一示例脚本，而是一套偏完整的开发入口。资料明确提到教程截图、首次连接、串口号配置、中位校准、CLI 总览、Shell 模式、多机械臂控制和常见问题，比较适合先快速跑通，再逐步嵌入真实项目。</p>
-          <div class="mini-grid">
-            <article>
-              <strong>CLI / Shell</strong>
-              <span>终端直接下发动作，适合首次连机、调试和现场快速验证。</span>
-            </article>
-            <article>
-              <strong>Python SDK</strong>
-              <span>在脚本中实例化控制对象，用于主控程序、流程调度和项目集成。</span>
-            </article>
-            <article>
-              <strong>MIT License</strong>
-              <span>资料明确标出仓库按 MIT 协议开源，更适合教学项目和商业集成。</span>
-            </article>
-            <article>
-              <strong>JSON / exec</strong>
-              <span>支持批量命令执行与结构化输出，适合自动化程序和 AI Agent 接口。</span>
-            </article>
-          </div>
-          <div class="capability-list">
-            <span>单关节控制</span>
-            <span>多关节同步控制</span>
-            <span>IK 逆解</span>
-            <span>FK 正解</span>
-            <span>status 状态读取</span>
-            <span>gripper 夹爪控制</span>
-            <span>LED 控制</span>
-            <span>PWM 输出</span>
-            <span>扭矩开关与限制</span>
-            <span>FPV 风格即时运动</span>
-          </div>
-        </div>
-        <div class="media-stack">
-          <div class="media-card">
-            <img src="assets/sdk.webp" alt="LinkArm-M 开源 CLI 与 Python SDK 的示意图">
-          </div>
-          <div class="glass-card">
-            <h3>环境边界</h3>
-            <ul>
-              <li>支持 Windows、macOS、Raspberry Pi、Jetson 与可运行 Python 的 USB 主机。</li>
-              <li>建议 Python 3.8 及以上版本。</li>
-              <li>macOS 使用前可能需要安装 CH34x / CH343 USB-UART 驱动。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="scenes" class="section">
-      <div class="container compare-grid">
-        <div class="compare-copy">
-          <p class="eyebrow">Application scenes</p>
-          <h2>适合移动底盘、远程操作、AI 接口和教学训练四类典型使用场景</h2>
-          <p>现有详情资料把使用场景说得很具体，不是泛泛地写“适用于科研教育”。下面这些内容都能在现有素材中直接对应到图文说明。</p>
-          <ul class="check-list">
-            <li><strong>移动底盘机械臂模组：</strong>强调机械臂更轻、前伸时重心变化较小，适合 Raspberry Pi / Jetson / RK 主体集成。</li>
-            <li><strong>第一人称视觉 / 远程操作：</strong>资料提到 FPV 控制接口，并随产品附带摄像头支架与开源支架图纸。</li>
-            <li><strong>AI Agent 接口：</strong>CLI 与 JSON 输出适合把程序决策转成实际动作。</li>
-            <li><strong>教学 / 培训：</strong>可直接用 CLI 演示末端坐标、关节运动和状态反馈之间的对应关系。</li>
-          </ul>
-        </div>
-        <div class="compare-panel">
-          <div class="media-card">
-            <img src="assets/use-cases.webp" alt="LinkArm-M 使用场景示意图">
-          </div>
-          <div class="feature-quote">
-            <p>资料还提供多机械臂控制示例，适合双臂协作平台或多工位演示。</p>
-          </div>
-        </div>
-      </div>
-      <div class="container dual-visuals">
-        <figure class="media-card">
-          <img src="assets/multi-arm.webp" alt="LinkArm-M 多机械臂同时控制示意图">
-          <figcaption>同一 Python 脚本可同时实例化多台机械臂控制对象。</figcaption>
+    <section id="structure" class="section soft-section">
+      <div class="container structure-layout">
+        <figure class="product-media structure-media">
+          <img src="assets/common-01-m-module-hero.webp" width="1600" height="900" loading="lazy" alt="LinkArm-M 并联机械臂侧面收拢姿态">
+          <figcaption><strong>并联连杆结构</strong><span>两组连杆共同形成机械支撑，负载不只由单个关节承担。</span></figcaption>
         </figure>
-        <figure class="media-card">
-          <img src="assets/open-rover.webp" alt="LinkArm-M 与开源底盘组合渲染图">
-          <figcaption>折叠状态可降低整机高度，适合移动平台运输与待机。</figcaption>
+        <div class="structure-copy">
+          <p class="eyebrow">STRUCTURE</p>
+          <h2>让结构承担更多负载</h2>
+          <p>LinkArm-M 的结构路线与常见串联机械臂不同：LinkArm-M 的机械结构与关节舵机共同承担负载，使臂体在移动、启停与保持姿态时更稳定。</p>
+          <div class="fact-list">
+            <div><strong>负载分配更合理</strong><span>减少单个关节长期承受大负载的工况。</span></div>
+            <div><strong>整体刚性更好</strong><span>负载、启停或底盘运动时，臂体姿态更稳定。</span></div>
+            <div><strong>工作更持久</strong><span>相同任务下，舵机更不容易持续处于高发热状态。</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="container structure-gallery">
+        <figure class="product-media">
+          <img src="assets/common-01-m-module-hero-2.webp" width="1600" height="900" loading="lazy" alt="LinkArm-M 并联机械臂向上展开姿态">
+          <figcaption><strong>向上展开</strong><span>展示连杆在不同工作姿态下的几何关系。</span></figcaption>
+        </figure>
+        <figure class="product-media">
+          <img src="assets/01-hero.webp" width="1600" height="900" loading="lazy" alt="LinkArm-M 并联机械臂水平展开姿态">
+          <figcaption><strong>侧面视角</strong><span>机械臂可展开、可收缩折叠，对舵机负载更小。</span></figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section panel">
-      <div class="container integration-layout">
-        <div>
-          <p class="eyebrow">Integration and delivery</p>
-          <h2>安装、供电、配件和尺寸资料已经能支撑首轮集成评估</h2>
-          <p>除了 SDK，LinkArm-M 的当前素材还补齐了尺寸图、交付清单、开源底盘说明和桌面固定方式。对于要先做空间评估、再决定是否进入二次设计的团队，这一层资料已经基本够用。</p>
-          <div class="integration-grid">
-            <article>
-              <h3>桌面固定</h3>
-              <p>交付清单包含两只桌面 G 字夹，适合先在桌边快速固定、验证串口、校准中位和跑基本动作。</p>
-            </article>
-            <article>
-              <h3>摄像头支架</h3>
-              <p>配件中明确包含摄像头支架一件，资料还提到可按开源图纸继续改造，适配自选摄像头模组。</p>
-            </article>
-            <article>
-              <h3>供电与接口</h3>
-              <p>供电接口为 DC5521，标配 12V 3A 适配器；USB Type-C 用于数据通信，不作为机械臂主动供电口。</p>
-            </article>
-          </div>
+    <section id="dimensions" class="section dimensions-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MECHANICAL DRAWING</p>
+          <h2>关键参数</h2>
+          <p>提供 DXF 图纸，方便用户进行二次开发和集成。</p>
         </div>
-        <div class="dimension-stack">
-          <div class="media-card">
-            <img src="assets/dimensions.webp" alt="LinkArm-M 产品尺寸图">
-          </div>
-          <div class="media-card">
-            <img src="assets/in-box.webp" alt="LinkArm-M 产品与配件清单图">
-          </div>
+        <div class="dimension-highlights" aria-label="尺寸图主要标注">
+          <div><strong>1 Kg</strong><span>最大负载</span></div>
+          <div><strong>330 mm</strong><span>最大伸展长度</span></div>
+          <div><strong>180 °</strong><span>基座旋转角度</span></div>
+          <div><strong>9-12.6 V</strong><span>工作电压范围</span></div>
         </div>
+      </div>
+      <div class="container-wide">
+        <a class="drawing-card" href="assets/drawing.webp" target="_blank" rel="noopener noreferrer" aria-label="在新窗口查看 LinkArm-M 原始尺寸图">
+          <img src="assets/drawing.webp" width="918" height="746" loading="lazy" alt="LinkArm-M 外形尺寸与安装关系图">
+          <span class="drawing-action">点击查看原始尺寸图</span>
+        </a>
       </div>
     </section>
 
-    <section id="specs" class="section section-tight">
-      <div class="container split specs-layout">
-        <div class="table-wrap">
-          <div class="section-heading compact">
-            <p class="eyebrow">Specifications</p>
-            <h2>可直接确认的产品规格参数</h2>
+    <section id="specs" class="section specs-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>产品参数</h2>
+          <p>LinkArm-M 机械臂参数。</p>
+        </div>
+
+        <article class="spec-table-card">
+          <div class="spec-table-header">
+            <span>LINKARM-M</span>
+            <h3>机械臂模组规格</h3>
           </div>
-          <table>
+          <table class="spec-table">
+            <caption>LinkArm-M 机械臂模组规格参数</caption>
             <tbody>
-              <tr><th>产品名称</th><td>LinkArm-M（3+1 自由度并联机械臂模组）</td></tr>
-              <tr><th>控制方式</th><td>USB 串口通信，由主机端运行 CLI / Python 控制</td></tr>
-              <tr><th>SDK 形态</th><td>Python SDK + CLI + Shell + <code>exec</code> + <code>--json-output</code></td></tr>
-              <tr><th>支持平台</th><td>Windows / macOS / Raspberry Pi / Jetson / 具备 USB 接口并支持 Python 的主机</td></tr>
-              <tr><th>推荐 Python 版本</th><td>Python 3.8 及以上</td></tr>
-              <tr><th>供电输入</th><td>12V 直流供电且电源能力不低于 3A；支持 3S 锂电约 9~12.6V 直供</td></tr>
-              <tr><th>USB 说明</th><td>USB 仅负责通信，不为主动动力供电</td></tr>
-              <tr><th>供电接口</th><td>DC5521</td></tr>
-              <tr><th>默认波特率</th><td>500000</td></tr>
-              <tr><th>运动学能力</th><td>IK（<code>ik</code> / <code>ik-now</code>）、FK（<code>fk</code>）、<code>status</code> 状态读取</td></tr>
-              <tr><th>夹爪控制</th><td><code>gripper</code>：0 为最大张开，-1 为完全闭合，最小可到 -1.5 更紧</td></tr>
-              <tr><th>舵机类型</th><td>飞特 SCS 系列总线舵机，型号 SC-1500-C023 / SC-1500-C024</td></tr>
-              <tr><th>臂展 Reach</th><td>330 mm</td></tr>
-              <tr><th>基座旋转角度</th><td>180°</td></tr>
-              <tr><th>自重</th><td>约 700 g</td></tr>
-              <tr><th>最大负载</th><td>末端可提约 1 kg 负载</td></tr>
-              <tr><th>外设扩展</th><td>板载 LED 控制与 PWM 输出（通道 0 / 1，范围 0~1024）</td></tr>
-              <tr><th>标配电源适配器</th><td>12V 3A</td></tr>
+              <tr class="spec-group-row"><th colspan="2" scope="colgroup">机械参数</th></tr>
+              <tr><th scope="row">自由度</th><td>3+1 DOF</td></tr>
+              <tr><th scope="row">机械臂重量</th><td>780 g（不包含 G 字夹）</td></tr>
+              <tr><th scope="row">最大负载</th><td>1 kg</td></tr>
+              <tr><th scope="row">最大伸展长度</th><td>330 mm</td></tr>
+              <tr><th scope="row">基座旋转角度</th><td>180°</td></tr>
+              <tr><th scope="row">重复定位精度</th><td>±8 mm（相同负载）</td></tr>
+              <tr><th scope="row">桌面 G 字夹支持厚度范围</th><td>7–50 mm</td></tr>
+
+              <tr class="spec-group-row"><th colspan="2" scope="colgroup">电气参数</th></tr>
+              <tr><th scope="row">工作电压</th><td>9–12.6 V（支持 3S 锂电池直接供电）</td></tr>
+              <tr><th scope="row">峰值电流</th><td>3 A</td></tr>
+              <tr><th scope="row">功耗</th><td>36 W</td></tr>
+
+              <tr class="spec-group-row"><th colspan="2" scope="colgroup">控制与开发</th></tr>
+              <tr><th scope="row">上位机连接</th><td>USB</td></tr>
+              <tr><th scope="row">控制方式</th><td>CLI / Python SDK / JSON</td></tr>
+              <tr><th scope="row">上位机平台</th><td>树莓派、Jetson、RK 系列控制器或 PC</td></tr>
+              <tr><th scope="row">软件支持</th><td>提供开源 Python SDK 与控制例程</td></tr>
+
+              <tr class="spec-group-row"><th colspan="2" scope="colgroup">外观与安装</th></tr>
+              <tr><th scope="row">材质</th><td>铝合金</td></tr>
+              <tr><th scope="row">安装孔位</th><td>70 × 63.5 mm（直径 4 mm × 4）/ 36 × 50 mm（直径 3 mm × 4）</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </section>
+
+    <section id="integration" class="section dark-section">
+      <div class="container controller-layout">
+        <div class="controller-copy">
+          <p class="eyebrow">OPEN INTEGRATION</p>
+          <h2>兼容多种控制器</h2>
+          <p>支持 PC、Jetson、RK 系列控制器或树莓派等平台。</p>
+          <div class="fact-list">
+            <div><strong>复用现有主控</strong><span>图中以树莓派为例，机械臂通过 USB 接口接入主控。</span></div>
+            <div><strong>统一整机架构</strong><span>让底盘、机械臂与其它执行器遵循团队自己的控制边界。</span></div>
+            <div><strong>保留选型自由</strong><span>可按算力、接口、实时性和供应链要求选择控制硬件。</span></div>
+          </div>
+        </div>
+        <figure class="product-media dark-media">
+          <img src="assets/m-02-m-controller-installed.webp" width="1600" height="900" loading="lazy" alt="LinkArm-M 通过外部控制板连接树莓派">
+          <figcaption><strong>外部控制器接入</strong><span>树莓派与机械臂控制硬件的连接示例。</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="scenarios" class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MOBILE BASE INTEGRATION</p>
+          <h2>集成到多种移动机器人中</h2>
+          <p>机械臂的特殊并联结构转为移动机器人设计，机械臂驱动板带有多种接口，可控制直流设备、板载 RGB LED；随机附赠摄像头支架，用于安装摄像头。</p>
+        </div>
+        <div class="scenario-grid">
+          <article><span>SCENE 01</span><h3>移动抓取</h3><p>底盘到达目标附近后，由机械臂完成拾取、放置与转运。</p></article>
+          <article><span>SCENE 02</span><h3>巡检操作</h3><p>携带相机、传感器或工具，对设备与环境进行近距离操作。</p></article>
+          <article><span>SCENE 03</span><h3>统一控制</h3><p>把机械臂接入已有主控，与轮组、升降和云台共同协作。</p></article>
+        </div>
+        <div class="application-grid">
+          <figure class="product-media application-featured">
+            <img src="assets/m-03-m-chassis-mounting.webp" width="1600" height="900" loading="lazy" alt="LinkArm-M 固定在机器人平台上的安装示例">
+            <figcaption><strong>平台安装</strong><span>底座通过安装板与机器人平台固定，机械臂和其它执行机构可在同一平台布置。</span></figcaption>
+          </figure>
+          <figure class="product-media">
+            <img src="assets/loaded-operation.webp" loading="lazy" alt="LinkArm-M 安装在移动底盘上携带负载工作">
+            <figcaption><strong>真实负载场景</strong><span>机械臂安装在底盘上，夹取物体。</span></figcaption>
+          </figure>
+          <figure class="product-media">
+            <img src="assets/rover-render.webp" loading="lazy" alt="LinkArm-M 集成到四轮移动底盘的方案示意">
+            <figcaption><strong>整机方案示意</strong><span>机械臂与移动底盘、电池和上层控制系统组合。</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CHOOSE YOUR VERSION</p>
+          <h2>LT 与 M，机械臂相同，控制边界不同</h2>
+          <p>两款产品的主要硬件区别主要在于：是否包含 ESP32-S3 下位机驱动板。</p>
+        </div>
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead><tr><th>对比项</th><th>LinkArm-LT</th><th class="current">LinkArm-M</th></tr></thead>
+            <tbody>
+              <tr><th>机械臂结构</th><td><strong>并联结构机械臂</strong></td><td class="current"><strong>并联结构机械臂</strong></td></tr>
+              <tr><th>ESP32-S3 下位机驱动板</th><td><strong>包含</strong></td><td class="current"><strong>不包含</strong></td></tr>
+              <tr><th>适合谁</th><td>希望使用成套下位机方案，减少底层控制集成工作的用户。</td><td class="current">已经有自己的控制器、驱动方案或系统架构的用户。</td></tr>
+              <tr><th>选择逻辑</th><td>希望更快把机械臂接入机器人系统。</td><td class="current">希望保留控制硬件的选择自由度。</td></tr>
             </tbody>
           </table>
         </div>
-        <aside class="spec-aside">
-          <h3>配件与交付物</h3>
-          <ul>
-            <li>机械臂本体 × 1</li>
-            <li>12V 3A 电源适配器 × 1</li>
-            <li>数据线 × 1</li>
-            <li>摄像头支架 × 1</li>
-            <li>桌面 G 字夹 × 2</li>
-            <li>备用紧固件 × 1</li>
-          </ul>
-          <p>资料同时给出产品尺寸图、FAQ 和开源底盘说明，适合先完成首轮上手与空间评估。</p>
-        </aside>
+        <p class="compare-note">除下位机驱动板配置外，不在此页面补写未经确认的差异。</p>
       </div>
     </section>
 
-    <section id="faq" class="section">
+    <section class="section soft-section">
+      <div class="container choice-layout">
+        <div class="choice-copy">
+          <p class="eyebrow">DECISION</p>
+          <h2>什么时候应该选 M？</h2>
+          <p>如果您的机器人已经有稳定的下位机与执行器控制架构，只需要 LinkArm 的机械结构与负载优势，选择 M。</p>
+        </div>
+        <article class="choice-card">
+          <span class="choice-model">LINKARM-LT</span>
+          <h3>选择带 ESP32-S3 下位机的模组版本</h3>
+          <ul>
+            <li>需要机械臂可独立运行使用</li>
+            <li>需要在现有的系统中再多加一个下位机</li>
+            <li>需要使用机械臂的下位机来分担逆解和插值算力</li>
+          </ul>
+          <a class="button secondary" href="../LinkArm-LT/index.html">查看 LinkArm-LT</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="tutorials" class="section tutorial-section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">FAQ</p>
-          <h2>资料里已经回答的关键问题</h2>
+          <p class="eyebrow">TUTORIALS &amp; DOCUMENTATION</p>
+          <h2>教程齐全，快速上手</h2>
+          <p>从机械安装、连接外部控制器，到运行 Python 例程和接入整机系统，我们提供分步骤教程与开源代码，帮助您先完成验证，再逐步深入开发。</p>
         </div>
-        <div class="faq-grid">
-          <article>
-            <h3>适合新手吗？</h3>
-            <p>适合愿意照着教程操作的新手，但需要先按现有文档完成一次配置与校准，再开始命令控制。</p>
-          </article>
-          <article>
-            <h3>能在 macOS 上使用吗？</h3>
-            <p>可以。资料说明支持 macOS，但识别 USB 串口前可能需要安装 CH34x / CH343 驱动。</p>
-          </article>
-          <article>
-            <h3>能同时控制两台或多台机械臂吗？</h3>
-            <p>可以。SDK 资料明确给出多机械臂控制思路：在同一个 Python 脚本中实例化多个控制对象即可。</p>
-          </article>
-          <article>
-            <h3>只插 USB 不接电源能动吗？</h3>
-            <p>不能。USB 只负责通信，机械臂模块必须由 12V 或 3S 锂电提供动力电源。</p>
-          </article>
-          <article>
-            <h3>必须接电脑或主控吗？</h3>
-            <p>是。FAQ 明确写明需要外部主机运行 SDK，经 USB 串口控制硬件层。</p>
-          </article>
-          <article>
-            <h3>支持 IK、FK 和状态反馈吗？</h3>
-            <p>支持。资料中给出 <code>ik</code> / <code>ik-now</code>、<code>fk</code>、<code>status</code> 等接口说明。</p>
-          </article>
+        <div class="tutorial-grid">
+          <article><span>01</span><h3>快速上手</h3><p>按照教程完成连接与基础动作验证，先确认机械臂和控制链路工作正常。</p></article>
+          <article><span>02</span><h3>控制器接入</h3><p>了解如何通过 USB 把机械臂接入树莓派、Jetson、RK 控制器或 PC。</p></article>
+          <article><span>03</span><h3>Python 例程</h3><p>从 CLI 和 Python SDK 开始控制，逐步扩展自己的任务逻辑。</p></article>
+          <article><span>04</span><h3>安装与集成</h3><p>结合尺寸图、安装孔位和产品资料，把模组装入移动机器人系统。</p></article>
+        </div>
+        <div class="tutorial-actions">
+          <a class="button primary" href="https://wiki.lygion.ai/reference/robots/linkarm-m/" target="_blank" rel="noopener noreferrer">查看 LinkArm-M 全部教程</a>
+          <a class="button secondary" href="assets/drawing.webp" target="_blank" rel="noopener noreferrer">查看原始尺寸图</a>
         </div>
       </div>
-    </section>
-
-    <section class="section section-dark section-last">
       <div class="container cta">
-        <div>
-          <p class="eyebrow">Need official materials</p>
-          <h2>继续查看官网入口，或等待补全 Wiki 链接</h2>
-          <p>当前页面只使用本地现有素材整理出首版中文响应式详情页。若后续补齐正式 Wiki 地址、源码仓库和更完整的图纸说明，可继续扩展下载区与开发文档入口。</p>
-        </div>
-        <div class="cta-actions">
-          <a href="https://lygion.ai/">访问灵影官网</a>
-          <a class="ghost" href="#" aria-label="Wiki 资料页面链接待更新">Wiki 资料占位</a>
-        </div>
+        <div><strong>已有控制方案，只需要机械臂模组？</strong><span>LinkArm-M 不包含 ESP32-S3 下位机驱动板，需要连接到外部控制器才能使用。</span></div>
+        <a class="button primary" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">前往淘宝店铺</a>
       </div>
     </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <span>LYGION 灵影 · LinkArm-M</span>
+      <div><a href="https://wiki.lygion.ai/reference/robots/linkarm-m/" target="_blank" rel="noopener noreferrer">产品 Wiki</a><a href="https://lygion.ai/">返回官网</a></div>
+    </div>
+  </footer>
 </body>
 </html>

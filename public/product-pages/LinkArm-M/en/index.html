@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkArm-M | Parallel Robot Arm Module for Mobile Robots | LYGION</title>
+  <meta name="description" content="LinkArm-M is a parallel robot arm module for mobile base integration. It connects to an external controller over USB and provides open Python and CLI interfaces.">
+  <meta name="keywords" content="LinkArm-M,parallel robot arm module,mobile robot arm,USB robot arm,Python robot arm,external controller robot arm,mobile base integration,LYGION">
+  <link rel="canonical" href="https://lygion.ai/product-pages/LinkArm-M/en/index.html">
+  <link rel="icon" type="image/webp" href="../assets/favicon.webp">
+  <link rel="stylesheet" href="../linkarm.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "LinkArm-M",
+    "brand": { "@type": "Brand", "name": "LYGION" },
+    "description": "A parallel robot arm module for mobile robot integration that connects to an external controller over USB.",
+    "category": "Parallel robot arm module",
+    "image": "https://lygion.ai/product-pages/LinkArm-M/assets/01-hero.webp"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="https://lygion.ai/en/" aria-label="Back to the LYGION website">
+        <span class="brand-mark"><img src="../assets/lygion-logo-mark.webp" alt=""></span>
+        <span><strong>LYGION</strong><small>Robotics hardware and open ecosystem</small></span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#advantages">Why parallel</a>
+        <a href="#structure">Structure</a>
+        <a href="#dimensions">Drawing</a>
+        <a href="#specs">Specifications</a>
+        <a href="#integration">Control integration</a>
+        <a href="#scenarios">Mobile integration</a>
+        <a href="#compare">LT vs M</a>
+        <a href="#tutorials">Tutorials</a>
+        <a class="store-link" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Taobao Store</a>
+        <a class="language-switch" href="../index.html" lang="zh-CN">中文</a>
+        <a class="nav-cta" href="https://lygionorganization.github.io/lygion-wiki/en/reference/robots/linkarm-m/" target="_blank" rel="noopener noreferrer">Wiki</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="variant-label">M VERSION · EXTERNAL CONTROLLER REQUIRED</span>
+          <p class="eyebrow">MOBILE ROBOT ARM MODULE</p>
+          <h1>A parallel robot arm built for mobile bases</h1>
+          <p class="model-name">LinkArm-M</p>
+          <p class="lead">The parallel linkage gives the arm a more stable mechanical structure while reducing servo heat under load, making thermal protection less likely to interrupt a task. LinkArm-M does not include the ESP32-S3 sub-controller board and is intended for users who already have their own control platform.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#advantages">Why it works on a mobile base</a>
+            <a class="button secondary" href="#dimensions">View the mechanical drawing</a>
+          </div>
+          <ul class="quick-specs" aria-label="Product highlights">
+            <li><strong>Parallel linkage</strong><span>Built for higher loads and structural stability</span></li>
+            <li><strong>External control</strong><span>ESP32-S3 sub-controller board not included</span></li>
+            <li><strong>Open examples</strong><span>Python SDK and CLI interfaces provided</span></li>
+          </ul>
+        </div>
+        <figure class="product-media hero-product-media">
+          <img src="../assets/01-hero.webp" width="1600" height="900" alt="LinkArm-M parallel robot arm module in an extended posture">
+          <figcaption><strong>LinkArm-M</strong><span>The robot arm module version without the ESP32-S3 sub-controller board</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Core product value">
+      <div class="container proof-grid">
+        <div><strong>Designed for mobile platforms</strong><span>A practical structure for carrying loads, maintaining stability, and working continuously.</span></div>
+        <div><strong>More usable payload</strong><span>Well suited to grasping, transfer, and tool-handling tasks on a mobile robot.</span></div>
+        <div><strong>Slower heat buildup</strong><span>Servos are less likely to enter thermal protection during sustained loaded operation.</span></div>
+        <div><strong>Open-source examples</strong><span>Python examples and a CLI control interface support further development.</span></div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHY PARALLEL</p>
+          <h2>Built for life on a mobile base</h2>
+          <p>Compared with a conventional serial arm, LinkArm-M focuses on four things that matter when the arm becomes part of a moving robot.</p>
+        </div>
+        <div class="benefit-grid">
+          <article><span>01</span><h3>Carry useful payload in motion</h3><p>Higher payload capacity leaves more operating margin for grasping, transfer, and end-of-arm tools.</p><strong>More complete task capability</strong></article>
+          <article><span>02</span><h3>Stay mechanically stable</h3><p>The linkage provides firm mechanical support and reduces the effect of payload on arm posture.</p><strong>More composed while the base moves</strong></article>
+          <article><span>03</span><h3>Reduce servo heat</h3><p>Lower thermal stress under load is useful for repeated motion and tasks that hold a pose.</p><strong>Better suited to sustained operation</strong></article>
+          <article><span>04</span><h3>Avoid thermal interruptions</h3><p>Reducing the chance of servo over-temperature protection helps prevent unexpected pauses during a task.</p><strong>Higher system availability</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure" class="section soft-section">
+      <div class="container structure-layout">
+        <figure class="product-media structure-media">
+          <img src="../assets/common-01-m-module-hero.webp" width="1600" height="900" loading="lazy" alt="Side view of the LinkArm-M parallel robot arm in a folded posture">
+          <figcaption><strong>Parallel linkage</strong><span>Two linkage sets form a shared mechanical support, so the load is not carried by one joint alone.</span></figcaption>
+        </figure>
+        <div class="structure-copy">
+          <p class="eyebrow">STRUCTURE</p>
+          <h2>Let the mechanism carry more of the load</h2>
+          <p>LinkArm-M takes a different mechanical approach from a typical serial arm. Its linkage and joint servos share the load, helping the arm stay stable while moving, starting, stopping, or holding position.</p>
+          <div class="fact-list">
+            <div><strong>Better load distribution</strong><span>Reduces long-duration, high-load demand on any single joint.</span></div>
+            <div><strong>Greater overall rigidity</strong><span>Arm posture stays more stable under load, during motion, and as the base accelerates or stops.</span></div>
+            <div><strong>Built for longer tasks</strong><span>Under the same workload, the servos are less likely to remain in a high-temperature state.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="container structure-gallery">
+        <figure class="product-media">
+          <img src="../assets/common-01-m-module-hero-2.webp" width="1600" height="900" loading="lazy" alt="LinkArm-M parallel robot arm extended upward">
+          <figcaption><strong>Raised posture</strong><span>The linkage geometry remains mechanically supported across different working positions.</span></figcaption>
+        </figure>
+        <figure class="product-media">
+          <img src="../assets/01-hero.webp" width="1600" height="900" loading="lazy" alt="Side view of the LinkArm-M parallel robot arm extended horizontally">
+          <figcaption><strong>Side profile</strong><span>The arm extends and folds while keeping servo loading lower.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="dimensions" class="section dimensions-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MECHANICAL DRAWING</p>
+          <h2>Key integration dimensions</h2>
+          <p>A DXF drawing is available to support mechanical integration and further development.</p>
+        </div>
+        <div class="dimension-highlights" aria-label="Key specifications from the mechanical drawing">
+          <div><strong>1 kg</strong><span>Maximum payload</span></div>
+          <div><strong>330 mm</strong><span>Maximum reach</span></div>
+          <div><strong>180°</strong><span>Base rotation</span></div>
+          <div><strong>9–12.6 V</strong><span>Operating voltage</span></div>
+        </div>
+      </div>
+      <div class="container-wide">
+        <a class="drawing-card" href="../assets/drawing.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size LinkArm-M mechanical drawing in a new window">
+          <img src="../assets/drawing.webp" width="918" height="746" loading="lazy" alt="LinkArm-M overall dimensions and mounting relationships">
+          <span class="drawing-action">Open full-size drawing</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="specs" class="section specs-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SPECIFICATIONS</p>
+          <h2>Product specifications</h2>
+          <p>Key specifications for the LinkArm-M robot arm module.</p>
+        </div>
+
+        <article class="spec-table-card">
+          <div class="spec-table-header">
+            <span>LINKARM-M</span>
+            <h3>Robot arm module specifications</h3>
+          </div>
+          <table class="spec-table">
+            <caption>LinkArm-M robot arm module specifications</caption>
+            <tbody>
+              <tr class="spec-group-row"><th colspan="2" scope="colgroup">Mechanical</th></tr>
+              <tr><th scope="row">Degrees of freedom</th><td>3+1 DOF</td></tr>
+              <tr><th scope="row">Arm weight</th><td>780 g (G-clamp not included)</td></tr>
+              <tr><th scope="row">Maximum payload</th><td>1 kg</td></tr>
+              <tr><th scope="row">Maximum reach</th><td>330 mm</td></tr>
+              <tr><th scope="row">Base rotation</th><td>180°</td></tr>
+              <tr><th scope="row">Repeatability</th><td>±8 mm (under the same payload)</td></tr>
+              <tr><th scope="row">Supported desktop thickness with G-clamp</th><td>7–50 mm</td></tr>
+
+              <tr class="spec-group-row"><th colspan="2" scope="colgroup">Electrical</th></tr>
+              <tr><th scope="row">Operating voltage</th><td>9–12.6 V (supports direct power from a 3S lithium battery)</td></tr>
+              <tr><th scope="row">Peak current</th><td>3 A</td></tr>
+              <tr><th scope="row">Power</th><td>36 W</td></tr>
+
+              <tr class="spec-group-row"><th colspan="2" scope="colgroup">Control and development</th></tr>
+              <tr><th scope="row">Host connection</th><td>USB</td></tr>
+              <tr><th scope="row">Control interfaces</th><td>CLI / Python SDK / JSON</td></tr>
+              <tr><th scope="row">Host platforms</th><td>Raspberry Pi, Jetson, RK-series controllers, or PC</td></tr>
+              <tr><th scope="row">Software support</th><td>Open-source Python SDK and control examples</td></tr>
+
+              <tr class="spec-group-row"><th colspan="2" scope="colgroup">Construction and mounting</th></tr>
+              <tr><th scope="row">Material</th><td>Aluminum alloy</td></tr>
+              <tr><th scope="row">Mounting patterns</th><td>70 × 63.5 mm (4 × 4 mm-diameter holes) / 36 × 50 mm (4 × 3 mm-diameter holes)</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </section>
+
+    <section id="integration" class="section dark-section">
+      <div class="container controller-layout">
+        <div class="controller-copy">
+          <p class="eyebrow">OPEN INTEGRATION</p>
+          <h2>Connect to the controller your robot already uses</h2>
+          <p>LinkArm-M supports PC, Jetson, RK-series controllers, Raspberry Pi, and similar host platforms.</p>
+          <div class="fact-list">
+            <div><strong>Reuse your existing host</strong><span>The example shows the arm connected to a Raspberry Pi over USB.</span></div>
+            <div><strong>Keep one system architecture</strong><span>Let the base, arm, and other actuators follow the control boundaries defined by your team.</span></div>
+            <div><strong>Choose hardware on your terms</strong><span>Select the host around compute, interfaces, real-time requirements, and supply-chain needs.</span></div>
+          </div>
+        </div>
+        <figure class="product-media dark-media">
+          <img src="../assets/m-02-m-controller-installed.webp" width="1600" height="900" loading="lazy" alt="LinkArm-M connected to a Raspberry Pi through external control hardware">
+          <figcaption><strong>External controller integration</strong><span>An example connection between a Raspberry Pi and the arm control hardware.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="scenarios" class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MOBILE BASE INTEGRATION</p>
+          <h2>Ready for a wide range of mobile robots</h2>
+          <p>The parallel structure is designed around mobile robot requirements. Interfaces on the arm driver board can control DC devices and onboard RGB LEDs, while the included camera bracket provides a straightforward way to add a camera.</p>
+        </div>
+        <div class="scenario-grid">
+          <article><span>SCENE 01</span><h3>Mobile manipulation</h3><p>Drive the base close to a target, then use the arm to pick, place, or transfer the object.</p></article>
+          <article><span>SCENE 02</span><h3>Inspection tasks</h3><p>Carry a camera, sensor, or tool for close-range interaction with equipment and the surrounding environment.</p></article>
+          <article><span>SCENE 03</span><h3>Unified control</h3><p>Connect the arm to the existing host so it can work alongside wheels, lifts, gimbals, and other robot subsystems.</p></article>
+        </div>
+        <div class="application-grid">
+          <figure class="product-media application-featured">
+            <img src="../assets/m-03-m-chassis-mounting.webp" width="1600" height="900" loading="lazy" alt="LinkArm-M mounted on a mobile robot platform">
+            <figcaption><strong>Platform mounting</strong><span>The base bolts to a robot platform so the arm and other actuators can share the same mechanical system.</span></figcaption>
+          </figure>
+          <figure class="product-media">
+            <img src="../assets/loaded-operation.webp" loading="lazy" alt="LinkArm-M grasping an object while mounted on a mobile base">
+            <figcaption><strong>Working with a payload</strong><span>The arm is mounted on the base and shown grasping an object.</span></figcaption>
+          </figure>
+          <figure class="product-media">
+            <img src="../assets/rover-render.webp" loading="lazy" alt="Concept rendering of LinkArm-M integrated with a four-wheel mobile robot">
+            <figcaption><strong>Complete robot concept</strong><span>The arm integrates with the mobile base, battery, and host control system.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CHOOSE YOUR VERSION</p>
+          <h2>Same arm, different control boundary</h2>
+          <p>The main hardware distinction between LinkArm-LT and LinkArm-M is whether the ESP32-S3 sub-controller board is included.</p>
+        </div>
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead><tr><th>Comparison</th><th>LinkArm-LT</th><th class="current">LinkArm-M</th></tr></thead>
+            <tbody>
+              <tr><th>Arm structure</th><td><strong>Parallel robot arm</strong></td><td class="current"><strong>Parallel robot arm</strong></td></tr>
+              <tr><th>ESP32-S3 sub-controller</th><td><strong>Included</strong></td><td class="current"><strong>Not included</strong></td></tr>
+              <tr><th>Best suited to</th><td>Users who want a complete sub-controller solution and less low-level integration work.</td><td class="current">Users who already have their own controller, drive system, or robot control architecture.</td></tr>
+              <tr><th>Choose it when</th><td>You want to bring the arm into a robot system more quickly.</td><td class="current">You want to keep full control over the control hardware.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare-note">No additional differences are claimed here beyond the confirmed controller-board configuration.</p>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container choice-layout">
+        <div class="choice-copy">
+          <p class="eyebrow">DECISION</p>
+          <h2>When should you choose LinkArm-M?</h2>
+          <p>Choose M when your robot already has a stable sub-controller and actuator architecture, and you only need LinkArm's mechanical structure and payload advantages.</p>
+        </div>
+        <article class="choice-card">
+          <span class="choice-model">LINKARM-LT</span>
+          <h3>Choose the version with the ESP32-S3 sub-controller when:</h3>
+          <ul>
+            <li>The arm needs to operate as a standalone system</li>
+            <li>You want to add a dedicated arm sub-controller to the existing robot architecture</li>
+            <li>You want the arm controller to handle inverse kinematics and interpolation</li>
+          </ul>
+          <a class="button secondary" href="../../LinkArm-LT/en/index.html">View LinkArm-LT</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="tutorials" class="section tutorial-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">TUTORIALS &amp; DOCUMENTATION</p>
+          <h2>Everything you need to get moving quickly</h2>
+          <p>Step-by-step tutorials and open-source code cover mechanical installation, external controller setup, Python examples, and full-system integration.</p>
+        </div>
+        <div class="tutorial-grid">
+          <article><span>01</span><h3>Quick start</h3><p>Complete the connection and basic motion checks first to verify the arm and control path.</p></article>
+          <article><span>02</span><h3>Controller integration</h3><p>Connect the arm over USB to a Raspberry Pi, Jetson, RK-series controller, or PC.</p></article>
+          <article><span>03</span><h3>Python examples</h3><p>Start with the CLI and Python SDK, then extend the examples with your own task logic.</p></article>
+          <article><span>04</span><h3>Mounting and integration</h3><p>Use the drawings, mounting patterns, and product documentation to install the module on a mobile robot.</p></article>
+        </div>
+        <div class="tutorial-actions">
+          <a class="button primary" href="https://lygionorganization.github.io/lygion-wiki/en/reference/robots/linkarm-m/" target="_blank" rel="noopener noreferrer">View all LinkArm-M tutorials</a>
+          <a class="button secondary" href="../assets/drawing.webp" target="_blank" rel="noopener noreferrer">Open the full-size drawing</a>
+        </div>
+      </div>
+      <div class="container cta">
+        <div><strong>Already have a control platform and only need the arm module?</strong><span>LinkArm-M does not include the ESP32-S3 sub-controller and must be connected to an external controller.</span></div>
+        <a class="button primary" href="https://lm36lm9sgacig91fy3g1p7hpkfvgwp7.taobao.com/shop/view_shop.htm" target="_blank" rel="noopener noreferrer">Visit the Taobao Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>LYGION · LinkArm-M</span>
+      <div><a href="https://lygionorganization.github.io/lygion-wiki/en/reference/robots/linkarm-m/" target="_blank" rel="noopener noreferrer">Product Wiki</a><a href="https://lygion.ai/en/">Back to LYGION</a></div>
+    </div>
+  </footer>
+</body>
+</html>

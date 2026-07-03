@@ -88,6 +88,43 @@ export const modules: {
   }
 ];
 
+type OpenProjectConfig = {
+  slug: string;
+  folder: string;
+  image: string;
+  name: LocalizedText;
+};
+
+function createOpenProject({ slug, folder, image, name }: OpenProjectConfig): Product {
+  return {
+    slug,
+    module: "lygion-open",
+    status: "open",
+    image: `/product-pages/OpneLygion/${image}`,
+    detailPath: {
+      zh: `/product-pages/OpneLygion/${folder}/index.html`,
+      en: `/product-pages/OpneLygion/${folder}/en/index.html`
+    },
+    name,
+    summary: {
+      zh: "开源项目，相关资料可在灵影 Wiki 下载中心查看。",
+      en: "An open-source project with resources available from the LYGION Wiki downloads page."
+    },
+    description: {
+      zh: "本项目为开源项目。",
+      en: "This is an open-source project."
+    },
+    highlights: {
+      zh: ["开源"],
+      en: ["Open source"]
+    },
+    specs: {
+      zh: [{ label: "状态", value: "开源" }],
+      en: [{ label: "Status", value: "Open source" }]
+    }
+  };
+}
+
 export const products: Product[] = [
   {
     slug: "dw69-drive-wheel-module",
@@ -507,31 +544,34 @@ export const products: Product[] = [
     slug: "linkarm-lt",
     module: "robot-systems",
     status: "available",
-    image: "/product-pages/LinkArm-LT/assets/hero.webp",
-    detailPath: "/product-pages/LinkArm-LT/index.html",
-    name: { zh: "LinkArm-LT 轻量机械臂", en: "LinkArm-LT Lightweight Robotic Arm" },
+    image: "/product-pages/LinkArm-LT/assets/01-hero.webp",
+    detailPath: {
+      zh: "/product-pages/LinkArm-LT/index.html",
+      en: "/product-pages/LinkArm-LT/en/index.html"
+    },
+    name: { zh: "LinkArm-LT 并联机械臂", en: "LinkArm-LT Parallel Robot Arm" },
     summary: {
-      zh: "内置 ESP32-S3 控制器和 Web 应用，可通过浏览器完成控制、Wi-Fi 配置、动作脚本和 JSON 调试。",
-      en: "A lightweight arm with ESP32-S3 control and a browser UI for control, Wi-Fi setup, action scripts, and JSON debugging."
+      zh: "面向移动底盘集成的并联机械臂，内置 ESP32-S3 下位机驱动板与跨平台 Web 应用。",
+      en: "A parallel robot arm for mobile base integration, with a built-in ESP32-S3 controller and cross-platform Web App."
     },
     description: {
-      zh: "把浏览器控制台、脚本系统、无线接入和 JSON 通信能力整合在控制器中，适合演示、教学和上位机集成。",
-      en: "Integrates browser control, scripting, wireless access, and JSON communication for demos, education, and host integration."
+      zh: "特殊结构带来更高负载稳定性与更低负载温升，可使用电脑、手机或平板完成基础调试。",
+      en: "Its parallel linkage improves load stability and reduces servo heat, while browser control and JSON interfaces simplify integration."
     },
     highlights: {
-      zh: ["Web 控制平台", "动作脚本编排", "轻量机械臂结构"],
-      en: ["Web control platform", "Action script workflow", "Lightweight arm structure"]
+      zh: ["面向移动底盘", "内置 ESP32-S3 下位机", "跨平台 Web 应用"],
+      en: ["Built for mobile robots", "Built-in ESP32-S3 controller", "Cross-platform Web App"]
     },
     specs: {
       zh: [
-        { label: "定位", value: "轻量机械臂" },
-        { label: "控制", value: "浏览器 / JSON" },
-        { label: "详情页", value: "静态资料包 HTML" }
+        { label: "定位", value: "移动底盘并联机械臂" },
+        { label: "结构", value: "并联结构" },
+        { label: "下位机", value: "内置 ESP32-S3 驱动板" }
       ],
       en: [
-        { label: "Role", value: "Lightweight robotic arm" },
-        { label: "Control", value: "Browser / JSON" },
-        { label: "Detail page", value: "Static HTML package" }
+        { label: "Role", value: "Parallel arm for mobile robots" },
+        { label: "Structure", value: "Parallel linkage" },
+        { label: "Controller", value: "Built-in ESP32-S3 board" }
       ]
     }
   },
@@ -539,136 +579,85 @@ export const products: Product[] = [
     slug: "linkarm-m",
     module: "robot-systems",
     status: "available",
-    image: "/product-pages/LinkArm-M/assets/hero.webp",
-    detailPath: "/product-pages/LinkArm-M/index.html",
+    image: "/product-pages/LinkArm-M/assets/01-hero.webp",
+    detailPath: {
+      zh: "/product-pages/LinkArm-M/index.html",
+      en: "/product-pages/LinkArm-M/en/index.html"
+    },
     name: { zh: "LinkArm-M 并联机械臂模组", en: "LinkArm-M Parallel Arm Module" },
     summary: {
-      zh: "面向移动底盘与开发集成的 3+1 自由度并联机械臂模组，开放 CLI 与 Python SDK。",
+      zh: "面向移动底盘集成的并联机械臂模组，提供 USB 接口和开源例程，易于集成到各类控制器中。",
       en: "A 3+1 DOF parallel arm module for mobile base integration with CLI and Python SDK support."
     },
     description: {
-      zh: "适合接入 Raspberry Pi、Jetson、RK 主控或 PC，提供 IK / FK、状态读取、JSON 输出和多机械臂控制路径。",
-      en: "Designed for Raspberry Pi, Jetson, RK controllers, and PCs with IK / FK, state reading, JSON output, and multi-arm control."
+      zh: "保留与 LinkArm-LT 相同的结构优势，适合已有控制器、驱动方案或整机控制架构的团队。",
+      en: "Designed for teams that already have a controller or system architecture, with USB connectivity and open Python examples for integration."
     },
     highlights: {
-      zh: ["3+1 自由度并联结构", "USB 串口主机控制", "开放 Python SDK"],
+      zh: ["面向移动底盘", "并联结构更稳定", "控制硬件自由选型"],
       en: ["3+1 DOF parallel structure", "USB serial host control", "Open Python SDK"]
     },
     specs: {
       zh: [
-        { label: "定位", value: "机械臂模组" },
-        { label: "控制", value: "CLI / Python SDK / JSON" },
-        { label: "详情页", value: "静态资料包 HTML" }
+        { label: "定位", value: "移动底盘机械臂模组" },
+        { label: "结构", value: "并联结构" },
+        { label: "下位机", value: "不含 ESP32-S3 驱动板" }
       ],
       en: [
         { label: "Role", value: "Robotic arm module" },
         { label: "Control", value: "CLI / Python SDK / JSON" },
-        { label: "Detail page", value: "Static HTML package" }
+        { label: "Controller", value: "External controller required" }
       ]
     }
   },
-  {
-    slug: "lygion-open-kit",
-    module: "lygion-open",
-    status: "open",
-    image: "/assets/products/open-kit.svg",
-    name: { zh: "Lygion Open Kit", en: "Lygion Open Kit" },
-    summary: {
-      zh: "用于公开参考设计、示例代码与开发文档的开源套件入口。",
-      en: "An open kit for reference designs, sample code, and developer documentation."
-    },
-    description: {
-      zh: "作为后续开源项目的统一展示入口，可链接到 GitHub 仓库、文档站和硬件资料。",
-      en: "A unified entry point for future open-source projects, linking GitHub repositories, docs, and hardware resources."
-    },
-    highlights: {
-      zh: ["GitHub 友好", "文档优先", "适合社区协作"],
-      en: ["GitHub friendly", "Documentation first", "Made for community collaboration"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "开源项目入口" },
-        { label: "内容", value: "代码 / 文档 / 参考设计" },
-        { label: "状态", value: "开放 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Open-source project hub" },
-        { label: "Content", value: "Code / docs / reference designs" },
-        { label: "Status", value: "Open demo" }
-      ]
-    },
-    links: {
-      github: "https://github.com/"
-    }
-  },
-  {
-    slug: "bus-protocol-sdk",
-    module: "lygion-open",
-    status: "open",
-    image: "/assets/products/protocol-sdk.svg",
-    name: { zh: "Bus Protocol SDK", en: "Bus Protocol SDK" },
-    summary: {
-      zh: "用于总线设备通信、调试工具和示例工程的开源 SDK。",
-      en: "An open SDK for bus communication, debugging tools, and sample projects."
-    },
-    description: {
-      zh: "帮助开发者快速理解设备通信流程，并用统一接口连接示例硬件和上层应用。",
-      en: "Helps developers understand device communication and connect sample hardware with upper-layer applications."
-    },
-    highlights: {
-      zh: ["示例工程", "协议文档", "跨平台工具预留"],
-      en: ["Sample projects", "Protocol docs", "Cross-platform tooling ready"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "通信 SDK" },
-        { label: "内容", value: "协议 / 示例 / 工具" },
-        { label: "状态", value: "开放 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Communication SDK" },
-        { label: "Content", value: "Protocol / samples / tools" },
-        { label: "Status", value: "Open demo" }
-      ]
-    },
-    links: {
-      github: "https://github.com/"
-    }
-  },
-  {
-    slug: "robot-reference-design",
-    module: "lygion-open",
-    status: "open",
-    image: "/assets/products/reference-design.svg",
-    name: { zh: "Robot Reference Design", en: "Robot Reference Design" },
-    summary: {
-      zh: "沉淀机器人硬件连接、线束、控制拓扑与软件启动流程的参考设计。",
-      en: "Reference designs for robot wiring, control topology, and software bring-up."
-    },
-    description: {
-      zh: "将灵影产品组合成可复用的机器人参考架构，方便团队从样机过渡到稳定版本。",
-      en: "Combines Lygion products into reusable robot architectures for moving from prototype to stable builds."
-    },
-    highlights: {
-      zh: ["系统拓扑", "接线参考", "启动清单"],
-      en: ["System topology", "Wiring reference", "Bring-up checklist"]
-    },
-    specs: {
-      zh: [
-        { label: "定位", value: "参考设计" },
-        { label: "内容", value: "硬件 / 软件 / 系统" },
-        { label: "状态", value: "开放 Demo" }
-      ],
-      en: [
-        { label: "Role", value: "Reference design" },
-        { label: "Content", value: "Hardware / software / system" },
-        { label: "Status", value: "Open demo" }
-      ]
-    },
-    links: {
-      github: "https://github.com/"
-    }
-  }
+  createOpenProject({
+    slug: "3d3s-chassis",
+    folder: "3d3s-chassis",
+    image: "assets/3d3s-chassis.webp",
+    name: { zh: "3D3S 全向底盘", en: "3D3S Omnidirectional Chassis" }
+  }),
+  createOpenProject({
+    slug: "4wd-aluminum-profile-chassis",
+    folder: "4wd-aluminum-profile-chassis",
+    image: "assets/4wd-aluminum-profile-chassis.webp",
+    name: { zh: "四驱铝型材底盘", en: "4WD Aluminum Profile Chassis" }
+  }),
+  createOpenProject({
+    slug: "4wd-sheet-metal-chassis",
+    folder: "4wd-sheet-metal-chassis",
+    image: "assets/4wd-sheet-metal-chassis.webp",
+    name: { zh: "四驱钣金底盘", en: "4WD Sheet Metal Chassis" }
+  }),
+  createOpenProject({
+    slug: "5-plus-1-dof-robotic-arm",
+    folder: "5-plus-1-dof-robotic-arm",
+    image: "assets/5-plus-1-dof-robotic-arm.webp",
+    name: { zh: "5+1 自由度机械臂", en: "5+1 DOF Robotic Arm" }
+  }),
+  createOpenProject({
+    slug: "6x6-rover",
+    folder: "6x6-rover",
+    image: "assets/6x6-rover.webp",
+    name: { zh: "6×6 移动机器人", en: "6×6 Rover" }
+  }),
+  createOpenProject({
+    slug: "open-leader-arm",
+    folder: "open-leader-arm",
+    image: "assets/open-leader-arm.webp",
+    name: { zh: "Open Leader Arm", en: "Open Leader Arm" }
+  }),
+  createOpenProject({
+    slug: "self-locking-gripper",
+    folder: "self-locking-gripper",
+    image: "assets/self-locking-gripper.webp",
+    name: { zh: "自锁夹爪", en: "Self-Locking Gripper" }
+  }),
+  createOpenProject({
+    slug: "two-wheel-balancing-chassis",
+    folder: "two-wheel-balancing-chassis",
+    image: "assets/two-wheel-balancing-chassis.webp",
+    name: { zh: "两轮平衡底盘", en: "Two-Wheel Balancing Chassis" }
+  })
 ];
 
 export function getModule(id: ModuleId) {
