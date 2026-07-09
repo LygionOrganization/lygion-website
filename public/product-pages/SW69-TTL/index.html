@@ -51,7 +51,12 @@
           <p class="eyebrow">SWERVE DRIVE MODULE</p>
           <h1>全向移动底盘<br>舵轮模组</h1>
           <h3>SW69-TTL</h3>
-          <p class="lead">将转向、行走、绝对角度反馈和总线控制组合成一个底盘执行单元，面向全向移动机器人底盘，易于集成。</p>
+          <p class="lead">SW69-TTL 将行走、转向、轮向反馈和总线驱动集成在一个舵轮模组中，适用于需要横移、斜向移动和原地旋转的机器人底盘。</p>
+          <ul class="hero-capabilities" aria-label="主要功能">
+            <li><strong>行走与转向</strong><span>两台步进电机分别驱动轮组行走和 360° 转向。</span></li>
+            <li><strong>轮向反馈</strong><span>绝对角度编码器读取当前轮向，参数校准后掉电保存，上电无需回零。</span></li>
+            <li><strong>总线控制</strong><span>两块驱动板与编码器共用单线 TTL 通信链路，便于多个模组统一控制。</span></li>
+          </ul>
           <div class="hero-actions">
             <a class="button primary" href="#structure">查看结构与尺寸</a>
             <a class="button secondary" href="#control">查看总线接线</a>
@@ -83,13 +88,13 @@
         <div class="section-heading">
           <p class="eyebrow">PRODUCT POSITIONING</p>
           <h2>让机器人底盘轻松拥有全向移动能力</h2>
-          <p>SW69-TTL 面向需要前后、横移、斜向和原地旋转的机器人移动平台。机械结构、电机、驱动与角度反馈集中在一个模组内，易于集成和使用。</p>
+          <p class="positioning-copy">SW69-TTL 适用于全向移动机器人移动平台。每个模组独立完成轮组行走、转向与绝对角度反馈。<br>机械结构、电机、驱动与角度反馈集中在一个模组内，易于集成和使用。</p>
         </div>
         <div class="value-grid">
-          <article><span>01</span><h3>大扭矩转向</h3><p>转向电机通过同步带带动轮组改变朝向，可配合底盘运动学控制轮向，我们提供开源算法和教程。</p></article>
-          <article><span>02</span><h3>步进电机驱动</h3><p>行走电机负责驱动 69 mm 轮组，可设置方向、速度和运动目标，具有出色的低速特性，支持平滑启停和心跳保护。</p></article>
-          <article><span>03</span><h3>轮向反馈</h3><p>绝对角度编码器用于读取当前转向角度，校准参数掉电不丢失，开机无需归零校准，使用更简单。</p></article>
-          <article><span>04</span><h3>总线通信</h3><p>两块 TTL Stepper Driver (A) 与编码器可接入同一条单线 TTL 总线，可以与灵影总线设备与飞特总线舵机混用。</p></article>
+          <article><span>01</span><h3>大扭矩转向</h3><p>转向电机通过同步带减速组带动轮组改变朝向，支持 360° 轮向控制。</p></article>
+          <article><span>02</span><h3>步进电机驱动</h3><p>行走电机驱动 69 mm 轮组，可设置方向、速度和运动目标，并支持平滑启停与心跳保护。</p></article>
+          <article><span>03</span><h3>绝对角度反馈</h3><p>编码器读取当前轮向；校准参数掉电保存，上电后无需执行机械回零。</p></article>
+          <article><span>04</span><h3>总线总线</h3><p>两块驱动板与编码器共用一条通信链路，设置独立 ID 后可由主控统一寻址。</p></article>
         </div>
       </div>
     </section>
@@ -139,7 +144,7 @@
         <div class="section-heading control-heading">
           <p class="eyebrow">TTL BUS INTEGRATION</p>
           <h2>多只舵轮，共用一条控制总线</h2>
-          <p>每只 SW69-TTL 使用两块 TTL Stepper Driver (A) 分别控制转向与行走电机。驱动板、绝对角度编码器和其它总线设备设置独立 ID 后，可由主控统同时控制。</p>
+          <p>每只 SW69-TTL 使用两块 TTL Stepper Driver (A) 分别控制转向与行走电机。驱动板、绝对角度编码器和其它总线设备设置独立 ID 后，可由主控统一控制。</p>
         </div>
         <figure class="wiring-card">
           <img src="assets/wiring.webp" alt="树莓派通过 TTL Adapter 和 Hub 连接三只 SW69-TTL 舵轮模组的总线接线" loading="lazy">
