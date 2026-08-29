@@ -11,7 +11,7 @@ export const languageLabels: Record<Language, string> = {
 
 export const wikiLinks: Record<Language, string> = {
   zh: "https://wiki.lygion.ai/",
-  en: "https://lygionorganization.github.io/lygion-wiki/"
+  en: "https://lygionorganization.github.io/lygion-wiki/en/"
 };
 
 export const copy = {

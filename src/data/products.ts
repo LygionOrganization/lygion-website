@@ -100,10 +100,10 @@ function createOpenProject({ slug, folder, image, name }: OpenProjectConfig): Pr
     slug,
     module: "lygion-open",
     status: "open",
-    image: `/product-pages/OpneLygion/${image}`,
+    image: `/product-pages/OpenLygion/${image}`,
     detailPath: {
-      zh: `/product-pages/OpneLygion/${folder}/index.html`,
-      en: `/product-pages/OpneLygion/${folder}/en/index.html`
+      zh: `/product-pages/OpenLygion/${folder}/index.html`,
+      en: `/product-pages/OpenLygion/${folder}/en/index.html`
     },
     name,
     summary: {
@@ -201,7 +201,10 @@ export const products: Product[] = [
     module: "robot-modules",
     status: "available",
     image: "/product-pages/DM42-G7220-E02/assets/hero.webp",
-    detailPath: "/product-pages/DM42-G7220-E02/index.html",
+    detailPath: {
+      zh: "/product-pages/DM42-G7220-E02/index.html",
+      en: "/product-pages/DM42-G7220-E02/en/index.html"
+    },
     name: { zh: "DM42-G7220-E02 总线步进关节执行器", en: "DM42-G7220-E02 Bus Stepper Joint Actuator" },
     summary: {
       zh: "集成减速步进电机、同步带二级减速、输出端绝对值编码器与 TTL 总线控制的关节执行器。",
@@ -233,7 +236,10 @@ export const products: Product[] = [
     module: "robot-modules",
     status: "available",
     image: "/product-pages/SP3M72-E02/assets/hero.webp",
-    detailPath: "/product-pages/SP3M72-E02/index.html",
+    detailPath: {
+      zh: "/product-pages/SP3M72-E02/index.html",
+      en: "/product-pages/SP3M72-E02/en/index.html"
+    },
     name: { zh: "SP3M72-E02 绝对磁编码器同步轮", en: "SP3M72-E02 Absolute Encoder Pulley" },
     summary: {
       zh: "HTD 3M 72T 同步轮、法兰轴承、固定座与 12bit 绝对磁编码器一体化。",
