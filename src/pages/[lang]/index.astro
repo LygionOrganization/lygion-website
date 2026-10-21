@@ -69,7 +69,7 @@ const moduleIcons: Record<ModuleId, string> = {
       <div class="product-module-list">
         {
           modules.map((module) => {
-            const moduleProducts = getProductsByModule(module.id);
+            const moduleProducts = getProductsByModule(module.id, lang);
 
             if (!moduleProducts.length) {
               return null;

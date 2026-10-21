@@ -6,6 +6,7 @@ export type LocalizedText = Record<Language, string>;
 
 export type Product = {
   slug: string;
+  languages?: Language[];
   module: ModuleId;
   status: "concept" | "prototype" | "available" | "open";
   image: string;
@@ -126,6 +127,23 @@ function createOpenProject({ slug, folder, image, name }: OpenProjectConfig): Pr
 }
 
 export const products: Product[] = [
+  {
+    slug: "robocore-s3",
+    languages: ["zh", "en"],
+    module: "bus-devices",
+    status: "available",
+    image: "/product-pages/RoboCore-S3/assets/hero-board-antenna.webp",
+    detailPath: { zh: "/product-pages/RoboCore-S3/index.html", en: "/product-pages/RoboCore-S3/en/index.html" },
+    name: { zh: "RoboCore S3 通用机器人主控板", en: "RoboCore S3 Robot Controller" },
+    summary: { zh: "面向各类机器人的 ESP32-S3 主控板，集成总线接口、Wi-Fi、六轴 IMU 与开源 Web 应用。", en: "An ESP32-S3 robot controller with device buses, Wi-Fi, a six-axis IMU and an open-source Web app." },
+    description: { zh: "基于 ESP32-S3 的通用机器人主控板，可独立运行控制程序，也可作为上位机的下位机；提供 Web 应用、JSON 通信和开源单元例程。", en: "Run standalone robot control code or connect a host computer. RoboCore S3 combines a built-in Web interface, JSON communication and open-source examples in a compact ESP32-S3 board." },
+    highlights: { zh: ["网页设备调试", "JSON 上位机通信", "板载六轴 IMU"], en: ["Browser-based device control", "JSON host communication", "Onboard six-axis IMU"] },
+    specs: {
+      zh: [{ label: "输入", value: "5–48V，设备总线动力电压随输入" }, { label: "尺寸", value: "47 × 52 mm" }, { label: "主控", value: "ESP32-S3" }],
+      en: [{ label: "Input", value: "5–48V; powered bus ports follow the input voltage" }, { label: "Dimensions", value: "47 × 52 mm" }, { label: "Processor", value: "ESP32-S3" }]
+    },
+    links: { docs: "https://wiki.lygion.ai/reference/bus-devices/robocore-s3/", github: "https://github.com/LygionOrganization/robocore_s3" }
+  },
   {
     slug: "dw69-drive-wheel-module",
     module: "robot-modules",
@@ -670,8 +688,8 @@ export function getModule(id: ModuleId) {
   return modules.find((module) => module.id === id);
 }
 
-export function getProductsByModule(id: ModuleId) {
-  return products.filter((product) => product.module === id);
+export function getProductsByModule(id: ModuleId, lang?: Language) {
+  return products.filter((product) => product.module === id && (!lang || !product.languages || product.languages.includes(lang)));
 }
 
 export function getProductDetailPath(product: Product, lang: Language) {

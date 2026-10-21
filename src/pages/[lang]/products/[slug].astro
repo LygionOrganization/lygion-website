@@ -6,7 +6,7 @@ import { withBase } from "../../../utils/paths";
 
 export function getStaticPaths() {
   return languages.flatMap((lang) =>
-    products.map((product) => ({
+    products.filter((product) => !product.languages || product.languages.includes(lang)).map((product) => ({
       params: { lang, slug: product.slug },
       props: { product }
     }))

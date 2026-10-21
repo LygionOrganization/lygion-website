@@ -17,7 +17,7 @@ const { module } = Astro.props;
 const langParam = Astro.params.lang;
 const lang: Language = isLanguage(langParam) ? langParam : "zh";
 const t = copy[lang];
-const moduleProducts = getProductsByModule(module.id as ModuleId);
+const moduleProducts = getProductsByModule(module.id as ModuleId, lang);
 ---
 
 <BaseLayout lang={lang} title={module.name[lang]} description={module.summary[lang]}>
